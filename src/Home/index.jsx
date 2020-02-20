@@ -43,18 +43,20 @@ export default class Home extends React.Component {
   scrollToAnchor = (anchorId) => {
     if (anchorId) {   // 找到锚点 id
       let anchorElement = document.getElementById(anchorId);
+      // console.log('offsetTop',anchorElement.offsetTop);
       if (anchorElement) {        // 如果对应id的锚点存在，就跳转到锚点
         anchorElement.scrollIntoView();
       }
       let test = setInterval(function () {
          anchorElement = document.getElementById(anchorId);
+        //  console.log('offsetTop',anchorElement.offsetTop)
         if (anchorElement) {        // 如果对应id的锚点存在，就跳转到锚点
           anchorElement.scrollIntoView();
         }
-      }, 50);
+      }, 30);
       setTimeout(function(){
         clearInterval(test);
-      },200)
+      },300)
     }
   }
 
