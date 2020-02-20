@@ -125,7 +125,7 @@ class Content7 extends React.Component {
     if (this.props.isMobile) {
     return (
       <div {...props} {...dataSource.wrapper}>
-        <a name="jiejuefangan"></a>
+        <a name="jiejuefangan" ></a>
         <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}
@@ -222,7 +222,7 @@ class Content7 extends React.Component {
      else {
       return (
         <div {...props} {...dataSource.wrapper}>
-          <a name="jiejuefangan"></a>
+          <a name="jiejuefangan" ></a>
           <div {...dataSource.page}>
             <div {...dataSource.titleWrapper}>
               {dataSource.titleWrapper.children.map(getChildrenToRender)}

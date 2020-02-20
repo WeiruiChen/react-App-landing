@@ -1,15 +1,12 @@
 import React from 'react';
-import {Layout, Card, Row, Col, Carousel} from 'antd';
+import { Card, Row, Col, Carousel} from 'antd';
 import QueueAnim from 'rc-queue-anim';
-import TweenOne, {TweenOneGroup} from 'rc-tween-one';
-import BannerAnim, {Element} from 'rc-banner-anim';
+import  {Element} from 'rc-banner-anim';
 import {getChildrenToRender} from './utils';
-import {isImg} from './utils';
 import 'rc-banner-anim/assets/index.css';
-const {Header, Footer, Sider, Content} = Layout;
 
 const {Meta} = Card;
-const {BgElement} = Element;
+
 class Banner extends React.PureComponent {
 
   constructor(props) {
@@ -28,26 +25,26 @@ class Banner extends React.PureComponent {
     const {dataSource} = props;
     delete props.dataSource;
     delete props.isMobile;
-    const childrenToRender = dataSource.BannerAnim.children.map((item, i) => {
-      const elem = item.BannerElement;
-      const elemClassName = elem.className;
-      delete elem.className;
-      const {bg, textWrapper, content} = item;
-      return (
-        <Element style={{background: "#F4F6F9"}} key={i.toString()} {...elem} prefixCls={elemClassName}>
-          <QueueAnim
-            type={['bottom', 'top']}
-            delay={200}
-            key="text"
-            {...textWrapper}
-          >
-            <div key="content" {...content}>
-              {content.children}
-            </div>
-          </QueueAnim>
-        </Element>
-      );
-    });
+    // const childrenToRender = dataSource.BannerAnim.children.map((item, i) => {
+    //   const elem = item.BannerElement;
+    //   const elemClassName = elem.className;
+    //   delete elem.className;
+    //   const {textWrapper, content} = item;
+    //   return (
+    //     <Element style={{background: "#F4F6F9"}} key={i.toString()} {...elem} prefixCls={elemClassName}>
+    //       <QueueAnim
+    //         type={['bottom', 'top']}
+    //         delay={200}
+    //         key="text"
+    //         {...textWrapper}
+    //       >
+    //         <div key="content" {...content}>
+    //           {content.children}
+    //         </div>
+    //       </QueueAnim>
+    //     </Element>
+    //   );
+    // });
     if (this.props.isMobile) {
       return (
         <div {...props} {...dataSource.wrapper}>
