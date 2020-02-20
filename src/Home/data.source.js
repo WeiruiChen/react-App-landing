@@ -13,7 +13,7 @@ export const Nav00DataSource = {
         name: 'item0',
         className: 'header0-item',
         children: {
-          href: '#hexinyoushi',
+          href: 'Content0_0',
           children: [{ children: '核心优势', name: 'text' }],
         },
       },
@@ -21,7 +21,7 @@ export const Nav00DataSource = {
         name: 'item1',
         className: 'header0-item',
         children: {
-          href: '#jiejuefangan',
+          href: 'Feature5_0',
           children: [{ children: '解决方案', name: 'text' }],
         },
       },
@@ -29,7 +29,7 @@ export const Nav00DataSource = {
         name: 'item2',
         className: 'header0-item',
         children: {
-          href: '#hezuohuoban',
+          href: 'Teams2_0',
           children: [{ children: '合作伙伴', name: 'text' }],
         },
       },
@@ -37,7 +37,7 @@ export const Nav00DataSource = {
         name: 'item3',
         className: 'header0-item',
         children: {
-          href: '#gongsidongtai',
+          href: 'Banner1_0',
           children: [{ children: '公司动态', name: 'text' }],
         },
       },
@@ -45,7 +45,7 @@ export const Nav00DataSource = {
         name: 'item4',
         className: 'header0-item',
         children: {
-          href: '#guanyuwomen',
+          href: 'Teams1_0',
           children: [{ children: '关于我们', name: 'text' }],
         },
       }

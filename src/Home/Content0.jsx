@@ -1,12 +1,12 @@
 import React from 'react';
 import QueueAnim from 'rc-queue-anim';
-import { Row, Col } from 'antd';
+import {Row, Col} from 'antd';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { getChildrenToRender } from './utils';
+import {getChildrenToRender} from './utils';
 
 class Content extends React.PureComponent {
   render() {
-    const { dataSource, isMobile, ...props } = this.props;
+    const {dataSource, isMobile, ...props} = this.props;
     const {
       wrapper,
       titleWrapper,
@@ -15,50 +15,53 @@ class Content extends React.PureComponent {
       childWrapper,
     } = dataSource;
     return (
-      <div {...props} {...wrapper}>
+      <div>
         <a name="hexinyoushi"></a>
-        <div {...page}>
-          <div {...titleWrapper}>
-            {titleWrapper.children.map(getChildrenToRender)}
+        <div {...props} {...wrapper}>
+
+          <div {...page}>
+            <div {...titleWrapper}>
+              {titleWrapper.children.map(getChildrenToRender)}
+            </div>
+            <OverPack {...overPackData}>
+              <QueueAnim
+                type="bottom"
+                key="block01"
+                leaveReverse
+                component={Row}
+                componentProps={childWrapper}
+              >
+                {childWrapper.children.map((block, i) => {
+                  const {children: item, ...blockProps} = block;
+                  return (
+                    <Col key={i.toString()} {...blockProps}>
+                      <div {...item}>
+                        {item.children.map(getChildrenToRender)}
+                      </div>
+                    </Col>
+                  );
+                })}
+              </QueueAnim>
+              <QueueAnim
+                type="bottom"
+                key="block"
+                leaveReverse
+                component={Row}
+                componentProps={childWrapper}
+              >
+                {childWrapper.children.map((block, i) => {
+                  const {children: item, ...blockProps} = block;
+                  return (
+                    <Col key={i.toString()} {...blockProps}>
+                      <div {...item}>
+                        {item.children.map(getChildrenToRender)}
+                      </div>
+                    </Col>
+                  );
+                })}
+              </QueueAnim>
+            </OverPack>
           </div>
-          <OverPack {...overPackData}>
-            <QueueAnim
-              type="bottom"
-              key="block01"
-              leaveReverse
-              component={Row}
-              componentProps={childWrapper}
-            >
-              {childWrapper.children.map((block, i) => {
-                const { children: item, ...blockProps } = block;
-                return (
-                  <Col key={i.toString()} {...blockProps}>
-                    <div {...item}>
-                      {item.children.map(getChildrenToRender)}
-                    </div>
-                  </Col>
-                );
-              })}
-            </QueueAnim>
-            <QueueAnim
-              type="bottom"
-              key="block"
-              leaveReverse
-              component={Row}
-              componentProps={childWrapper}
-            >
-              {childWrapper.children.map((block, i) => {
-                const { children: item, ...blockProps } = block;
-                return (
-                  <Col key={i.toString()} {...blockProps}>
-                    <div {...item}>
-                      {item.children.map(getChildrenToRender)}
-                    </div>
-                  </Col>
-                );
-              })}
-            </QueueAnim>
-          </OverPack>
         </div>
       </div>
     );

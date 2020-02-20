@@ -25,7 +25,6 @@ class Teams1 extends React.PureComponent {
       <div>
         <a name="guanyuwomen"></a>
         <div {...props} {...dataSource.wrapper}>
-
           <div {...dataSource.page}>
             <div {...dataSource.titleWrapper}>
               {dataSource.titleWrapper.children.map(getChildrenToRender)}

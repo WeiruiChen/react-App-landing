@@ -1,7 +1,7 @@
 /* eslint no-undef: 0 */
 /* eslint arrow-parens: 0 */
 import React from 'react';
-import { enquireScreen } from 'enquire-js';
+import {enquireScreen} from 'enquire-js';
 
 import Nav0 from './Nav0';
 import Banner0 from './Banner0';
@@ -29,7 +29,7 @@ enquireScreen((b) => {
   isMobile = b;
 });
 
-const { location } = window;
+const {location} = window;
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -40,10 +40,29 @@ export default class Home extends React.Component {
     };
   }
 
+  scrollToAnchor = (anchorId) => {
+    if (anchorId) {   // 找到锚点 id
+      let anchorElement = document.getElementById(anchorId);
+      if (anchorElement) {        // 如果对应id的锚点存在，就跳转到锚点
+        anchorElement.scrollIntoView();
+      }
+      let test = setInterval(function () {
+         anchorElement = document.getElementById(anchorId);
+        if (anchorElement) {        // 如果对应id的锚点存在，就跳转到锚点
+          anchorElement.scrollIntoView();
+        }
+      }, 50);
+      setTimeout(function(){
+        clearInterval(test);
+      },200)
+    }
+  }
+
+
   componentDidMount() {
     // 适配手机屏幕;
     enquireScreen((b) => {
-      this.setState({ isMobile: !!b });
+      this.setState({isMobile: !!b});
     });
     // dva 2.0 样式在组件渲染之后动态加载，导致滚动组件不生效；线上不影响；
     /* 如果不是 dva 2.0 请删除 start */
@@ -63,6 +82,7 @@ export default class Home extends React.Component {
       <Nav0
         id="Nav0_0"
         key="Nav0_0"
+        ToAnchor={this.scrollToAnchor}
         dataSource={Nav00DataSource}
         isMobile={this.state.isMobile}
       />,
@@ -79,29 +99,29 @@ export default class Home extends React.Component {
         isMobile={this.state.isMobile}
       />,
       <Feature5
-      id="Feature5_0"
-      key="Feature5_0"
-      dataSource={Feature50DataSource}
-      isMobile={this.state.isMobile}
-    />,
+        id="Feature5_0"
+        key="Feature5_0"
+        dataSource={Feature50DataSource}
+        isMobile={this.state.isMobile}
+      />,
       <Teams2
-      id="Teams2_0"
-      key="Teams2_0"
-      dataSource={Teams20DataSource}
-      isMobile={this.state.isMobile}
-     />,
-     <Banner1
-     id="Banner1_0"
-     key="Banner1_0"
-     dataSource={Banner10DataSource}
-     isMobile={this.state.isMobile}
-   />,
+        id="Teams2_0"
+        key="Teams2_0"
+        dataSource={Teams20DataSource}
+        isMobile={this.state.isMobile}
+      />,
+      <Banner1
+        id="Banner1_0"
+        key="Banner1_0"
+        dataSource={Banner10DataSource}
+        isMobile={this.state.isMobile}
+      />,
       <Teams1
-      id="Teams1_0"
-      key="Teams1_0"
-      dataSource={Teams10DataSource}
-      isMobile={this.state.isMobile}
-     />,
+        id="Teams1_0"
+        key="Teams1_0"
+        dataSource={Teams10DataSource}
+        isMobile={this.state.isMobile}
+      />,
       // <Footer1
       //   id="Footer1_0"
       //   key="Footer1_0"
@@ -109,11 +129,11 @@ export default class Home extends React.Component {
       //   isMobile={this.state.isMobile}
       // />,
       <Footer2
-      id="Footer2_0"
-      key="Footer2_0"
-      dataSource={Footer20DataSource}
-      isMobile={this.state.isMobile}
-    />,
+        id="Footer2_0"
+        key="Footer2_0"
+        dataSource={Footer20DataSource}
+        isMobile={this.state.isMobile}
+      />,
     ];
     return (
       <div

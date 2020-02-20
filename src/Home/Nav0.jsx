@@ -1,9 +1,9 @@
 import React from 'react';
 import TweenOne from 'rc-tween-one';
-import { Menu } from 'antd';
-import { getChildrenToRender } from './utils';
+import {Menu} from 'antd';
+import {getChildrenToRender} from './utils';
 
-const { Item, SubMenu } = Menu;
+const {Item} = Menu;
 
 class Header extends React.Component {
   constructor(props) {
@@ -12,6 +12,19 @@ class Header extends React.Component {
       phoneOpen: undefined,
     };
   }
+  subGoto = (id) => { // 学习挣钱，调用父组件方法
+    console.log('1111111');
+    this.props.ToAnchor('gongsidongtai');
+  }
+  // scrollToAnchor = (anchorId) => {
+  //   cons
+  //   if (anchorId) {   // 找到锚点 id
+  //     let anchorElement = document.getElementById('gongsidongtai');
+  //     if (anchorElement) {        // 如果对应id的锚点存在，就跳转到锚点
+  //       anchorElement.scrollIntoView({block: 'start', behavior: 'smooth'});
+  //     }
+  //   }
+  // }
 
   phoneClick = () => {
     const phoneOpen = !this.state.phoneOpen;
@@ -21,51 +34,16 @@ class Header extends React.Component {
   };
 
   render() {
-    const { dataSource, isMobile, ...props } = this.props;
-    const { phoneOpen } = this.state;
+    const {dataSource, isMobile, ...props} = this.props;
+    const {phoneOpen} = this.state;
     const navData = dataSource.Menu.children;
     const navChildren = navData.map((item) => {
-      const { children: a, subItem, ...itemProps } = item;
-      if (subItem) {
-        return (
-          <SubMenu
-            key={item.name}
-            {...itemProps}
-            title={
-              <div
-                {...a}
-                className={`header0-item-block ${a.className}`.trim()}
-              >
-                {a.children.map(getChildrenToRender)}
-              </div>
-            }
-            popupClassName="header0-item-child"
-          >
-            {subItem.map(($item, ii) => {
-              const { children: childItem } = $item;
-              const child = childItem.href ? (
-                <a {...childItem} >
-                  {childItem.children.map(getChildrenToRender)}
-                </a>
-              ) : (
-                <div {...childItem}>
-                  {childItem.children.map(getChildrenToRender)}
-                </div>
-              );
-              return (
-                <Item key={$item.name || ii.toString()} {...$item}>
-                  {child}
-                </Item>
-              );
-            })}
-          </SubMenu>
-        );
-      }
+      const {children: a, subItem, ...itemProps} = item;
       return (
         <Item key={item.name} {...itemProps}>
-          <a  {...a} className={`header0-item-block ${a.className}`.trim()}>
-            {a.children.map(getChildrenToRender) }
-          </a>
+          <div onClick={()=>{this.props.ToAnchor(item.children.href)}} className={`header0-item-block ${a.className}`.trim()}>
+            {a.children.map(getChildrenToRender)}
+          </div>
         </Item>
       );
     });
@@ -73,7 +51,7 @@ class Header extends React.Component {
     return (
       <TweenOne
         component="header"
-        animation={{ opacity: 0, type: 'from' }}
+        animation={{opacity: 0, type: 'from'}}
         {...dataSource.wrapper}
         {...props}
       >
@@ -82,7 +60,7 @@ class Header extends React.Component {
           className={`${dataSource.page.className}${phoneOpen ? ' open' : ''}`}
         >
           <TweenOne
-            animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
+            animation={{x: -30, type: 'from', ease: 'easeOutQuad'}}
             {...dataSource.logo}
           >
             <img width="50%" src={dataSource.logo.children} alt="img" />
@@ -104,15 +82,15 @@ class Header extends React.Component {
             animation={
               isMobile
                 ? {
-                    height: 0,
-                    duration: 300,
-                    onComplete: (e) => {
-                      if (this.state.phoneOpen) {
-                        e.target.style.height = 'auto';
-                      }
-                    },
-                    ease: 'easeInOutQuad',
-                  }
+                  height: 0,
+                  duration: 300,
+                  onComplete: (e) => {
+                    if (this.state.phoneOpen) {
+                      e.target.style.height = 'auto';
+                    }
+                  },
+                  ease: 'easeInOutQuad',
+                }
                 : null
             }
             moment={moment}

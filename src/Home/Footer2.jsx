@@ -8,8 +8,8 @@ class Footer2 extends React.PureComponent {
     const {...props} = this.props;
     const {dataSource} = props;
     delete props.dataSource;
-    // delete props.isMobile;
-    if (props.isMobile) {
+    delete props.isMobile;
+    if (this.props.isMobile) {
       return (
         <div>
           <h1 style={{fontSize: '32px', margin: ' 0 auto', textAlign: 'center'}}>联系我们</h1>
