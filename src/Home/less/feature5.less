@@ -1,0 +1,101 @@
+@feature5: feature5;
+.@{feature5}-wrapper {
+   background-color: #fafafa;
+  min-height: 720px;
+  .@{feature5} {
+    >h1,
+    >p {
+      text-align: center;
+    }
+    .title-content {
+      text-align: center;
+      font-size: 24px;
+    }
+    &-tag {
+      & i {
+        width: 12px;
+        height: 14px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+      &-name {
+        display: inline-block;
+      }
+    }
+    .backzhenwu{
+      background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwuicon.png) no-repeat;
+      background-size:12px 12px;
+    }
+    .zhihui{
+      background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuiicon.png) no-repeat;
+      background-size:12px 12px;
+    }
+    .gongying{
+      background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongyingicon.png) no-repeat;
+      background-size:12px 12px;
+    }
+    .chanping{
+      background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanpingicon.png) no-repeat;
+      background-size:12px 12px;
+    }
+    .shuzi{
+      background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuziicon.png) no-repeat;
+      background-size:12px 12px;
+    }
+    .ant-tabs-bar {
+      text-align: center;
+    }
+    .my-accordion .pad .am-accordion-content-box {
+      padding: 10px;
+    }
+    .ant-tabs {
+      .ant-tabs-nav {
+        float: none;
+        text-align: center;
+      }
+    }
+    &-tabs-wrapper {
+      position: relative;
+      margin-top: 24px;
+    }
+    &-content {
+      display: flex;
+      align-items: center;
+    }
+    &-text {
+      padding: 24px 48px;
+    }
+    &-img {
+      padding: 24px 48px;
+    }
+  
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{feature5}-wrapper {
+    min-height: 980px;
+    overflow: hidden;
+    .@{feature5} {
+      max-width: 100%;
+      &-content {
+        display: block;
+      }
+      &-text,
+      &-img {
+        text-align: left;
+        padding: 0;
+      }
+      &-img {
+        margin-top: 32px;
+      }
+      .ant-tabs-bar {
+        width: auto;
+        .ant-tabs-nav {
+          float: left;
+        }
+      }
+    }
+  }
+}
