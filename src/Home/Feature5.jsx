@@ -2,10 +2,11 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import {Tabs, Icon, Row, Col} from 'antd';
-import {Accordion,List} from 'antd-mobile';
+import {Collapse} from 'antd';
 import {getChildrenToRender} from './utils';
 
 const TabPane = Tabs.TabPane;
+const {Panel} = Collapse;
 
 class Content7 extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Content7 extends React.Component {
     this.setState({current: parseFloat(key)});
   };
   onChange1 = (key) => {
-    console.log('key'+key);
+    console.log('key' + key);
   };
 
   getBlockChildren = (item, i) => {
@@ -90,71 +91,169 @@ class Content7 extends React.Component {
     //   </div>
     // );
     // if (props.isMobile) getChildrenToRender{
-      // return (
-      //   <div {...props} {...dataSource.wrapper}>
-      //     <div {...dataSource.page}>
-      //       <div {...dataSource.titleWrapper}>
-      //         {dataSource.titleWrapper.children.map(getChildrenToRender)}
-      //       </div>
+    // return (
+    //   <div {...props} {...dataSource.wrapper}>
+    //     <div {...dataSource.page}>
+    //       <div {...dataSource.titleWrapper}>
+    //         {dataSource.titleWrapper.children.map(getChildrenToRender)}
+    //       </div>
 
-      //       <div style={{marginTop: 10, marginBottom: 10}}>
-      //         <Accordion  defaultActiveKey="0" className="pad" onChange={this.onChange1} >
-      //           <Accordion.Panel header="1">
-      //           <div><img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwushanglian.png" width="100%"  alt="政务上链"></img></div>
-      //           </Accordion.Panel>
-      //           <Accordion.Panel header="2">
-      //           <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuichengshi.png" width="100%"  alt="智慧城市"></img>
-      //           </Accordion.Panel>
-      //           <Accordion.Panel header="供应链金融">
-      //           </Accordion.Panel>
-      //           <Accordion.Panel header="产品溯源">
-      //           </Accordion.Panel>
-      //           <Accordion.Panel header="数字身份" className="pad"></Accordion.Panel>
-      //         </Accordion>
-      //       </div>
+    //       <div style={{marginTop: 10, marginBottom: 10}}>
+    //         <Accordion  defaultActiveKey="0" className="pad" onChange={this.onChange1} >
+    //           <Accordion.Panel header="1">
+    //           <div><img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwushanglian.png" width="100%"  alt="政务上链"></img></div>
+    //           </Accordion.Panel>
+    //           <Accordion.Panel header="2">
+    //           <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuichengshi.png" width="100%"  alt="智慧城市"></img>
+    //           </Accordion.Panel>
+    //           <Accordion.Panel header="供应链金融">
+    //           </Accordion.Panel>
+    //           <Accordion.Panel header="产品溯源">
+    //           </Accordion.Panel>
+    //           <Accordion.Panel header="数字身份" className="pad"></Accordion.Panel>
+    //         </Accordion>
+    //       </div>
 
-      //     </div>
-      //   </div>
-      // );
+    //     </div>
+    //   </div>
+    // );
     // }
     delete props.dataSource;
     delete props.isMobile;
     const tabsChildren = dataSource.block.children.map(this.getBlockChildren);
 
+    if (this.props.isMobile) {
     return (
       <div {...props} {...dataSource.wrapper}>
-      <a name="jiejuefangan"></a>
+        <a name="jiejuefangan"></a>
         <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}
           </div>
-
-          <OverPack {...dataSource.OverPack}>
-            <TweenOne.TweenOneGroup
-              key="tabs"
-              enter={{
-                y: 30,
-                opacity: 0,
-                delay: 200,
-                type: 'from',
-              }}
-              leave={{y: 30, opacity: 0}}
-              {...dataSource.tabsWrapper}
+          <div>
+            <Collapse
+              expandIconPosition='right'
             >
-              <Tabs
-                tabPosition="left"
-                key="tabs"
-                onChange={this.onChange}
-                activeKey={`${this.state.current}`}
-                {...dataSource.block}
-              >
-                {tabsChildren}
-              </Tabs>
-            </TweenOne.TweenOneGroup>
-          </OverPack>
+              <Panel style={{background:'#fff'}}  header={<div style={{height: '6vh', textAlign: 'center'}}>
+                <div style={{marginTop:'3vh'}}>
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwuicon.png" alt="政务上链">
+                  </img>
+                  <span style={{fontSize: '30px', color: '#0033A1',marginLeft:'10px'}}>政务上链</span>
+                </div>
+              </div>} key="1">
+                <div >
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwushanglian.png" width="100%" alt="政务上链"></img>
+                </div>
+              </Panel>
+            </Collapse>
+
+            <Collapse
+              style={{marginTop: '50px'}}
+              expandIconPosition='right'
+            >
+              <Panel style={{background:'#fff'}} header={<div style={{height: '6vh', textAlign: 'center'}}>
+                <div style={{marginTop:'3vh'}}>
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuiicon.png" alt="智慧城市">
+                  </img>
+                  <span style={{fontSize: '30px', color: '#0033A1',marginLeft:'10px'}}>智慧城市</span>
+                </div>
+              </div>} key="1">
+                <div >
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuichengshi.png" width="100%" alt="智慧城市"></img>
+                </div>
+              </Panel>
+            </Collapse>
+
+            <Collapse
+              style={{marginTop: '50px'}}
+              expandIconPosition='right'
+            >
+              <Panel style={{background:'#fff'}} header={<div style={{height: '6vh', textAlign: 'center'}}>
+                <div style={{marginTop:'3vh'}}>
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongyingicon.png" alt="供应链金融">
+                  </img>
+                  <span style={{fontSize: '30px', color: '#0033A1',marginLeft:'10px'}}>供应链金融</span>
+                </div>
+              </div>} key="1">
+                <div >
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongyinglianjinrong.png" width="100%" alt="供应链金融"></img>
+                </div>
+              </Panel>
+            </Collapse>
+
+            <Collapse
+              style={{marginTop: '50px'}}
+              expandIconPosition='right'
+            >
+              <Panel style={{background:'#fff'}} header={<div style={{height: '6vh', textAlign: 'center'}}>
+                <div style={{marginTop:'3vh'}}>
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanpingicon.png" alt="产品溯源">
+                  </img>
+                  <span style={{fontSize: '30px', color: '#0033A1',marginLeft:'10px'}}>产品溯源</span>
+                </div>
+              </div>} key="1">
+                <div >
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanping.png" width="100%" alt="产品溯源"></img>
+                </div>
+              </Panel>
+            </Collapse>
+
+            <Collapse
+              style={{marginTop: '50px'}}
+              expandIconPosition='right'
+            >
+              <Panel style={{background:'#fff'}} header={<div style={{height: '6vh', textAlign: 'center'}}>
+                <div style={{marginTop:'3vh'}}>
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuziicon.png" alt="数字身份">
+                  </img>
+                  <span style={{fontSize: '30px', color: '#0033A1',marginLeft:'10px'}}>数字身份</span>
+                </div>
+              </div>} key="1">
+                <div >
+                  <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuzi.png" width="100%" alt="数字身份"></img>
+                </div>
+              </Panel>
+            </Collapse>
+           
+          </div>
         </div>
-      </div>
-    );
+      </div>);
+    }
+     else {
+      return (
+        <div {...props} {...dataSource.wrapper}>
+          <a name="jiejuefangan"></a>
+          <div {...dataSource.page}>
+            <div {...dataSource.titleWrapper}>
+              {dataSource.titleWrapper.children.map(getChildrenToRender)}
+            </div>
+            <OverPack {...dataSource.OverPack}>
+              <TweenOne.TweenOneGroup
+                key="tabs"
+                enter={{
+                  y: 30,
+                  opacity: 0,
+                  delay: 200,
+                  type: 'from',
+                }}
+                leave={{y: 30, opacity: 0}}
+                {...dataSource.tabsWrapper}
+              >
+                <Tabs
+                  tabPosition="left"
+                  key="tabs"
+                  onChange={this.onChange}
+                  activeKey={`${this.state.current}`}
+                  {...dataSource.block}
+                >
+                  {tabsChildren}
+                </Tabs>
+              </TweenOne.TweenOneGroup>
+            </OverPack>
+          </div>
+        </div>
+      );
+    }
   }
 }
 
