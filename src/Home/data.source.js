@@ -13,7 +13,7 @@ export const Nav00DataSource = {
         name: 'item0',
         className: 'header0-item',
         children: {
-          href: '#',
+          href: '#hexinyoushi',
           children: [{ children: '核心优势', name: 'text' }],
         },
       },
@@ -21,7 +21,7 @@ export const Nav00DataSource = {
         name: 'item1',
         className: 'header0-item',
         children: {
-          href: '#',
+          href: '#jiejuefangan',
           children: [{ children: '解决方案', name: 'text' }],
         },
       },
@@ -29,7 +29,7 @@ export const Nav00DataSource = {
         name: 'item2',
         className: 'header0-item',
         children: {
-          href: '#',
+          href: '#hezuohuoban',
           children: [{ children: '合作伙伴', name: 'text' }],
         },
       },
@@ -37,7 +37,7 @@ export const Nav00DataSource = {
         name: 'item3',
         className: 'header0-item',
         children: {
-          href: '#',
+          href: '#gongsidongtai',
           children: [{ children: '公司动态', name: 'text' }],
         },
       },
@@ -45,7 +45,7 @@ export const Nav00DataSource = {
         name: 'item4',
         className: 'header0-item',
         children: {
-          href: '#',
+          href: '#guanyuwomen',
           children: [{ children: '关于我们', name: 'text' }],
         },
       }
@@ -76,12 +76,7 @@ export const Feature50DataSource = {
       { name: 'title', children: '解决方案', className: 'title-h1' },
       {
         name: 'content',
-        className: 'title-content',
-        children: '多场景应用',
-      },
-      {
-        name: 'content',
-        children: '鲨丁区块链以成熟的行业解决方案为依托,支持政务上链、智慧城市、供应链金融、存证溯源等多种应用场景快速落地,全面满足企业需求。',
+        children: '鲨丁区块链以成熟的行业解决方案为依托，支持政务上链、智慧城市、供应链金融、存证溯源等多种应用场景快速落地，全面满足企业需求。',
       },
     ],
   },
@@ -320,7 +315,7 @@ export const Content00DataSource = {
   OverPack: { playScale: 0.3, className: '' },
   titleWrapper: {
     className: 'title-wrapper',
-    children: [{ name: 'title', children: '核心优势' },
+    children: [{ name: 'title', children: '核心优势'},
     {name:'content',children:'鲨丁区块链依靠多年分布式系统领域研发经验,通过自主创新,成为集高效、灵活、安全于一身的新一代联盟区块链解决方案。'}],
   },
   childWrapper: {

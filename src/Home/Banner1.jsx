@@ -42,6 +42,7 @@ class Banner extends React.PureComponent {
     });
     return (
       <div {...props} {...dataSource.wrapper}>
+        <a name="gongsidongtai"></a>
         <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}

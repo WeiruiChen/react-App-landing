@@ -44,7 +44,7 @@ class Header extends React.Component {
             {subItem.map(($item, ii) => {
               const { children: childItem } = $item;
               const child = childItem.href ? (
-                <a {...childItem}>
+                <a {...childItem} >
                   {childItem.children.map(getChildrenToRender)}
                 </a>
               ) : (
@@ -63,8 +63,8 @@ class Header extends React.Component {
       }
       return (
         <Item key={item.name} {...itemProps}>
-          <a {...a} className={`header0-item-block ${a.className}`.trim()}>
-            {a.children.map(getChildrenToRender)}
+          <a  {...a} className={`header0-item-block ${a.className}`.trim()}>
+            {a.children.map(getChildrenToRender) }
           </a>
         </Item>
       );

@@ -23,6 +23,7 @@ class Teams1 extends React.PureComponent {
     const listChildren = this.getBlockChildren(dataSource.block.children);
     return (
       <div {...props} {...dataSource.wrapper}>
+        <a name="hezuohuoban"></a>
         <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}

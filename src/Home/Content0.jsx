@@ -16,6 +16,7 @@ class Content extends React.PureComponent {
     } = dataSource;
     return (
       <div {...props} {...wrapper}>
+        <a name="hexinyoushi"></a>
         <div {...page}>
           <div {...titleWrapper}>
             {titleWrapper.children.map(getChildrenToRender)}

@@ -123,6 +123,7 @@ class Content7 extends React.Component {
 
     return (
       <div {...props} {...dataSource.wrapper}>
+      <a name="jiejuefangan"></a>
         <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}
