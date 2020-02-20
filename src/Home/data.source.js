@@ -656,11 +656,26 @@ export const Teams10DataSource = {
               name: 'content1',
               className: 'teams1-content',
               children:
-                `佐治亚理工博士
-                 高性能系统专家
-                 10年软件开发经验
-                 曾就职于谷歌和脸书`,
+                `佐治亚理工博士`,
             },
+            {
+              name: 'content2',
+              className: 'teams1-content',
+              children:
+                `高性能系统专家`,
+            },
+            {
+              name: 'content3',
+              className: 'teams1-content',
+              children:
+                `10年软件开发经验`,
+            },
+            {
+              name: 'content4',
+              className: 'teams1-content',
+              children:
+                `曾就职于谷歌和脸书`,
+            }
           ],
         },
       },
@@ -687,10 +702,25 @@ export const Teams10DataSource = {
               name: 'content1',
               className: 'teams1-content',
               children:
-                `西安交通大学博士
-                 大数据和产品管理专家
-                 投资与孵化从业经验
-                 曾就职于NHN中国、华院数据和六禾资本`,
+                `西安交通大学博士`,
+            },
+            {
+              name: 'content2',
+              className: 'teams1-content',
+              children:
+                `大数据和产品管理专家`,
+            },
+            {
+              name: 'content3',
+              className: 'teams1-content',
+              children:
+                `投资与孵化从业经验`,
+            },
+            {
+              name: 'content4',
+              className: 'teams1-content',
+              children:
+                `曾就职于NHN中国、华院数据和六禾资本`,
             },
           ],
         },
@@ -718,10 +748,25 @@ export const Teams10DataSource = {
               name: 'content1',
               className: 'teams1-content',
               children:
-                `约翰霍普金斯大学硕士
-                 2年华尔街金融从业经验
-                 4年硅谷产品、市场、分析从业经验
-                 曾就职于领英、Wish和Argus`,
+                `约翰霍普金斯大学硕士`,
+            },
+            {
+              name: 'content2',
+              className: 'teams1-content',
+              children:
+                `2年华尔街金融从业经验`,
+            },
+            {
+              name: 'content3',
+              className: 'teams1-content',
+              children:
+                `4年硅谷产品、市场、分析从业经验`,
+            },
+            {
+              name: 'content4',
+              className: 'teams1-content',
+              children:
+                `曾就职于领英、Wish和Argus`,
             },
           ],
         },
