@@ -2,16 +2,23 @@
 
 .@{header0} {
   background: @template-nav-bg-color;
+  position: sticky;
   width: 100%;
   z-index: 1;
   box-shadow: 0 5px 8px fade(#000, 15);
-  position: relative;
   top: 0;
-
   .home-page {
     padding: 0 24px;
   }
 
+  &-div-mobile-amotion {
+    position: fixed;
+    z-index: 100;
+    top: 20px; 
+    right: 10px; 
+    background: #29B6F6;
+    border-radius: 10px
+  }
   &-logo {
     display: inline-block;
     position: relative;
@@ -30,11 +37,11 @@
 
   &-menu {
     float: right;
-
     .ant-menu {
       line-height: 62px;
       height: 64px;
-
+      // position: absolute;
+      z-index: 999;
       a {
         display: block;
       }
@@ -54,7 +61,6 @@
   &-item,
   &-item-child,
   &-menu {
-
     .ant-menu-sub .ant-menu-item,
     .ant-menu-inline .ant-menu-item {
       height: auto;
@@ -90,6 +96,7 @@
   }
 }
 
+
 @media screen and (max-width: 767px) {
   .@{header0} {
     &-logo {
@@ -99,19 +106,40 @@
     &.home-page-wrapper .home-page {
       padding: 0 24px;
     }
+    &-div-mobile-amotion {
+    position: fixed;
+    z-index: 100;
+    top: 20px; 
+    right: 10px; 
+    width:90px;
+    background: #29B6F6;
+    border-radius: 20px;
+     transition: all 1s;
+            -moz-transition: all 1s;
+            -webkit-transition: all 1s;
+            -o-transition:all 1s;
+    }
+    &-div-mobile-amotion-son {
+      font-size: 10px;
+      background: #29B6F6;
+      border-radius: 10px;
+       transition: all 1s;
+              -moz-transition: all 1s;
+              -webkit-transition: all 1s;
+              -o-transition:all 1s;
+  
+      }
 
     &-menu {
       height: auto;
-      float: inherit;
+      // float: right;
       position: relative;
-      left: -24px;
-      width: ~"calc(100% + 48px)";
+      width: ~"calc(30% + 48px)";
       opacity: 0;
       transition: opacity .3s @ease-in-out;
 
       & li {
-        padding: 0 24px;
-
+        padding-left:0!important;
         &.ant-menu-submenu {
           padding: 0;
         }
@@ -120,6 +148,7 @@
         &-sub-item {
           padding: 8px 0;
         }
+        width: 60px;
       }
     }
 
@@ -180,7 +209,6 @@
       }
     }
     &-item-block {
-      height: 40px;
       line-height: 40px;
     }
   }

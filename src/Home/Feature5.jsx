@@ -33,7 +33,7 @@ class Content7 extends React.Component {
       <TabPane
         key={i + 1}
         tab={
-          <div className={tag.className}>
+          <div className={tag.className} style={{marginTop:'17px'}}>
             <Icon type={iconChildren} className={icon.className} />
             <div {...tagText}>{tagText.children}</div>
           </div>
@@ -71,57 +71,30 @@ class Content7 extends React.Component {
   };
 
   render() {
+    // const renderTabBar = (props, DefaultTabBar) => {
+    //   // 提取tab信息
+    //   const tabInfo = [];
+    //   props.panels.forEach(item => {
+    //     tabInfo.push({
+    //       key: item.key,
+    //       title: item.props.tab
+    //     })
+    //   });
+    //   return (
+    //     <div style={{display: 'flex', marginBottom: 16}}>
+    //       {tabInfo.map((item, index) => (
+    //         <div key={item.key}
+    //           onClick={() => this.setState({activeKey: item.key})}
+    //           className={props.activeKey === item.key ? 'activeTab normalTab' : 'normalTab'}>
+    //           <div style={{padding: '0 16px'}}>{item.title}</div>
+    //         </div>)}
+    //     </div>)
+    // };
     const {...props} = this.props;
     const {dataSource} = props;
-    // return (
-    //   <div style={{ marginTop: 10, marginBottom: 10 }}>
-    //     <Accordion defaultActiveKey="0" className="my-accordion" onChange={this.onChange1}>
-    //       <Accordion.Panel header="Title 1">
-    //         <List className="my-list">
-    //           <List.Item>content 1</List.Item>
-    //           <List.Item>content 2</List.Item>
-    //           <List.Item>content 3</List.Item>
-    //         </List>
-    //       </Accordion.Panel>
-    //       <Accordion.Panel header="Title 2" className="pad">this is panel content2 or other</Accordion.Panel>
-    //       <Accordion.Panel header="Title 3" className="pad">
-    //         text text text text text text text text text text text text text text text
-    //       </Accordion.Panel>
-    //     </Accordion>
-    //   </div>
-    // );
-    // if (props.isMobile) getChildrenToRender{
-    // return (
-    //   <div {...props} {...dataSource.wrapper}>
-    //     <div {...dataSource.page}>
-    //       <div {...dataSource.titleWrapper}>
-    //         {dataSource.titleWrapper.children.map(getChildrenToRender)}
-    //       </div>
-
-    //       <div style={{marginTop: 10, marginBottom: 10}}>
-    //         <Accordion  defaultActiveKey="0" className="pad" onChange={this.onChange1} >
-    //           <Accordion.Panel header="1">
-    //           <div><img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwushanglian.png" width="100%"  alt="政务上链"></img></div>
-    //           </Accordion.Panel>
-    //           <Accordion.Panel header="2">
-    //           <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuichengshi.png" width="100%"  alt="智慧城市"></img>
-    //           </Accordion.Panel>
-    //           <Accordion.Panel header="供应链金融">
-    //           </Accordion.Panel>
-    //           <Accordion.Panel header="产品溯源">
-    //           </Accordion.Panel>
-    //           <Accordion.Panel header="数字身份" className="pad"></Accordion.Panel>
-    //         </Accordion>
-    //       </div>
-
-    //     </div>
-    //   </div>
-    // );
-    // }
     delete props.dataSource;
     delete props.isMobile;
     const tabsChildren = dataSource.block.children.map(this.getBlockChildren);
-
     if (this.props.isMobile) {
       return (
         <div>
@@ -242,20 +215,26 @@ class Content7 extends React.Component {
                   leave={{y: 30, opacity: 0}}
                   {...dataSource.tabsWrapper}
                 >
-                  <Tabs
-                    tabPosition="left"
-                    key="tabs"
-                    onChange={this.onChange}
-                    activeKey={`${this.state.current}`}
-                    {...dataSource.block}
-                  >
-                    {tabsChildren}
-                  </Tabs>
+                  {/* <div className="card-container"> */}
+                    <Tabs
+                      tabPosition="left"
+                      key="tabs"
+                      onChange={this.onChange}
+                      activeKey={`${this.state.current}`}
+                      // renderTabBar={}
+                      tabBarStyle={{color: '#0033A1'}}
+                      type="card"
+                      {...dataSource.block}
+                      tabBarGutter={0}
+                    >
+                      {tabsChildren}
+                    </Tabs>
+                  {/* </div> */}
                 </TweenOne.TweenOneGroup>
               </OverPack>
             </div>
           </div>
-        </div>
+        </div >
       );
     }
   }

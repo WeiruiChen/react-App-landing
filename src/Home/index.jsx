@@ -10,6 +10,7 @@ import Content0 from './Content0';
 import Teams1 from './Teams1';
 import Teams2 from './Teams2';
 import Feature5 from './Feature5';
+// import Footer0 from './Footer0';
 import Footer2 from './Footer2';
 
 import {
@@ -21,6 +22,7 @@ import {
   Feature50DataSource,
   Teams10DataSource,
   Footer20DataSource,
+  // Footer01DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
 
@@ -48,15 +50,15 @@ export default class Home extends React.Component {
         anchorElement.scrollIntoView();
       }
       let test = setInterval(function () {
-         anchorElement = document.getElementById(anchorId);
+        anchorElement = document.getElementById(anchorId);
         //  console.log('offsetTop',anchorElement.offsetTop)
         if (anchorElement) {        // 如果对应id的锚点存在，就跳转到锚点
           anchorElement.scrollIntoView();
         }
       }, 30);
-      setTimeout(function(){
+      setTimeout(function () {
         clearInterval(test);
-      },300)
+      }, 300)
     }
   }
 
@@ -133,6 +135,7 @@ export default class Home extends React.Component {
       <Footer2
         id="Footer2_0"
         key="Footer2_0"
+        ToAnchor={this.scrollToAnchor}
         dataSource={Footer20DataSource}
         isMobile={this.state.isMobile}
       />,
@@ -144,6 +147,13 @@ export default class Home extends React.Component {
           this.dom = d;
         }}
       >
+        {/* <div style={{position: 'absolute', zIndex: '999', top: '20px', right: '30px'}}>
+          <div>核心优势</div>
+          <div>解决方案</div>
+          <div>合作伙伴</div>
+          <div>公司动态</div>
+          <div>关于我们</div>
+        </div> */}
         {/* 如果不是 dva 2.0 替换成 {children} start */}
         {this.state.show && children}
         {/* 如果不是 dva 2.0 替换成 {children} end */}

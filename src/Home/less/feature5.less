@@ -1,6 +1,6 @@
 @feature5: feature5;
 .@{feature5}-wrapper {
-   background-color: #fafafa;
+  background-color: #fafafa;
   min-height: 720px;
   .@{feature5} {
     >h1,
@@ -9,39 +9,49 @@
     }
     .title-content {
       text-align: center;
-      font-size: 24px;
+      font-size: 22px;
+    }
+    .title-name1 {
+      font-size:24px;
     }
     &-tag {
       & i {
-        width: 12px;
-        height: 14px;
+        width: 16px;
+        height: 16px;
         display: inline-block;
         vertical-align: middle;
         margin-right: 5px;
+        margin-bottom: 10px;
       }
       &-name {
         display: inline-block;
+        font-size:22px;
       }
+     
     }
     .backzhenwu{
       background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwuicon.png) no-repeat;
-      background-size:12px 12px;
+      background-size:16px 16px;
+
     }
     .zhihui{
       background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuiicon.png) no-repeat;
-      background-size:12px 12px;
+      background-size:16px 16px;
+
     }
     .gongying{
       background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongyingicon.png) no-repeat;
-      background-size:12px 12px;
+      background-size:16px 16px;
+
     }
     .chanping{
       background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanpingicon.png) no-repeat;
-      background-size:12px 12px;
+      background-size:16px 16px;
+
     }
     .shuzi{
       background: url(https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuziicon.png) no-repeat;
-      background-size:12px 12px;
+      background-size:16px 16px;
     }
     .ant-tabs-bar {
       text-align: center;
@@ -55,6 +65,13 @@
         text-align: center;
       }
     }
+    .ant-tabs-tab {
+      height: 75px!important;
+      // border-color: transparent;
+    }
+    // :global.ant-tabs-tab {
+    //   height: 75px !important;
+    // }
     &-tabs-wrapper {
       position: relative;
       margin-top: 24px;
@@ -71,6 +88,32 @@
     }
   
   }
+
+
+  // .card-container > .ant-tabs-card > .ant-tabs-content {
+  //   height: 120px;
+  //   margin-top: -16px;
+  // }
+  
+  // .card-container > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
+  //   background: #fff;
+  //   padding: 16px;
+  // }
+  
+  // .card-container > .ant-tabs-card > .ant-tabs-bar {
+  //   border-color: #fff;
+  // }
+  
+  // .card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+  //   border-color: transparent;
+  //   background: transparent;
+  //   height: 75px;
+  // }
+  
+  // .card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+  //   border-color: #fff;
+  //   background: #fff;
+  // }
 }
 
 @media screen and (max-width: 767px) {

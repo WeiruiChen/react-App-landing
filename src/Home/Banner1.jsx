@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Row, Col, Carousel} from 'antd';
+import {Card, Row, Col, Carousel, Icon} from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import {Element} from 'rc-banner-anim';
 import {getChildrenToRender} from './utils';
@@ -12,12 +12,20 @@ class Banner extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {show: false};
+    this.next = this.next.bind(this);
+    this.prev = this.prev.bind(this);
 
     // 这边绑定是必要的，这样 `this` 才能在回调函数中使用
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
     this.setState({show: true});
+  }
+  next() {
+    this.slider.slick.slickNext();
+  }
+  prev() {
+    this.slider.slick.slickPrev();
   }
 
   render() {
@@ -48,8 +56,6 @@ class Banner extends React.PureComponent {
     if (this.props.isMobile) {
       return (
         <div>
-          <a name="gongsidongtai"></a>
-
           <div {...props} {...dataSource.wrapper}>
             <div {...dataSource.page}>
               <div {...dataSource.titleWrapper} style={{display: 'inline'}}>
@@ -183,52 +189,63 @@ class Banner extends React.PureComponent {
               <div {...dataSource.titleWrapper}>
                 {dataSource.titleWrapper.children.map(getChildrenToRender)}
               </div>
-              <Carousel autoplay >
-                <div>
-                  <Row style={{marginTop: '50px'}} type="flex" align="bottom" justify="space-around">
-                    <Col span={6} > <Card hoverable
-                      cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/dZkxf3XMaCN5dNkq_M4h-g")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg1.png" />}
-                    >
-                      <Meta title={<div>
-                        <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain为北京邮电大学新生进行区块链讲座</span>
-                      </div>} description="2019.12.10" />
-                    </Card></Col>
-                    <Col span={6} offset={1}><Card hoverable
-                      cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/13B853SzdDNhjvREKAU67Q")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg2.png" />}
-                    >
-                      <Meta title={<div>
-                        <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain项目进展报告:2020年1月</span>
-                      </div>} description="2020.2.1" />
-                    </Card></Col>
-                    <Col span={6} offset={1}><Card hoverable
-                      cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/-cyJSlebhtjI3ZSxi4Le9w")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg3.png" />}
-                    >
-                      <Meta title={<div>
-                        <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain开启开发者悬赏开发主网工具可获万元奖励</span>
-                      </div>} description="2020.1.16" />
-                    </Card></Col>
-                  </Row>
-                </div>
-                <div >
-                  <Row style={{marginTop: '50px'}} type="flex" align="bottom" justify="space-around">
-                    <Col span={6} > <Card hoverable
-                      cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/KVwTNHBjDLjENA9H2BVnLg")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongao4.png" />}
-                    >
-                      <Meta title={<div>
-                        <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain夸克链需要更高的舞台 TPS比赛冠军采访</span>
-                      </div>} description="2020.1.10" />
-                    </Card></Col>
-                    <Col span={6} offset={1}><Card hoverable
-                      cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/PoAqGiSNoRpWSFTh89VxBQ")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gonggao5.png" />}
-                    >
-                      <Meta title={<div>
-                        <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain CMO跨年直播|都说19年是公链的“滑铁卢”，2020公链如何东山再起？</span>
-                      </div>} description="2020.1.1" />
-                    </Card></Col>
-                    <Col span={6} offset={1}></Col>
-                  </Row>
-                </div>
-              </Carousel>
+              <div style={{background:'#F4F6F9'}}>
+              <Row>
+                <Col span={1} style={{textAlign:'center'}}>
+              <Icon type="left-circle" style={{fontSize:'30px',marginTop:'185px'}}  onClick={this.prev} />   
+              </Col> 
+              <Col span={22}><Carousel autoplay ref={el => (this.slider = el)}>
+                  <div>
+                    <Row style={{marginTop: '50px'}} type="flex" align="bottom" justify="space-around">
+                      <Col span={6} > <Card hoverable
+                        cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/dZkxf3XMaCN5dNkq_M4h-g")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg1.png" />}
+                      >
+                        <Meta title={<div>
+                          <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain为北京邮电大学新生进行区块链讲座</span>
+                        </div>} description="2019.12.10" />
+                      </Card></Col>
+                      <Col span={6} offset={1}><Card hoverable
+                        cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/13B853SzdDNhjvREKAU67Q")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg2.png" />}
+                      >
+                        <Meta title={<div>
+                          <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain项目进展报告:2020年1月</span>
+                        </div>} description="2020.2.1" />
+                      </Card></Col>
+                      <Col span={6} offset={1}><Card hoverable
+                        cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/-cyJSlebhtjI3ZSxi4Le9w")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg3.png" />}
+                      >
+                        <Meta title={<div>
+                          <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain开启开发者悬赏开发主网工具可获万元奖励</span>
+                        </div>} description="2020.1.16" />
+                      </Card></Col>
+                    </Row>
+                  </div>
+                  <div >
+                    <Row style={{marginTop: '50px'}} type="flex" align="bottom" justify="space-around">
+                      <Col span={6} > <Card hoverable
+                        cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/KVwTNHBjDLjENA9H2BVnLg")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongao4.png" />}
+                      >
+                        <Meta title={<div>
+                          <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain夸克链需要更高的舞台 TPS比赛冠军采访</span>
+                        </div>} description="2020.1.10" />
+                      </Card></Col>
+                      <Col span={6} offset={1}><Card hoverable
+                        cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/PoAqGiSNoRpWSFTh89VxBQ")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gonggao5.png" />}
+                      >
+                        <Meta title={<div>
+                          <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain CMO跨年直播|都说19年是公链的“滑铁卢”，2020公链如何东山再起？</span>
+                        </div>} description="2020.1.1" />
+                      </Card></Col>
+                      <Col span={6} offset={1}></Col>
+                    </Row>
+                  </div>
+                </Carousel>
+                </Col>
+                <Col span={1} style={{textAlign:'center'}}>
+                <Icon type="right-circle" style={{fontSize:'30px',marginTop:'185px'}} onClick={this.next} />
+                </Col>
+                </Row>
+              </div>
             </div>
           </div>
         </div>

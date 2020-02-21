@@ -16,7 +16,7 @@ class Footer2 extends React.PureComponent {
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>Email: margaret.xie@shadingtech.com</h2>
           <div {...props} {...dataSource.wrapper} style={{margin: 'auto 0'}}>
             <div style={{width: '30%', height: '100%', float: 'left', marginLeft: '20%'}}>
-              <img style={{width:'100%',height:'100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/logo-02.png" atl="logo"></img>
+              <img style={{width: '100%', height: '100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/logo-02.png" atl="logo"></img>
             </div>
             <div style={{float: 'right', marginRight: '30%'}}>
               <div>核心优势</div>
@@ -31,6 +31,7 @@ class Footer2 extends React.PureComponent {
     } else {
       return (
         <div>
+
           <h1 style={{fontSize: '32px', margin: ' 0 auto', textAlign: 'center'}}>联系我们</h1>
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>Email: margaret.xie@shadingtech.com</h2>
           <div {...props} {...dataSource.wrapper}>
@@ -54,21 +55,21 @@ class Footer2 extends React.PureComponent {
                 {...dataSource.copyright}
               >
                 {dataSource.copyright.children.map((item, i) =>
-                  React.createElement(
-                    item.name.indexOf('title') === 0 ? 'h1' : 'div',
-                    {key: i.toString(), ...item},
-                    typeof item.children === 'string' && item.children.match(isImg)
-                      ? React.createElement('img', {
-                        src: item.children,
-                        alt: 'img',
-                      })
-                      : item.children
-                  )
+                  <div onClick={() => {this.props.ToAnchor(item.href)}} style={{marginLeft:'20px'}} key={item.href}>{item.children}</div>
                 )}
+              </TweenOne>
+              <TweenOne
+                animation={{y: '+=30', opacity: 0, type: 'from'}}
+                key="footer"
+                {...dataSource.copyright}
+                style={{textAlign: 'center',marginRight:'40px'}}
+              >
+                {dataSource.copyright1.children}
               </TweenOne>
             </OverPack>
           </div>
         </div >
+
       );
     }
   }
