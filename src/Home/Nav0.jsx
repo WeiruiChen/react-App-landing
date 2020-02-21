@@ -39,8 +39,8 @@ class Header extends React.Component {
       if (this.props.isMobile) {
         return (
           <Item key={item.name} {...itemProps} style={{
-            width: '94px'}}>
-            <div onClick={() => {this.props.ToAnchor(item.children.href)}} style={{fontSize: '10px', position: 'relative'}}>
+            width: '70px'}}>
+            <div onClick={() => {this.props.ToAnchor(item.children.href)}} style={{fontSize: '10px', marginLeft:'-24px',color:'#000'}}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>
@@ -59,7 +59,7 @@ class Header extends React.Component {
     if (this.props.isMobile) {
       return (
         <div id='father' className="header0-div-mobile-amotion">
-          <Button onClick={this.toggleOn} icon="menu" ghost style={{margin: '10px 0 0 30px', }}></Button>
+          <Button onClick={this.toggleOn} icon="menu" ghost style={{margin: '10px 0 0 20px', }}></Button>
           <div className="header0-div-mobile-amotion-son" style={{textAlign: 'center'}} id='son'>
             <Menu
               mode={isMobile ? 'inline' : 'horizontal'}
@@ -69,11 +69,6 @@ class Header extends React.Component {
             >
               {navChildren}
             </Menu>
-            {/* <div style={{marginTop: '5px', height: '30px'}}>核心优势</div>
-            <div style={{marginTop: '5px', height: '30px'}}>解决方案</div>
-            <div style={{marginTop: '5px', height: '30px'}}>合作伙伴</div>
-            <div style={{marginTop: '5px', height: '30px'}}>公司动态</div>
-            <div style={{marginTop: '5px', height: '30px'}}>关于我们</div> */}
           </div>
         </div>
       );

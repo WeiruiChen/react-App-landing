@@ -54,7 +54,8 @@ export const Nav00DataSource = {
   mobileMenu: {className: 'header0-mobile-menu'},
 };
 export const Banner01DataSource = {
-  wrapper: {className: 'banner0'},
+  wrapper: {className: 'home-page-wrapper content0-wrapper banner0'},
+  page: {className: 'home-page content0'},
   textWrapper: {className: 'banner0-text-wrapper'},
   title: {
     className: 'banner0-title',
@@ -64,7 +65,6 @@ export const Banner01DataSource = {
     className: 'banner0-title',
     children: '引领自主可控区块链技术和产业发展潮流',
   },
-  button: {className: 'banner0-button', children: 'Learn More'},
 };
 export const Feature50DataSource = {
   wrapper: {className: 'home-page-wrapper feature5-wrapper'},
@@ -193,7 +193,8 @@ export const Feature50DataSource = {
   },
 };
 export const Banner10DataSource = {
-  wrapper: {className: 'banner1'},
+  wrapper: {className: 'home-page-wrapper content0-wrapper banner1'},
+  page: {className: 'home-page content0'},
   titleWrapper: {
     className: 'title-wrapper',
     children: [
