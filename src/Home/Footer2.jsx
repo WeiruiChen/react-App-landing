@@ -1,6 +1,7 @@
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import {Button} from 'antd';
 import {isImg} from './utils';
 
 class Footer2 extends React.PureComponent {
@@ -12,19 +13,22 @@ class Footer2 extends React.PureComponent {
     if (this.props.isMobile) {
       return (
         <div>
-          <div style={{
+          {/* <div style={{
             height: '40px',width:'80%',marginLeft:'10%', textAlign: 'center', marginBottom: '10px',borderStyle:'outset',
             borderRadius:'2px',borderColor:'#000',borderWidth:'2px'
           }}>
             <a style={{paddingTop: '20px', fontSize: '20px'}} href="mailto:margaret.xie@shadingtech.com">Email: margaret.xie@shadingtech.com</a>
-          </div>
+          </div> */}
+          <Button onClick={() => {
+            window.location.href = "mailto:margaret.xie@shadingtech.com";
+          }} style={{height: '40px', width: '80%', marginLeft: '10%', marginBottom: '10px', textAlign: 'center'}}>Email: margaret.xie@shadingtech.com</Button>
           {/* <h1 style={{fontSize: '32px', margin: ' 0 auto', textAlign: 'center'}}>联系我们</h1>
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>Email: margaret.xie@shadingtech.com</h2> */}
-          <div {...props} {...dataSource.wrapper} style={{margin: 'auto 0',height:'90px'}}>
+          <div {...props} {...dataSource.wrapper} style={{margin: 'auto 0', height: '90px'}}>
             <div style={{width: '30%', height: '100%', float: 'left', marginLeft: '10%'}}>
               <img style={{width: '100%', height: '100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/logo-02.png" atl="logo"></img>
             </div>
-            <div style={{float: 'right',fontSize:'5px'}}>
+            <div style={{float: 'right', fontSize: '5px'}}>
               <div >核心优势</div>
               <div >联系方式</div>
               <div>合作伙伴</div>
@@ -39,7 +43,9 @@ class Footer2 extends React.PureComponent {
         <div>
 
           <h1 style={{fontSize: '32px', margin: ' 0 auto', textAlign: 'center'}}>联系我们</h1>
-          <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>Email: margaret.xie@shadingtech.com</h2>
+          <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>
+            <a style={{fontSize: '20px'}} href="mailto:margaret.xie@shadingtech.com">Email: margaret.xie@shadingtech.com</a>
+          </h2>
           <div {...props} {...dataSource.wrapper}>
             {/* <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
