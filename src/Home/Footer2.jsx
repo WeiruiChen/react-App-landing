@@ -28,7 +28,7 @@ class Footer2 extends React.PureComponent {
             <div style={{width: '30%', height: '100%', float: 'left', marginLeft: '10%'}}>
               <img style={{width: '100%', height: '100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/logo-02.png" atl="logo"></img>
             </div>
-            <div style={{float: 'right', fontSize: '5px'}}>
+            <div style={{float: 'right',paddingTop:'5px',fontSize:'10px'}}>
               <div >核心优势</div>
               <div >联系方式</div>
               <div>合作伙伴</div>

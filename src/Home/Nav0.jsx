@@ -39,8 +39,9 @@ class Header extends React.Component {
       if (this.props.isMobile) {
         return (
           <Item key={item.name} {...itemProps} style={{
-            width: '70px'}}>
-            <div onClick={() => {this.props.ToAnchor(item.children.href)}} style={{fontSize: '10px', marginLeft:'-24px',color:'#000'}}>
+            width: '70px'
+          }}>
+            <div onClick={() => {this.props.ToAnchor(item.children.href)}} style={{fontSize: '10px', marginLeft: '-24px', color: '#000'}}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>
@@ -58,9 +59,9 @@ class Header extends React.Component {
     const moment = phoneOpen === undefined ? 300 : null;
     if (this.props.isMobile) {
       return (
-        <div id='father' className="header0-div-mobile-amotion">
+        <div id='father' className="header0-div-mobile-amotion" style={{height: '50px'}}>
           <Button onClick={this.toggleOn} icon="menu" ghost style={{margin: '10px 0 0 20px', }}></Button>
-          <div className="header0-div-mobile-amotion-son" style={{textAlign: 'center'}} id='son'>
+          <div className="header0-div-mobile-amotion-son" style={{textAlign: 'center',display:'none'}} id='son'>
             <Menu
               mode={isMobile ? 'inline' : 'horizontal'}
               defaultSelectedKeys={['sub0']}
