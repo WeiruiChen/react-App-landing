@@ -66,7 +66,6 @@ class Header extends React.Component {
             >
               <img width="50%" src={dataSource.logo.children} alt="img" />
             </TweenOne>
-            {isMobile && (
               <div
                 {...dataSource.mobileMenu}
                 onClick={() => {
@@ -77,7 +76,6 @@ class Header extends React.Component {
                 <em />
                 <em />
               </div>
-            )}
             <TweenOne
               {...dataSource.Menu}
               animation={
@@ -99,6 +97,7 @@ class Header extends React.Component {
             >
               <Menu
                 mode='horizontal'
+                theme="theme"
               >
                 {navChildren}
               </Menu>
