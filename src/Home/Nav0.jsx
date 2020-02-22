@@ -28,18 +28,18 @@ class Header extends React.Component {
       if (this.props.isMobile) {
         return (
           <Item key={item.name} {...itemProps} style={{
-            width: '70px'
+            width: '50px'
           }}>
-            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = item.children.href} }}
-              style={{fontSize: '10px', color: '#000'}}>
-              {a.children.map(getChildrenToRender)}
+            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:margaret.xie@shadingtech.com"} }}
+              style={{fontSize: '10px', color: '#000'}} >
+                {a.children.map(getChildrenToRender)}
             </div>
           </Item>
         );
       } else {
         return (
           <Item key={item.name} {...itemProps}>
-            <div onClick={() => { if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = 'mailto:margaret.xie@shadingtech.com'} }} className={`header0-item-block ${a.className}`.trim()}>
+            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:margaret.xie@shadingtech.com"} }} className={`header0-item-block ${a.className}`.trim()}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>
@@ -98,10 +98,7 @@ class Header extends React.Component {
               reverse={!!phoneOpen}
             >
               <Menu
-                mode={isMobile ? 'horizontal' : 'horizontal'}
-                defaultSelectedKeys={['sub0']}
-                theme="theme"
-                inlineCollapsed={false}
+                mode='horizontal'
               >
                 {navChildren}
               </Menu>
