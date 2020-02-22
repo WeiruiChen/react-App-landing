@@ -2,6 +2,7 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import {Tabs, Icon, Row, Col} from 'antd';
+import Zmage from 'react-zmage'
 import {Collapse} from 'antd';
 import {getChildrenToRender} from './utils';
 
@@ -29,64 +30,47 @@ class Content7 extends React.Component {
     const {icon} = tag;
     const iconChildren = icon.children;
     const tagText = tag.text;
-    if (i === 0) {
-      return (
-        <TabPane
-          key={0}
-          disabled
-          style={{backgroundColor: '#9EA6B3!important'}}
-          tab={
-            <div className={tag.className} style={{marginTop: '17px'}}>
-              <Icon type={iconChildren} className={icon.className} />
-              <div {...tagText}>{tagText.children}</div>
-            </div>
-          }
-          className={item.className}
+
+    return (
+      <TabPane
+        key={i + 1}
+        tab={
+          <div className={tag.className} style={{marginTop: '17px'}}>
+            <Icon type={iconChildren} className={icon.className} />
+            <div {...tagText}>{tagText.children}</div>
+          </div>
+        }
+        className={item.className}
+      >
+        <TweenOne.TweenOneGroup
+          enter={{
+            y: 30,
+            delay: 300,
+            opacity: 0,
+            type: 'from',
+            ease: 'easeOutQuad',
+          }}
+          leave={null}
+          component=""
         >
-        </TabPane>
-      )
-    } else {
-      return (
-        <TabPane
-          key={i + 1}
-          tab={
-            <div className={tag.className} style={{marginTop: '17px'}}>
-              <Icon type={iconChildren} className={icon.className} />
-              <div {...tagText}>{tagText.children}</div>
-            </div>
-          }
-          className={item.className}
-        >
-          <TweenOne.TweenOneGroup
-            enter={{
-              y: 30,
-              delay: 300,
-              opacity: 0,
-              type: 'from',
-              ease: 'easeOutQuad',
-            }}
-            leave={null}
-            component=""
-          >
-            {this.state.current === i + 1 && (
-              <Row
-                key="content"
-                className={content.className}
-                gutter={content.gutter}
-              >
-                <Col className={text.className} xs={text.xs} md={text.md}>
-                  {textChildren}
-                </Col>
-                {/* <Col className={img.className} xs={img.xs} md={img.md}>
+          {this.state.current === i + 1 && (
+            <Row
+              key="content"
+              className={content.className}
+              gutter={content.gutter}
+            >
+              <Col className={text.className} xs={text.xs} md={text.md}>
+                {textChildren}
+              </Col>
+              {/* <Col className={img.className} xs={img.xs} md={img.md}>
                 <img src={img.children} width="100%" alt="img" />
               </Col> */}
-              </Row>
-            )}
-          </TweenOne.TweenOneGroup>
-        </TabPane>
+            </Row>
+          )}
+        </TweenOne.TweenOneGroup>
+      </TabPane>
     );
-  }
-};
+  };
 
   render() {
     // const renderTabBar = (props, DefaultTabBar) => {
@@ -116,8 +100,9 @@ class Content7 extends React.Component {
     if (this.props.isMobile) {
       return (
         <div>
-          <a name="jiejuefangan" ></a>
-          <div {...props} {...dataSource.wrapper}>
+          <div {...props} {...dataSource.wrapper} style={{
+            minHeight: '300px'
+          }}>
             <div {...dataSource.page}>
               <div {...dataSource.titleWrapper}>
                 {dataSource.titleWrapper.children.map(getChildrenToRender)}
@@ -134,7 +119,8 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwushanglian.png" width="100%" alt="政务上链"></img>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwushanglian.png" width="100%" alt="政务上链">
+                      </Zmage>
                     </div>
                   </Panel>
                 </Collapse>
@@ -151,7 +137,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuichengshi.png" width="100%" alt="智慧城市"></img>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuichengshi.png" width="100%" alt="智慧城市"></Zmage>
                     </div>
                   </Panel>
                 </Collapse>
@@ -168,7 +154,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongyinglianjinrong.png" width="100%" alt="供应链金融"></img>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongyinglianjinrong.png" width="100%" alt="供应链金融"></Zmage>
                     </div>
                   </Panel>
                 </Collapse>
@@ -185,7 +171,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanping.png" width="100%" alt="产品溯源"></img>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanping.png" width="100%" alt="产品溯源"></Zmage>
                     </div>
                   </Panel>
                 </Collapse>
@@ -202,7 +188,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuzi.png" width="100%" alt="数字身份"></img>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuzi.png" width="100%" alt="数字身份"></Zmage>
                     </div>
                   </Panel>
                 </Collapse>

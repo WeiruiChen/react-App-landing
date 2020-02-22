@@ -19,17 +19,6 @@ class Header extends React.Component {
     });
   };
 
-  // toggleOn() {
-  //   let styleFather = document.getElementById('father').style;
-  //   if (styleFather.height == '50px') {
-  //     document.getElementById('father').style.height = "212px";
-  //     document.getElementById('son').style.display = 'block';
-  //   } else {
-  //     document.getElementById('father').style.height = "50px";
-  //     document.getElementById('son').style.display = 'none';
-  //   }
-
-  // }
   render() {
     const {dataSource, isMobile, ...props} = this.props;
     const {phoneOpen} = this.state;
@@ -41,7 +30,8 @@ class Header extends React.Component {
           <Item key={item.name} {...itemProps} style={{
             width: '70px'
           }}>
-            <div onClick={() => {this.props.ToAnchor(item.children.href)}} style={{fontSize: '10px',  color: '#000'}}>
+            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = item.children.href} }}
+              style={{fontSize: '10px', color: '#000'}}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>
@@ -49,7 +39,7 @@ class Header extends React.Component {
       } else {
         return (
           <Item key={item.name} {...itemProps}>
-            <div onClick={() => {this.props.ToAnchor(item.children.href)}} className={`header0-item-block ${a.className}`.trim()}>
+            <div onClick={() => { if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = 'mailto:margaret.xie@shadingtech.com'} }} className={`header0-item-block ${a.className}`.trim()}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>

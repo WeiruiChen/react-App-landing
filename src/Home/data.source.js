@@ -48,6 +48,14 @@ export const Nav00DataSource = {
           href: 'Teams1_0',
           children: [{children: '关于我们', name: 'text'}],
         },
+      },
+      {
+        name: 'mail',
+        className: 'header0-item',
+        children: {
+          href: 'margaret.xie@shadingtech.com',
+          children: [{children: '联系我们', name: 'text'}],
+        },
       }
     ],
   },
@@ -82,29 +90,8 @@ export const Feature50DataSource = {
   },
   tabsWrapper: {className: 'feature5-tabs-wrapper'},
   block: {
-    
+
     children: [
-      {
-        name: 'block-0',
-        tag: {
-          className: 'feature5-tag',
-          text: {children: '多应用场景', className: 'feature5-tag-name'},
-          icon: {children: '', className: ''},
-          disabled:'true'
-        },
-        content: {
-          className: '',
-          text: {
-            className: '',
-            md: 24,
-            xs: 30,
-            children: (
-              <>
-              </>
-            ),
-          }
-        },
-      },
       {
         name: 'block0',
         tag: {
@@ -812,7 +799,7 @@ export const Teams20DataSource = {
       {
         name: 'block0',
         className: 'block',
-        md: 8,
+        md: 6,
         xs: 8,
         titleWrapper: {
           children: [
@@ -820,7 +807,7 @@ export const Teams20DataSource = {
               name: 'image',
               className: 'teams2-image',
               children:
-                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/hezuo1.png'
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/hezuo1.jpg'
             }
           ],
         },
@@ -828,23 +815,7 @@ export const Teams20DataSource = {
       {
         name: 'block1',
         className: 'block',
-        md: 8,
-        xs: 8,
-        titleWrapper: {
-          children: [
-            {
-              name: 'image',
-              className: 'teams2-mid',
-              children:
-                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/hezuo2.png',
-            }
-          ],
-        },
-      },
-      {
-        name: 'block2',
-        className: 'block',
-        md: 8,
+        md: 6,
         xs: 8,
         titleWrapper: {
           children: [
@@ -852,7 +823,39 @@ export const Teams20DataSource = {
               name: 'image',
               className: 'teams2-image',
               children:
-                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/hezuo3.png',
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/hezuo3.jpg',
+            }
+          ],
+        },
+      },
+      {
+        name: 'block2',
+        className: 'block',
+        md: 6,
+        xs: 8,
+        titleWrapper: {
+          children: [
+            {
+              name: 'image',
+              className: 'teams2-image',
+              children:
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/hezuo3.jpg',
+            }
+          ],
+        },
+      },
+      {
+        name: 'block3',
+        className: 'block',
+        md: 6,
+        xs: 8,
+        titleWrapper: {
+          children: [
+            {
+              name: 'image',
+              className: 'teams2-image',
+              children:
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/hezuo3.jpg',
             }
           ],
         },
@@ -872,7 +875,7 @@ export const Footer20DataSource = {
     children: (
       <>
         <span>
-          ©2020 <a href="http://119.23.79.90:3000">鲨丁网</a> All Rights
+          ©2020 <a href="http://119.23.79.90:3000"> 鲨丁网 </a> All Rights
           Reserved
         </span>
       </>

@@ -180,21 +180,34 @@ class Banner extends React.PureComponent {
                           cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/dZkxf3XMaCN5dNkq_M4h-g")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg1.png" />}
                         >
                           <Meta title={<div>
-                            <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain为北京邮电大学新生进行区块链讲座</span>
+                            <span style={{
+                              fontSize: '14px',
+                              display: 'block',
+                              whiteSpace: 'pre-wrap',
+                              color: '#0033A1', wordBreak: 'normal', display: 'block', wordWarp: 'break-word', overflow: 'hidden'
+                            }}>QuarkChain为北京邮电大学新生进行区块链讲座</span>
                           </div>} description="2019.12.10" />
                         </Card></Col>
                         <Col span={6} offset={1}><Card hoverable
                           cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/13B853SzdDNhjvREKAU67Q")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg2.png" />}
                         >
                           <Meta title={<div>
-                            <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain项目进展报告:2020年1月</span>
+                            <span style={{
+                              fontSize: '14px', color: '#0033A1', display: 'block',
+                              whiteSpace: 'pre-wrap',
+                              color: '#0033A1', wordBreak: 'normal', display: 'block', wordWarp: 'break-word', overflow: 'hidden'
+                            }}>QuarkChain项目进展报告:2020年1月</span>
                           </div>} description="2020.2.1" />
                         </Card></Col>
                         <Col span={6} offset={1}><Card hoverable
                           cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/-cyJSlebhtjI3ZSxi4Le9w")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg3.png" />}
                         >
                           <Meta title={<div>
-                            <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain开启开发者悬赏开发主网工具可获万元奖励</span>
+                            <span style={{
+                              fontSize: '14px', color: '#0033A1', display: 'block',
+                              whiteSpace: 'pre-wrap',
+                              color: '#0033A1', wordBreak: 'normal', display: 'block', wordWarp: 'break-word', overflow: 'hidden'
+                            }}>QuarkChain开启开发者悬赏开发主网工具可获万元奖励</span>
                           </div>} description="2020.1.16" />
                         </Card></Col>
                       </Row>
@@ -205,15 +218,24 @@ class Banner extends React.PureComponent {
                           cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/KVwTNHBjDLjENA9H2BVnLg")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongao4.png" />}
                         >
                           <Meta title={<div>
-                            <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain夸克链需要更高的舞台 TPS比赛冠军采访</span>
+                            <span style={{
+                              fontSize: '14px', color: '#0033A1', display: 'block',
+                              whiteSpace: 'pre-wrap',
+                              color: '#0033A1', wordBreak: 'normal', display: 'block', wordWarp: 'break-word', overflow: 'hidden'
+                            }}>QuarkChain夸克链需要更高的舞台 TPS比赛冠军采访</span>
                           </div>} description="2020.1.10" />
                         </Card></Col>
                         <Col span={6} offset={1}><Card hoverable
                           cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/PoAqGiSNoRpWSFTh89VxBQ")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gonggao5.png" />}
                         >
-                          <Meta title={<div>
-                            <span style={{fontSize: '10px', color: '#0033A1'}}>QuarkChain CMO跨年直播|都说19年是公链的“滑铁卢”，2020公链如何东山再起？</span>
-                          </div>} description="2020.1.1" />
+                          <Meta title={
+                            <div>
+                              <span style={{
+                                fontSize: '14px', color: '#0033A1', wordBreak: 'normal', display: 'block', wordWarp: 'break-word', overflow: 'hidden'
+                              }}>QuarkChain CMO跨年直播|都</span>
+                              <span className="show-text"> 说19年是公链的“滑铁卢”,2020公链如何东山再起？</span>
+                            </div>
+                          } description="2020.1.1" />
                         </Card></Col>
                         <Col span={6} offset={1}></Col>
                       </Row>
