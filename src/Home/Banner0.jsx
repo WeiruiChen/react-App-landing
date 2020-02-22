@@ -1,7 +1,5 @@
 import React from 'react';
-import {Icon} from 'antd';
 import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
 import {isImg} from './utils';
 
 class Banner extends React.PureComponent {

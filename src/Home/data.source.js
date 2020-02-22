@@ -107,7 +107,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwushanglian.png" width="100%" alt="政务上链"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwu-newest.png" width="100%" alt="政务上链"></img>
               </>
             ),
           }
@@ -128,7 +128,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuichengshi.png" width="100%" alt="智慧城市"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihui-newest.png" width="100%" alt="智慧城市"></img>
               </>
             ),
           }
@@ -149,7 +149,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongyinglianjinrong.png" width="100%" alt="供应链金融"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongying-newest.png" width="100%" alt="供应链金融"></img>
               </>
             ),
           }
@@ -170,7 +170,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanping.png" width="100%" alt="产品溯源"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanping-newest.png" width="100%" alt="产品溯源"></img>
               </>
             ),
           }
@@ -191,7 +191,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuzi.png" width="100%" alt="数字身份"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuzi-newest.png" width="100%" alt="数字身份"></img>
               </>
             ),
           }
@@ -259,66 +259,7 @@ export const Banner10DataSource = {
     ],
   },
 };
-// export const Banner10DataSource = {
-//   wrapper: { className: 'banner1' },
-//   // titleWrapper: {
-//   //   className: 'title-wrapper',
-//   //   children: [{ name: 'title', children: '核心优势' },
-//   //   {name:'content',children:'鲨丁区块链依靠多年分布式系统领域研发经验,通过自主创新,成为集高效、灵活、安全于一身的新一代联盟区块链解决方案。'}],
-//   // },
-//   BannerAnim: {
-//     children: [
-//       {
-//         name: 'elem0',
-//         BannerElement: { className: 'banner-user-elem' },
-//         textWrapper: { className: 'banner1-text-wrapper' },
-//         bg: { className: 'bg bg0' },
-//         title: {
-//           className: 'banner1-title',
-//           children:
-//             'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-//         },
-//         content: {
-//           className: 'banner1-content',
-//           children: '一个高效的页面动画解决方案',
-//         },
-//         button: { className: 'banner1-button', children: 'Learn More' },
-//       },
-//       {
-//         name: 'elem1',
-//         BannerElement: { className: 'banner-user-elem' },
-//         textWrapper: { className: 'banner1-text-wrapper' },
-//         bg: { className: 'bg bg1' },
-//         title: {
-//           className: 'banner1-title',
-//           children:
-//             'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-//         },
-//         content: {
-//           className: 'banner1-content',
-//           children: '一个高效的页面动画解决方案',
-//         },
-//         button: { className: 'banner1-button', children: 'Learn More' },
-//       },
-//       {
-//         name: 'elem2',
-//         BannerElement: { className: 'banner-user-elem' },
-//         textWrapper: { className: 'banner1-text-wrapper' },
-//         bg: { className: 'bg bg1' },
-//         title: {
-//           className: 'banner1-title',
-//           children:
-//             'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-//         },
-//         content: {
-//           className: 'banner1-content',
-//           children: '一个高效的页面动画解决方案',
-//         },
-//         button: { className: 'banner1-button', children: 'Learn More' },
-//       },
-//     ],
-//   },
-// };
+
 export const Content00DataSource = {
   wrapper: {className: 'home-page-wrapper content0-wrapper'},
   page: {className: 'home-page content0'},
@@ -343,7 +284,7 @@ export const Content00DataSource = {
               name: 'image',
               className: 'content0-block-icon',
               children:
-                'http://chuantu.xyz/t6/720/1582022961x2728265626.png',
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chuangxin.svg',
             },
             {
               name: 'title',
@@ -366,7 +307,7 @@ export const Content00DataSource = {
               name: 'image',
               className: 'content0-block-icon',
               children:
-                'http://chuantu.xyz/t6/720/1582023377x3661913030.png',
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/linghuo.svg',
             },
             {
               name: 'title',
@@ -392,7 +333,7 @@ export const Content00DataSource = {
               name: 'image',
               className: 'content0-block-icon',
               children:
-                'http://chuantu.xyz/t6/720/1582023507x3703728804.png',
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/anquan.svg',
             },
             {
               name: 'title',
@@ -423,14 +364,14 @@ export const Content00DataSource = {
               name: 'image',
               className: 'content0-block-icon',
               children:
-                'http://chuantu.xyz/t6/720/1582023959x3703728804.png',
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gaoxiao.svg',
             },
             {
               name: 'title',
               className: 'content0-block-title',
               children: '高效共识',
             },
-            {name: 'content', children: '支持多种CFT/BFT联盟链共识算法'},
+            {name: 'content', children: '111支持多种CFT/BFT联盟链共识算法'},
           ],
         },
       },
@@ -446,7 +387,7 @@ export const Content00DataSource = {
               name: 'image',
               className: 'content0-block-icon',
               children:
-                'hhttp://chuantu.xyz/t6/720/1582024009x3661913030.png',
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/wujian.svg',
             },
             {
               name: 'title',
@@ -472,7 +413,7 @@ export const Content00DataSource = {
               name: 'image',
               className: 'content0-block-icon',
               children:
-                'http://chuantu.xyz/t6/720/1582024077x3661913030.png',
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/anxu.svg',
             },
             {
               name: 'title',
@@ -489,144 +430,7 @@ export const Content00DataSource = {
     ],
   },
 };
-export const Content50DataSource = {
-  wrapper: {className: 'home-page-wrapper content5-wrapper'},
-  page: {className: 'home-page content5'},
-  OverPack: {playScale: 0.3, className: ''},
-  titleWrapper: {
-    className: 'title-wrapper',
-    children: [
-      {name: 'title', children: '解决方案', className: 'title-h1'},
-      {
-        name: 'content',
-        className: 'title-content',
-        children: '多场景应用',
-      },
-      {
-        name: 'content',
-        children: '鲨丁区块链以成熟的行业解决方案为依托,支持政务上链、智慧城市、供应链金融、存证溯源等多种应用场景快速落地,全面满足企业需求。',
-      },
-    ],
-  },
-  block: {
-    className: 'content5-img-wrapper',
-    gutter: 16,
-    children: [
-      {
-        name: 'block0',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: {className: 'content5-block-content'},
-          img: {
-            children:
-              'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
-          },
-          content: {children: 'Ant Design'},
-        },
-      },
-      {
-        name: 'block1',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: {className: 'content5-block-content'},
-          img: {
-            children:
-              'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
-          },
-          content: {children: 'Ant Motion'},
-        },
-      },
-      {
-        name: 'block2',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: {className: 'content5-block-content'},
-          img: {
-            children:
-              'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
-          },
-          content: {children: 'Ant Design'},
-        },
-      },
-      {
-        name: 'block3',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: {className: 'content5-block-content'},
-          img: {
-            children:
-              'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
-          },
-          content: {children: 'Ant Motion'},
-        },
-      },
-      {
-        name: 'block4',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: {className: 'content5-block-content'},
-          img: {
-            children:
-              'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
-          },
-          content: {children: 'Ant Design'},
-        },
-      },
-      {
-        name: 'block5',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: {className: 'content5-block-content'},
-          img: {
-            children:
-              'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
-          },
-          content: {children: 'Ant Motion'},
-        },
-      },
-      {
-        name: 'block6',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: {className: 'content5-block-content'},
-          img: {
-            children:
-              'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
-          },
-          content: {children: 'Ant Design'},
-        },
-      },
-      {
-        name: 'block7',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: {className: 'content5-block-content'},
-          img: {
-            children:
-              'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
-          },
-          content: {children: 'Ant Motion'},
-        },
-      },
-    ],
-  },
-};
+
 export const Teams10DataSource = {
   wrapper: {className: 'home-page-wrapper teams1-wrapper'},
   page: {className: 'home-page teams1'},

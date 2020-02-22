@@ -20,7 +20,6 @@ class Content7 extends React.Component {
     this.setState({current: parseFloat(key)});
   };
   onChange1 = (key) => {
-    console.log('key' + key);
   };
 
   getBlockChildren = (item, i) => {
@@ -201,7 +200,6 @@ class Content7 extends React.Component {
     else {
       return (
         <div>
-          <a name="jiejuefangan" ></a>
           <div {...props} {...dataSource.wrapper}>
             <div {...dataSource.page}>
               <div {...dataSource.titleWrapper}>

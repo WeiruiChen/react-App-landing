@@ -1,7 +1,5 @@
 import React from 'react';
 import {Card, Row, Col, Carousel, Icon} from 'antd';
-import QueueAnim from 'rc-queue-anim';
-import {Element} from 'rc-banner-anim';
 import {getChildrenToRender} from './utils';
 import 'rc-banner-anim/assets/index.css';
 
@@ -45,7 +43,7 @@ class Banner extends React.PureComponent {
             <div {...page}>
               <div {...dataSource.titleWrapper} style={{display: 'inline'}}>
                 {dataSource.titleWrapper.children.map(getChildrenToRender)}
-                <a onClick={this.handleClick} style={{fontSize: '15px', color: '#898989', marginLeft: '80%'}}>查看更多></a>
+                <a  onClick={this.handleClick} style={{fontSize: '15px', color: '#898989', marginLeft: '80%'}}>查看更多></a>
               </div>
               <div>
                 <div style={{marginLeft: '5%'}}>
@@ -162,7 +160,6 @@ class Banner extends React.PureComponent {
     } else {
       return (
         <div>
-          <a id="gongsidongtai"></a>
           <div {...currentProps} {...wrapper}>
             <div {...page}>
               <div {...dataSource.titleWrapper}>
@@ -184,7 +181,7 @@ class Banner extends React.PureComponent {
                               fontSize: '14px',
                               display: 'block',
                               whiteSpace: 'pre-wrap',
-                              color: '#0033A1', wordBreak: 'normal', display: 'block', wordWarp: 'break-word', overflow: 'hidden'
+                              color: '#0033A1', wordBreak: 'normal',  wordWarp: 'break-word', overflow: 'hidden'
                             }}>QuarkChain为北京邮电大学新生进行区块链讲座</span>
                           </div>} description="2019.12.10" />
                         </Card></Col>
@@ -193,9 +190,9 @@ class Banner extends React.PureComponent {
                         >
                           <Meta title={<div>
                             <span style={{
-                              fontSize: '14px', color: '#0033A1', display: 'block',
+                              fontSize: '14px',  display: 'block',
                               whiteSpace: 'pre-wrap',
-                              color: '#0033A1', wordBreak: 'normal', display: 'block', wordWarp: 'break-word', overflow: 'hidden'
+                              color: '#0033A1', wordBreak: 'normal',  wordWarp: 'break-word', overflow: 'hidden'
                             }}>QuarkChain项目进展报告:2020年1月</span>
                           </div>} description="2020.2.1" />
                         </Card></Col>
@@ -204,9 +201,8 @@ class Banner extends React.PureComponent {
                         >
                           <Meta title={<div>
                             <span style={{
-                              fontSize: '14px', color: '#0033A1', display: 'block',
-                              whiteSpace: 'pre-wrap',
-                              color: '#0033A1', wordBreak: 'normal', display: 'block', wordWarp: 'break-word', overflow: 'hidden'
+                              fontSize: '14px', color: '#0033A1', 
+                              whiteSpace: 'pre-wrap',display: 'block', wordWarp: 'break-word', overflow: 'hidden'
                             }}>QuarkChain开启开发者悬赏开发主网工具可获万元奖励</span>
                           </div>} description="2020.1.16" />
                         </Card></Col>
@@ -219,9 +215,9 @@ class Banner extends React.PureComponent {
                         >
                           <Meta title={<div>
                             <span style={{
-                              fontSize: '14px', color: '#0033A1', display: 'block',
+                              fontSize: '14px',  display: 'block',
                               whiteSpace: 'pre-wrap',
-                              color: '#0033A1', wordBreak: 'normal', display: 'block', wordWarp: 'break-word', overflow: 'hidden'
+                              color: '#0033A1', wordBreak: 'normal', wordWarp: 'break-word', overflow: 'hidden'
                             }}>QuarkChain夸克链需要更高的舞台 TPS比赛冠军采访</span>
                           </div>} description="2020.1.10" />
                         </Card></Col>

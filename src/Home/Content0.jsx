@@ -13,10 +13,10 @@ class Content extends React.PureComponent {
       page,
       OverPack: overPackData,
       childWrapper,
+      childWrapper1
     } = dataSource;
     return (
       <div>
-        <a name="hexinyoushi"></a>
         <div {...props} {...wrapper}>
 
           <div {...page}>
@@ -49,7 +49,7 @@ class Content extends React.PureComponent {
                 component={Row}
                 componentProps={childWrapper}
               >
-                {childWrapper.children.map((block, i) => {
+                {childWrapper1.children.map((block, i) => {
                   const {children: item, ...blockProps} = block;
                   return (
                     <Col key={i.toString()} {...blockProps}>

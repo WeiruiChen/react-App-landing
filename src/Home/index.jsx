@@ -6,7 +6,6 @@ import {enquireScreen} from 'enquire-js';
 import Nav0 from './Nav0';
 import Banner0 from './Banner0';
 import Banner1 from './Banner1';
-import Banner from './Banner';
 import Content0 from './Content0';
 import Teams1 from './Teams1';
 import Teams2 from './Teams2';
