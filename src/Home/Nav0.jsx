@@ -118,7 +118,6 @@ class Header extends React.Component {
             </TweenOne>
           </div>
         </TweenOne >
-
       );
     } else {
       return (
