@@ -171,7 +171,7 @@ class Banner extends React.PureComponent {
               <div style={{background: '#F4F6F9'}}>
                 <Row>
                   <Col span={1} style={{textAlign: 'center'}}>
-                    <Icon type="left-circle" style={{fontSize: '30px', marginTop: '185px', color: '#7E8899'}} onClick={this.prev} />
+                    <Icon type="left-circle" style={{fontSize: '30px', marginTop: '185px', color: '#BEC4CC'}} onClick={this.prev} />
                   </Col>
                   <Col span={22}><Carousel autoplay ref={el => (this.slider = el)}>
                     <div>
@@ -243,7 +243,7 @@ class Banner extends React.PureComponent {
                   </Carousel>
                   </Col>
                   <Col span={1} style={{textAlign: 'center'}}>
-                    <Icon type="right-circle" style={{fontSize: '30px', marginTop: '185px', color: '#7E8899'}} onClick={this.next} />
+                    <Icon type="right-circle" style={{fontSize: '30px', marginTop: '185px', color: '#BEC4CC'}} onClick={this.next} />
                   </Col>
                 </Row>
               </div>
