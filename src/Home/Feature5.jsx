@@ -35,8 +35,8 @@ class Content7 extends React.Component {
       <TabPane
         key={i + 1}
         tab={
-          <div className={tag.className} style={{marginTop: '17px'}}>
-            <Icon type={iconChildren} className={icon.className} />
+          <div className={tag.className} style={{marginTop: '20px'}}>
+            <Icon type={iconChildren} className={icon.className} style={{marginTop:'5px'}} />
             <div {...tagText}>{tagText.children}</div>
           </div>
         }
