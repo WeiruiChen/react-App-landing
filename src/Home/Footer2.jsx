@@ -58,8 +58,8 @@ class Footer2 extends React.PureComponent {
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}
           </div> */}
-            <OverPack {...dataSource.OverPack}>
-              <TweenOne {...dataSource.links}>
+            <OverPack {...dataSource.OverPack} style={{display:'inline-block'}}>
+              <TweenOne {...dataSource.links} style={{marginLeft:'75px'}}>
                 {dataSource.links.children.map((item, i) => {
                   return (
                     <a key={i.toString()} {...item}>
@@ -73,7 +73,7 @@ class Footer2 extends React.PureComponent {
                 key="copyright"
                 {...dataSource.copyright}
               >
-                <div style={{marginRight:'75px'}}>
+                <div style={{marginRight:'100px',marginTop:'40px'}}>
                   {dataSource.copyright.children.map((item, i) =>
                     // item.name === 'mail' ?
                     <a onClick={() => {this.props.ToAnchor(item.href)}} style={{marginLeft: '20px', color: '#3D4D66'}} key={item.href}>{item.children}</a>
@@ -83,7 +83,7 @@ class Footer2 extends React.PureComponent {
                   {/* </div> */}
                 </div>
               </TweenOne>
-            </OverPack> }
+            </OverPack> 
 
           </div>
           <div style={{textAlign: 'center', height: '20px', backgroundColor: '#DFE1E5'}}>
