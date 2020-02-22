@@ -118,7 +118,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwushanglian.png" width="100%" alt="政务上链">
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwu-newest.png" width="100%" alt="政务上链">
                       </Zmage>
                     </div>
                   </Panel>
@@ -136,7 +136,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihuichengshi.png" width="100%" alt="智慧城市"></Zmage>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihui-newest.png" width="100%" alt="智慧城市"></Zmage>
                     </div>
                   </Panel>
                 </Collapse>
@@ -153,7 +153,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongyinglianjinrong.png" width="100%" alt="供应链金融"></Zmage>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongying-newest.png" width="100%" alt="供应链金融"></Zmage>
                     </div>
                   </Panel>
                 </Collapse>
@@ -170,7 +170,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanping.png" width="100%" alt="产品溯源"></Zmage>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanping-newest.png" width="100%" alt="产品溯源"></Zmage>
                     </div>
                   </Panel>
                 </Collapse>
@@ -187,7 +187,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuzi.png" width="100%" alt="数字身份"></Zmage>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuzi-newest.png" width="100%" alt="数字身份"></Zmage>
                     </div>
                   </Panel>
                 </Collapse>
