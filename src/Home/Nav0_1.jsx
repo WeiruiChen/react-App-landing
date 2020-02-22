@@ -19,17 +19,17 @@ class Header extends React.Component {
     });
   };
 
-  // toggleOn() {
-  //   let styleFather = document.getElementById('father').style;
-  //   if (styleFather.height == '50px') {
-  //     document.getElementById('father').style.height = "212px";
-  //     document.getElementById('son').style.display = 'block';
-  //   } else {
-  //     document.getElementById('father').style.height = "50px";
-  //     document.getElementById('son').style.display = 'none';
-  //   }
+  toggleOn() {
+    let styleFather = document.getElementById('father').style;
+    if (styleFather.height == '50px') {
+      document.getElementById('father').style.height = "212px";
+      document.getElementById('son').style.display = 'block';
+    } else {
+      document.getElementById('father').style.height = "50px";
+      document.getElementById('son').style.display = 'none';
+    }
 
-  // }
+  }
   render() {
     const {dataSource, isMobile, ...props} = this.props;
     const {phoneOpen} = this.state;
@@ -41,7 +41,7 @@ class Header extends React.Component {
           <Item key={item.name} {...itemProps} style={{
             width: '70px'
           }}>
-            <div onClick={() => {this.props.ToAnchor(item.children.href)}} style={{fontSize: '10px',  color: '#000'}}>
+            <div onClick={() => {this.props.ToAnchor(item.children.href)}} style={{fontSize: '10px', marginLeft: '-24px', color: '#000'}}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>
@@ -59,66 +59,19 @@ class Header extends React.Component {
     const moment = phoneOpen === undefined ? 300 : null;
     if (this.props.isMobile) {
       return (
-        <TweenOne
-          component="header"
-          animation={{opacity: 0, type: 'from'}}
-          {...dataSource.wrapper}
-          {...props}
-        >
-          <div
-            {...dataSource.page}
-            className={`${dataSource.page.className}${phoneOpen ? ' open' : ''}`}
-          >
-            <TweenOne
-              style={{display: phoneOpen ? 'none' : ''}}
-              animation={{x: -30, type: 'from', ease: 'easeOutQuad'}}
-              {...dataSource.logo}
+        <div id='father' className="header0-div-mobile-amotion" style={{height: '50px'}}>
+          <Button onClick={this.toggleOn} icon="menu" ghost style={{margin: '10px 0 0 20px', }}></Button>
+          <div className="header0-div-mobile-amotion-son" style={{textAlign: 'center',display:'none'}} id='son'>
+            <Menu
+              mode={isMobile ? 'inline' : 'horizontal'}
+              defaultSelectedKeys={['sub0']}
+              theme="theme"
+              style={{width: '0px'}}
             >
-              <img width="50%" src={dataSource.logo.children} alt="img" />
-            </TweenOne>
-            {isMobile && (
-              <div
-                {...dataSource.mobileMenu}
-                onClick={() => {
-                  this.phoneClick();
-                }}
-              >
-                <em />
-                <em />
-                <em />
-              </div>
-            )}
-            <TweenOne
-              {...dataSource.Menu}
-              animation={
-                isMobile
-                  ? {
-                    height: 0,
-                    duration: 0,
-                    onComplete: (e) => {
-                      if (this.state.phoneOpen) {
-                        e.target.style.height = 'auto';
-                      }
-                    },
-                    ease: 'easeInOutQuad',
-                  }
-                  : null
-              }
-              moment={moment}
-              reverse={!!phoneOpen}
-            >
-              <Menu
-                mode={isMobile ? 'horizontal' : 'horizontal'}
-                defaultSelectedKeys={['sub0']}
-                theme="theme"
-                inlineCollapsed={false}
-              >
-                {navChildren}
-              </Menu>
-            </TweenOne>
+              {navChildren}
+            </Menu>
           </div>
-        </TweenOne >
-
+        </div>
       );
     } else {
       return (

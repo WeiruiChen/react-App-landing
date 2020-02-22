@@ -74,7 +74,6 @@ export const Feature50DataSource = {
     className: 'title-wrapper',
     children: [
       {name: 'title', children: '解决方案', className: 'title-h1'},
-      {name: 'text', children: '多应用场景', className: 'title-name1'},
       {
         name: 'content',
         children: '鲨丁区块链以成熟的行业解决方案为依托，支持政务上链、智慧城市、供应链金融、存证溯源等多种应用场景快速落地，全面满足企业需求。',
@@ -83,7 +82,29 @@ export const Feature50DataSource = {
   },
   tabsWrapper: {className: 'feature5-tabs-wrapper'},
   block: {
+    
     children: [
+      {
+        name: 'block-0',
+        tag: {
+          className: 'feature5-tag',
+          text: {children: '多应用场景', className: 'feature5-tag-name'},
+          icon: {children: '', className: ''},
+          disabled:'true'
+        },
+        content: {
+          className: '',
+          text: {
+            className: '',
+            md: 24,
+            xs: 30,
+            children: (
+              <>
+              </>
+            ),
+          }
+        },
+      },
       {
         name: 'block0',
         tag: {

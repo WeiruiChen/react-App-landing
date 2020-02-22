@@ -3,7 +3,7 @@
 import React from 'react';
 import {enquireScreen} from 'enquire-js';
 
-import Nav0 from './Nav0';
+import Nav0 from './Nav0_1';
 import Banner0 from './Banner0';
 import Banner1 from './Banner1';
 import Banner from './Banner';

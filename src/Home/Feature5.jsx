@@ -12,7 +12,7 @@ class Content7 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 1,
+      current: 2,
     };
   }
   onChange = (key) => {
@@ -29,46 +29,64 @@ class Content7 extends React.Component {
     const {icon} = tag;
     const iconChildren = icon.children;
     const tagText = tag.text;
-    return (
-      <TabPane
-        key={i + 1}
-        tab={
-          <div className={tag.className} style={{marginTop:'17px'}}>
-            <Icon type={iconChildren} className={icon.className} />
-            <div {...tagText}>{tagText.children}</div>
-          </div>
-        }
-        className={item.className}
-      >
-        <TweenOne.TweenOneGroup
-          enter={{
-            y: 30,
-            delay: 300,
-            opacity: 0,
-            type: 'from',
-            ease: 'easeOutQuad',
-          }}
-          leave={null}
-          component=""
+    if (i === 0) {
+      return (
+        <TabPane
+          key={0}
+          disabled
+          style={{backgroundColor: '#9EA6B3!important'}}
+          tab={
+            <div className={tag.className} style={{marginTop: '17px'}}>
+              <Icon type={iconChildren} className={icon.className} />
+              <div {...tagText}>{tagText.children}</div>
+            </div>
+          }
+          className={item.className}
         >
-          {this.state.current === i + 1 && (
-            <Row
-              key="content"
-              className={content.className}
-              gutter={content.gutter}
-            >
-              <Col className={text.className} xs={text.xs} md={text.md}>
-                {textChildren}
-              </Col>
-              {/* <Col className={img.className} xs={img.xs} md={img.md}>
+        </TabPane>
+      )
+    } else {
+      return (
+        <TabPane
+          key={i + 1}
+          tab={
+            <div className={tag.className} style={{marginTop: '17px'}}>
+              <Icon type={iconChildren} className={icon.className} />
+              <div {...tagText}>{tagText.children}</div>
+            </div>
+          }
+          className={item.className}
+        >
+          <TweenOne.TweenOneGroup
+            enter={{
+              y: 30,
+              delay: 300,
+              opacity: 0,
+              type: 'from',
+              ease: 'easeOutQuad',
+            }}
+            leave={null}
+            component=""
+          >
+            {this.state.current === i + 1 && (
+              <Row
+                key="content"
+                className={content.className}
+                gutter={content.gutter}
+              >
+                <Col className={text.className} xs={text.xs} md={text.md}>
+                  {textChildren}
+                </Col>
+                {/* <Col className={img.className} xs={img.xs} md={img.md}>
                 <img src={img.children} width="100%" alt="img" />
               </Col> */}
-            </Row>
-          )}
-        </TweenOne.TweenOneGroup>
-      </TabPane>
+              </Row>
+            )}
+          </TweenOne.TweenOneGroup>
+        </TabPane>
     );
-  };
+  }
+};
 
   render() {
     // const renderTabBar = (props, DefaultTabBar) => {
@@ -216,19 +234,20 @@ class Content7 extends React.Component {
                   {...dataSource.tabsWrapper}
                 >
                   {/* <div className="card-container"> */}
-                    <Tabs
-                      tabPosition="left"
-                      key="tabs"
-                      onChange={this.onChange}
-                      activeKey={`${this.state.current}`}
-                      // renderTabBar={}
-                      tabBarStyle={{color: '#0033A1'}}
-                      type="card"
-                      {...dataSource.block}
-                      tabBarGutter={0}
-                    >
-                      {tabsChildren}
-                    </Tabs>
+                  <Tabs
+                    tabPosition="left"
+                    key="tabs"
+                    onChange={this.onChange}
+                    activeKey={`${this.state.current}`}
+                    // renderTabBar={}
+                    tabBarStyle={{color: '#0033A1'}}
+                    type="card"
+                    {...dataSource.block}
+                    tabBarGutter={0}
+                  >
+
+                    {tabsChildren}
+                  </Tabs>
                   {/* </div> */}
                 </TweenOne.TweenOneGroup>
               </OverPack>

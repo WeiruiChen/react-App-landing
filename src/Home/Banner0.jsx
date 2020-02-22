@@ -16,7 +16,7 @@ class Banner extends React.PureComponent {
     } = dataSource;
     return (
       <div {...currentProps} {...wrapper}>
-        <div {...page}>
+        <div {...page} >
           <QueueAnim
             key="QueueAnim"
             type={['bottom', 'top']}
@@ -35,18 +35,6 @@ class Banner extends React.PureComponent {
               {dataSource.content.children}
             </div>
           </QueueAnim>
-          <TweenOne
-            animation={{
-              y: '-=20',
-              yoyo: true,
-              repeat: -1,
-              duration: 1000,
-            }}
-            className="banner0-icon"
-            key="icon"
-          >
-            <Icon type="down" />
-          </TweenOne>
         </div>
       </div>
 
