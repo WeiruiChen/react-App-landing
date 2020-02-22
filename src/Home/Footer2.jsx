@@ -30,19 +30,19 @@ class Footer2 extends React.PureComponent {
             </div>
             <div style={{float: 'right', paddingTop: '5px', fontSize: '10px'}}>
               <div onClick={() => {this.props.ToAnchor('Content0_0')}}>
-              <a style={{color: '#3D4D66'}}>核心优势</a></div>
-            <div onClick={() => {this.props.ToAnchor('Feature5_0')}}>
-              <a style={{color: '#3D4D66'}}> 解决方案</a></div>
-            <div onClick={() => {this.props.ToAnchor('Teams2_0')}}>
-              <a style={{color: '#3D4D66'}}>合作伙伴</a></div>
-            <div onClick={() => {this.props.ToAnchor('Banner1_0')}}>
-              <a style={{color: '#3D4D66'}}>公司动态</a></div>
-            <div onClick={() => {this.props.ToAnchor('Teams1_0')}}>
-              <a style={{color: '#3D4D66'}}>关于我们</a></div>
-            <div onClick={() => {window.location.href = 'mailto:margaret.xie@shadingtech.com'}}>
-              <a style={{color: '#3D4D66'}}>联系我们 Email: margaret.xie@shadingtech.com</a></div>
+                <a style={{color: '#3D4D66'}}>核心优势</a></div>
+              <div onClick={() => {this.props.ToAnchor('Feature5_0')}}>
+                <a style={{color: '#3D4D66'}}> 解决方案</a></div>
+              <div onClick={() => {this.props.ToAnchor('Teams2_0')}}>
+                <a style={{color: '#3D4D66'}}>合作伙伴</a></div>
+              <div onClick={() => {this.props.ToAnchor('Banner1_0')}}>
+                <a style={{color: '#3D4D66'}}>公司动态</a></div>
+              <div onClick={() => {this.props.ToAnchor('Teams1_0')}}>
+                <a style={{color: '#3D4D66'}}>关于我们</a></div>
+              <div onClick={() => {window.location.href = 'mailto:margaret.xie@shadingtech.com'}}>
+                <a style={{color: '#3D4D66'}}>联系我们 Email: margaret.xie@shadingtech.com</a></div>
+            </div>
           </div>
-        </div>
         </div >
       );
     } else {
@@ -73,14 +73,15 @@ class Footer2 extends React.PureComponent {
                 key="copyright"
                 {...dataSource.copyright}
               >
-                {/* <div> */}
-                {dataSource.copyright.children.map((item, i) =>
-                  // item.name === 'mail' ?
-                  <a onClick={() => {this.props.ToAnchor(item.href)}} style={{marginLeft: '20px', color: '#3D4D66'}} key={item.href}>{item.children}</a>
-                  // :
-                )}
-                <a href="mailto:margaret.xie@shadingtech.com" style={{marginLeft: '20px', color: '#3D4D66'}} key='mail'>联系我们</a>
-                {/* </div> */}
+                <div style={{marginRight:'75px'}}>
+                  {dataSource.copyright.children.map((item, i) =>
+                    // item.name === 'mail' ?
+                    <a onClick={() => {this.props.ToAnchor(item.href)}} style={{marginLeft: '20px', color: '#3D4D66'}} key={item.href}>{item.children}</a>
+                    // :
+                  )}
+                  <a href="mailto:margaret.xie@shadingtech.com" style={{marginLeft: '20px', color: '#3D4D66'}} key='mail'>联系我们</a>
+                  {/* </div> */}
+                </div>
               </TweenOne>
             </OverPack> }
 

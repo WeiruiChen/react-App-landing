@@ -821,9 +821,9 @@ export const Teams20DataSource = {
           children: [
             {
               name: 'image',
-              className: 'teams2-image',
+              className: 'teams2-mid',
               children:
-                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/hezuo3.jpg',
+                'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/hezuo2.jpg',
             }
           ],
         },
