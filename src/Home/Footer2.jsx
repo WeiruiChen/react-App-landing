@@ -52,7 +52,7 @@ class Footer2 extends React.PureComponent {
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>
             <a style={{fontSize: '20px'}} href="mailto:margaret.xie@shadingtech.com">Email: margaret.xie@shadingtech.com</a>
           </h2>
-          <div {...props} {...dataSource.wrapper}>
+          <div {...props} {...dataSource.wrapper} style={{textAlign:'center'}}>
             {/* <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}
