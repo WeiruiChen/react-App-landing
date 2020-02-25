@@ -1,9 +1,10 @@
 import React from 'react';
-import {Card, Row, Col, Carousel, Icon} from 'antd';
+import {Card, Row, Col, Carousel, Icon,Layout} from 'antd';
 import {getChildrenToRender} from './utils';
 import 'rc-banner-anim/assets/index.css';
 
 const {Meta} = Card;
+const { Header, Footer, Sider, Content } = Layout;
 
 class Banner extends React.PureComponent {
 
@@ -49,14 +50,29 @@ class Banner extends React.PureComponent {
     } = dataSource;
     const Banner0Data = BannerAnim.children.map((item) => {
       return (
+        // <Card
+        //   onClick={() => {window.open(item.href)}}
+        //   hoverable
+        //   size='small'
+        //   style={{width: '250px', margin: '0 auto', marginTop: '20px'}}
+        //   cover={<img alt="example" src={item.imgSrc} />}>
+        //   <Meta style={{fontSize: '10px'}} title={<span style={{color: '#0033A1', fontSize: '12px'}}
+        //   >{item.title}</span>} description={item.date} />
+        // </Card>
         <Card
           onClick={() => {window.open(item.href)}}
           hoverable
           size='small'
-          style={{width: '250px', margin: '0 auto', marginTop: '20px'}}
-          cover={<img alt="example" src={item.imgSrc} />}>
-          <Meta style={{fontSize: '10px'}} title={<span style={{color: '#0033A1', fontSize: '12px'}}
-          >{item.title}</span>} description={item.date} />
+          style={{width: '100%', margin: '0 auto', marginTop: '30px'}}
+        >
+          <Layout >
+            <Sider theme='light'><img alt="example" style={{width:'90%',marginTop:'7',marginLeft:'5%'}}  src={item.imgSrc} ></img></Sider>
+            <Layout style={{background:'#fff'}}>
+              <Content style={{background:'#fff'}}><span style={{color: '#0033A1',fontSize: '12px'}}
+          >{item.title}</span></Content>
+              <Footer style={{background:'#fff'}}><div style={{float:'bottom'}}>{item.date}</div></Footer>
+            </Layout>
+          </Layout>
         </Card>
       )
     });
@@ -66,7 +82,7 @@ class Banner extends React.PureComponent {
           onClick={() => {window.open(item.href)}}
           hoverable
           size='small'
-          style={{width: '250px', margin: '0 auto',marginTop: '20px'}}
+          style={{width: '250px', margin: '0 auto', marginTop: '20px'}}
           cover={<img alt="example" src={item.imgSrc} />}>
           <Meta title={<span style={{color: '#0033A1', fontSize: '12px'}}
           >{item.title}</span>} description={item.date} />
@@ -81,8 +97,8 @@ class Banner extends React.PureComponent {
               <div {...dataSource.titleWrapper} style={{background: '#F4F6F9'}}>
                 {dataSource.titleWrapper.children.map(getChildrenToRender)}
               </div>
-              <div style={{textAlign:'center'}}>
-                <Icon type="up-circle" style={{fontSize: '30px',  color: '#BEC4CC',margin:'0 auto'}} onClick={this.prev1} />
+              <div style={{textAlign: 'center'}}>
+                <Icon type="up-circle" style={{fontSize: '30px', color: '#BEC4CC', margin: '0 auto'}} onClick={this.prev1} />
                 <Carousel dotPosition='left' ref={el => (this.slider1 = el)}>
                   {/* <Col> */}
                   <div style={{textAlign: 'center'}}>
@@ -92,7 +108,7 @@ class Banner extends React.PureComponent {
                     {Banner1Data}
                   </div>
                 </Carousel>
-                <Icon type="down-circle" style={{fontSize: '30px', marginTop:'20px', color: '#BEC4CC'}} onClick={this.prev1} />
+                <Icon type="down-circle" style={{fontSize: '30px', marginTop: '20px', color: '#BEC4CC'}} onClick={this.prev1} />
 
                 {/* <div style={{textAlign: 'center'}}>
                     <Card
