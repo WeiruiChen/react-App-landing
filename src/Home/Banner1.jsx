@@ -50,30 +50,30 @@ class Banner extends React.PureComponent {
     } = dataSource;
     const Banner0Data = BannerAnim.children.map((item) => {
       return (
-        // <Card
-        //   onClick={() => {window.open(item.href)}}
-        //   hoverable
-        //   size='small'
-        //   style={{width: '250px', margin: '0 auto', marginTop: '20px'}}
-        //   cover={<img alt="example" src={item.imgSrc} />}>
-        //   <Meta style={{fontSize: '10px'}} title={<span style={{color: '#0033A1', fontSize: '12px'}}
-        //   >{item.title}</span>} description={item.date} />
-        // </Card>
         <Card
           onClick={() => {window.open(item.href)}}
           hoverable
           size='small'
-          style={{width: '100%', margin: '0 auto', marginTop: '30px'}}
-        >
-          <Layout >
-            <Sider theme='light'><img alt="example" style={{width:'90%',marginTop:'7',marginLeft:'5%'}}  src={item.imgSrc} ></img></Sider>
-            <Layout style={{background:'#fff'}}>
-              <Content style={{background:'#fff'}}><span style={{color: '#0033A1',fontSize: '12px'}}
-          >{item.title}</span></Content>
-              <Footer style={{background:'#fff'}}><div style={{float:'bottom'}}>{item.date}</div></Footer>
-            </Layout>
-          </Layout>
+          style={{width: '250px', margin: '0 auto', marginTop: '20px'}}
+          cover={<img alt="example" src={item.imgSrc} />}>
+          <Meta style={{fontSize: '10px'}} title={<span style={{color: '#0033A1', fontSize: '12px'}}
+          >{item.title}</span>} description={item.date} />
         </Card>
+        // <Card
+        //   onClick={() => {window.open(item.href)}}
+        //   hoverable
+        //   size='small'
+        //   style={{width: '100%', margin: '0 auto', marginTop: '30px'}}
+        // >
+        //   <Layout >
+        //     <Sider theme='light'><img alt="example" style={{width:'90%',marginTop:'7',marginLeft:'5%'}}  src={item.imgSrc} ></img></Sider>
+        //     <Layout style={{background:'#fff'}}>
+        //       <Content style={{background:'#fff'}}><span style={{color: '#0033A1',fontSize: '12px'}}
+        //   >{item.title}</span></Content>
+        //       <Footer style={{background:'#fff'}}><div style={{float:'bottom'}}>{item.date}</div></Footer>
+        //     </Layout>
+        //   </Layout>
+        // </Card>
       )
     });
     const Banner1Data = BannerAnim.children1.map((item) => {
