@@ -2,7 +2,7 @@ import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 import {Row, Col} from 'antd';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import {getChildrenToRender, getChildrenToRenderMobile} from './utils';
+import {getChildrenToRender, getChildrenToRenderWeb,getChildrenToRenderMobile} from './utils';
 
 class Content extends React.PureComponent {
   render() {
@@ -89,7 +89,7 @@ class Content extends React.PureComponent {
                       <Col key={i.toString()} {...blockProps}>
                         <div className="content0-block-item">
 
-                          {item.children.map(getChildrenToRender)}
+                          {item.children.map(getChildrenToRenderWeb)}
                           <div></div>
                         </div>
                       </Col>
@@ -108,7 +108,7 @@ class Content extends React.PureComponent {
                     return (
                       <Col key={i.toString()} {...blockProps}>
                         <div {...item}>
-                          {item.children.map(getChildrenToRender)}
+                          {item.children.map(getChildrenToRenderWeb)}
                         </div>
                       </Col>
                     );
