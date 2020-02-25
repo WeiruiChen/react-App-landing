@@ -66,12 +66,19 @@ export const Banner01DataSource = {
   wrapper: {className: 'home-page-wrapper content0-wrapper banner0'},
   page: {className: 'home-page content0'},
   textWrapper: {className: 'banner0-text-wrapper'},
+  title1: {
+    className: 'banner0-title',
+    tag:'mobile',
+    children: '构筑下一代高吞吐多链异构联盟链，引领自主可控区块链技术和产业发展潮流',
+  },
   title: {
     className: 'banner0-title',
+    tag:'web',
     children: '构筑下一代高吞吐多链异构联盟链',
   },
   content: {
     className: 'banner0-title',
+    tag:'web',
     children: '引领自主可控区块链技术和产业发展潮流',
   },
 };
