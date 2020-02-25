@@ -97,6 +97,7 @@ export default class Home extends React.Component {
       <Banner0
         id="Banner0_1"
         key="Banner0_1"
+        style={{minHeight:'550px'}}
         dataSource={Banner01DataSource}
         isMobile={this.state.isMobile}
       />,

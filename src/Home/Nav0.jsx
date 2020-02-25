@@ -1,6 +1,6 @@
 import React from 'react';
 import TweenOne from 'rc-tween-one';
-import {Menu} from 'antd';
+import {Menu, Button} from 'antd';
 import {getChildrenToRender} from './utils';
 
 const {Item} = Menu;
@@ -31,15 +31,15 @@ class Header extends React.Component {
             width: '50px'
           }}>
             <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:margaret.xie@shadingtech.com"} }}
-              style={{fontSize: '10px', color: '#000'}} >
-                {a.children.map(getChildrenToRender)}
+              style={{fontSize: '12px', color: '#000'}} >
+              {a.children.map(getChildrenToRender)}
             </div>
           </Item>
         );
       } else {
         return (
           <Item key={item.name} {...itemProps}>
-            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:margaret.xie@shadingtech.com"} }} className={`header0-item-block ${a.className}`.trim()}>
+            <div  onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:margaret.xie@shadingtech.com"} }} className={`header0-item-block ${a.className}`.trim()}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>
@@ -66,16 +66,16 @@ class Header extends React.Component {
             >
               <img width="50%" src={dataSource.logo.children} alt="img" />
             </TweenOne>
-              <div
-                {...dataSource.mobileMenu}
-                onClick={() => {
-                  this.phoneClick();
-                }}
-              >
-                <em />
-                <em />
-                <em />
-              </div>
+            <div
+              {...dataSource.mobileMenu}
+              onClick={() => {
+                this.phoneClick();
+              }}
+            >
+              <em />
+              <em />
+              <em />
+            </div>
             <TweenOne
               {...dataSource.Menu}
               animation={
@@ -100,6 +100,7 @@ class Header extends React.Component {
                 theme="theme"
               >
                 {navChildren}
+                <Button size="small" onClick={() => { window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
               </Menu>
             </TweenOne>
           </div>
@@ -154,12 +155,14 @@ class Header extends React.Component {
               moment={moment}
               reverse={!!phoneOpen}
             >
+
               <Menu
                 mode={isMobile ? 'inline' : 'horizontal'}
                 defaultSelectedKeys={['sub0']}
                 theme="theme"
               >
                 {navChildren}
+                <Button onClick={() => { window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
               </Menu>
             </TweenOne>
           </div>

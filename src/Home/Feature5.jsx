@@ -118,7 +118,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwu-newest.png" width="100%" alt="政务上链">
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwu-newestP.png" width="100%" alt="政务上链">
                       </Zmage>
                     </div>
                   </Panel>

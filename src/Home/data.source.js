@@ -48,15 +48,16 @@ export const Nav00DataSource = {
           href: 'Teams1_0',
           children: [{children: '关于我们', name: 'text'}],
         },
-      },
-      {
-        name: 'mail',
-        className: 'header0-item',
-        children: {
-          href: 'margaret.xie@shadingtech.com',
-          children: [{children: '联系我们', name: 'text'}],
-        },
       }
+      // ,
+      // {
+      //   name: 'mail',
+      //   className: 'header0-item',
+      //   children: {
+      //     href: 'margaret.xie@shadingtech.com',
+      //     children: [{children: '联系我们', name: 'text'}],
+      //   },
+      // }
     ],
   },
   mobileMenu: {className: 'header0-mobile-menu'},
@@ -84,37 +85,19 @@ export const Feature50DataSource = {
       {name: 'title', children: '解决方案', className: 'title-h1'},
       {
         name: 'content',
-        children: '鲨丁区块链以成熟的行业解决方案为依托，支持政务上链、智慧城市、供应链金融、存证溯源等多种应用场景快速落地，全面满足企业需求。',
+        children: '鲨丁区块链以成熟的行业解决方案为依托，支持政务上链、智慧城市、供应链金融、',
       },
+      {
+        name: 'content',
+        children: '存证溯源等多种应用场景快速落地，全面满足企业需求。',
+      }
     ],
   },
   tabsWrapper: {className: 'feature5-tabs-wrapper'},
   block: {
-
     children: [
       {
         name: 'block0',
-        tag: {
-          className: 'feature5-tag',
-          text: {children: '政务上链', className: 'feature5-tag-name'},
-          icon: {children: 'backzhenwu', className: 'backzhenwu'},
-        },
-        content: {
-          className: 'feature5-content',
-          text: {
-            className: 'feature5-text',
-            md: 24,
-            xs: 30,
-            children: (
-              <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwu-newest.png" width="100%" alt="政务上链"></img>
-              </>
-            ),
-          }
-        },
-      },
-      {
-        name: 'block1',
         tag: {
           className: 'feature5-tag',
           icon: {children: 'zhihui', className: 'zhihui'},
@@ -128,12 +111,34 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihui-newest.png" width="100%" alt="智慧城市"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihui-newestP.png" width="100%" alt="智慧城市"></img>
               </>
             ),
           }
         },
       },
+      {
+        name: 'block1',
+        tag: {
+          className: 'feature5-tag',
+          text: {children: '政务上链', className: 'feature5-tag-name'},
+          icon: {children: 'backzhenwu', className: 'backzhenwu'},
+        },
+        content: {
+          className: 'feature5-content',
+          text: {
+            className: 'feature5-text',
+            md: 24,
+            xs: 30,
+            children: (
+              <>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwu-newestP.png" width="100%" alt="政务上链"></img>
+              </>
+            ),
+          }
+        },
+      },
+
       {
         name: 'block2',
         tag: {
@@ -212,52 +217,39 @@ export const Banner10DataSource = {
   BannerAnim: {
     children: [
       {
-        name: 'elem0',
-        BannerElement: {className: 'banner-user-elem'},
-        textWrapper: {className: 'banner1-text-wrapper'},
-        bg: {className: 'bg bg0'},
-        // title: {
-        //   className: 'banner1-title',
-        //   children:
-        //     'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-        // },
-        content: {
-          className: 'banner1-content',
-          children: '',
-        }
+        imgSrc: 'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg1.png',
+        title: 'QuarkChain为北京邮电大学新生进行区块链讲座',
+        date: '2019.12.10',
+        href: 'https://mp.weixin.qq.com/s/dZkxf3XMaCN5dNkq_M4h-g'
       },
       {
-        name: 'elem1',
-        BannerElement: {className: 'banner-user-elem'},
-        textWrapper: {className: 'banner1-text-wrapper'},
-        bg: {className: 'bg bg1'},
-        // title: {
-        //   className: 'banner1-title',
-        //   children:
-        //     'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-        // },
-        content: {
-          className: 'banner1-content',
-          children: '',
-        },
+        imgSrc: 'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg2.png',
+        title: 'QuarkChain项目进展报告：2020年1月',
+        date: '2020.2.1',
+        href: 'https://mp.weixin.qq.com/s/13B853SzdDNhjvREKAU67Q'
       },
       {
-        name: 'elem2',
-        BannerElement: {className: 'banner-user-elem'},
-        textWrapper: {className: 'banner1-text-wrapper'},
-        bg: {className: 'bg bg2'},
-        // title: {
-        //   className: 'banner1-title',
-        //   children:
-        //     'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-        // },
-        content: {
-          className: 'banner1-content',
-          children: '',
-        }
+        imgSrc: 'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg3.png',
+        title: 'QuarkChain开启开发者悬赏开发主网工具可获万元奖励',
+        date: '2019.12.10',
+        href: 'https://mp.weixin.qq.com/s/-cyJSlebhtjI3ZSxi4Le9w'
       },
     ],
-  },
+    children1: [
+      {
+        imgSrc: 'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongao4.png',
+        title: 'QuarkChain夸克链需要更高的舞台 TPS比赛冠军采访',
+        date: '2020.1.10',
+        href: 'https://mp.weixin.qq.com/s/KVwTNHBjDLjENA9H2BVnLg'
+      },
+      {
+        imgSrc: 'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gonggao5.png',
+        title: 'QuarkChain CMO跨年直播|都说19年是公链的“滑铁卢”,2020公链如何东山再起？',
+        date: '2019.12.10',
+        href: 'https://mp.weixin.qq.com/s/PoAqGiSNoRpWSFTh89VxBQ'
+      }
+    ]
+  }
 };
 
 export const Content00DataSource = {
@@ -267,7 +259,8 @@ export const Content00DataSource = {
   titleWrapper: {
     className: 'title-wrapper',
     children: [{name: 'title', children: '核心优势'},
-    {name: 'content', children: '鲨丁区块链依靠多年分布式系统领域研发经验,通过自主创新,成为集高效、灵活、安全于一身的新一代联盟区块链解决方案。'}],
+    {name: 'content', children: '鲨丁区块链依靠多年分布式系统领域研发经验,通过自主创新，'},
+    {name: 'content', children: '成为集高效、灵活、安全于一身的新一代联盟区块链解决方案。'}],
   },
   childWrapper: {
     className: 'content0-block-wrapper',
@@ -291,7 +284,8 @@ export const Content00DataSource = {
               className: 'content0-block-title',
               children: '自主创新',
             },
-            {name: 'content', children: '拥有经过多案例验证玻色子多链共识核心技术'},
+            {name: 'content', tag: 'web', children: '拥有经过多案例验证玻色子多链共识核心技术'},
+            {name: 'content', tag: 'mobile', children: '拥有经过多案例验证玻色子多链共识核心技术'}
           ],
         },
       },
@@ -316,7 +310,18 @@ export const Content00DataSource = {
             },
             {
               name: 'content',
+              tag: 'web',
               children: '支持基于以太坊/HyperLedger/UTXO等账本和交易模型',
+            },
+            {
+              name: 'content',
+              tag: 'mobile',
+              children: '支持基于以太坊/HyperLedger/UTXO等',
+            },
+            {
+              name: 'content',
+              tag: 'mobile',
+              children: '账本和交易模型',
             },
           ],
         },
@@ -342,8 +347,15 @@ export const Content00DataSource = {
             },
             {
               name: 'content',
+              tag: 'web',
               children: '支持多粒度的多链联盟链准入制度',
             },
+            {
+              name: 'content',
+              tag: 'mobile',
+              children: '支持多粒度的多链联盟链准入制度',
+            },
+            
           ],
         },
       },
@@ -371,7 +383,8 @@ export const Content00DataSource = {
               className: 'content0-block-title',
               children: '高效共识',
             },
-            {name: 'content', children: '111支持多种CFT/BFT联盟链共识算法'},
+            {name: 'content', tag: 'web', children: '支持多种CFT/BFT联盟链共识算法'},
+            {name: 'content', tag: 'mobile', children: '支持多种CFT/BFT联盟链共识算法'},
           ],
         },
       },
@@ -396,6 +409,12 @@ export const Content00DataSource = {
             },
             {
               name: 'content',
+              tag: 'web',
+              children: '支持安全和高效的跨链互操作',
+            },
+            {
+              name: 'content',
+              tag: 'mobile',
               children: '支持安全和高效的跨链互操作',
             },
           ],
@@ -422,7 +441,18 @@ export const Content00DataSource = {
             },
             {
               name: 'content',
+              tag: 'web',
               children: '支持百万级别TPS（每秒交易）和PB级别链上数据存储',
+            },
+            {
+              name: 'content',
+              tag: 'mobile',
+              children: '支持百万级别TPS（每秒交易）',
+            },
+            {
+              name: 'content',
+              tag: 'mobile',
+              children: '和PB级别链上数据存储',
             },
           ],
         },
@@ -594,8 +624,11 @@ export const Teams20DataSource = {
     className: 'title-wrapper',
     children: [{name: 'title', children: '合作伙伴'},
     {
-      name: 'content', children: `鲨丁区块链携手战略合作伙伴，在构筑全球多链联盟链基础设施的探索中一起砥砺前行，
-    用区块链技术创造更多的价值！`}],
+      name: 'content', children: `鲨丁区块链携手战略合作伙伴，在构筑全球多链联盟链基础设施的探索中一起砥砺前行，`
+    },
+    {
+      name: 'content', children: `用区块链技术创造更多的价值！`
+    }],
   },
   block: {
     className: 'block-wrapper',
@@ -604,7 +637,7 @@ export const Teams20DataSource = {
         name: 'block0',
         className: 'block',
         md: 6,
-        xs: 8,
+        xs: 6,
         titleWrapper: {
           children: [
             {
@@ -620,7 +653,7 @@ export const Teams20DataSource = {
         name: 'block1',
         className: 'block',
         md: 6,
-        xs: 8,
+        xs: 6,
         titleWrapper: {
           children: [
             {
@@ -636,7 +669,7 @@ export const Teams20DataSource = {
         name: 'block2',
         className: 'block',
         md: 6,
-        xs: 8,
+        xs: 6,
         titleWrapper: {
           children: [
             {
@@ -652,7 +685,7 @@ export const Teams20DataSource = {
         name: 'block3',
         className: 'block',
         md: 6,
-        xs: 8,
+        xs: 6,
         titleWrapper: {
           children: [
             {
@@ -664,6 +697,7 @@ export const Teams20DataSource = {
           ],
         },
       },
+      
     ],
   },
 };

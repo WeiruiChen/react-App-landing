@@ -18,16 +18,20 @@ class Footer2 extends React.PureComponent {
           }}>
             <a style={{paddingTop: '20px', fontSize: '20px'}} href="mailto:margaret.xie@shadingtech.com">Email: margaret.xie@shadingtech.com</a>
           </div> */}
-          <Button onClick={() => {
+          <h1 style={{fontSize: '32px', margin: '0 auto', textAlign: 'center'}}>联系我们</h1>
+          <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>
+            <a style={{fontSize: '20px'}} href="mailto:margaret.xie@shadingtech.com">Email: margaret.xie@shadingtech.com</a>
+          </h2>
+          {/* <Button onClick={() => {
             window.location.href = "mailto:margaret.xie@shadingtech.com";
-          }} style={{height: '40px', width: '80%', marginLeft: '10%', marginBottom: '10px', textAlign: 'center'}}>Email: margaret.xie@shadingtech.com</Button>
+          }} style={{height: '40px', width: '80%', marginLeft: '10%', marginBottom: '10px', textAlign: 'center'}}>Email: margaret.xie@shadingtech.com</Button> */}
           {/* <h1 style={{fontSize: '32px', margin: ' 0 auto', textAlign: 'center'}}>联系我们</h1>
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>Email: margaret.xie@shadingtech.com</h2> */}
-          <div {...props} {...dataSource.wrapper} style={{margin: 'auto 0', height: '110px'}}>
-            <div style={{width: '30%', height: '100%', float: 'left', marginLeft: '10%'}}>
+          <div {...props} {...dataSource.wrapper} style={{margin: '0 auto', height: '130px'}}>
+            <div style={{width: '45%', height: '100%', float: 'left'}}>
               <img style={{width: '100%', height: '100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/logo-02.png" atl="logo"></img>
             </div>
-            <div style={{float: 'right', paddingTop: '5px', fontSize: '10px'}}>
+            <div style={{float: 'right', paddingTop: '5px', fontSize: '12px'}}>
               <div onClick={() => {this.props.ToAnchor('Content0_0')}}>
                 <a style={{color: '#3D4D66'}}>核心优势</a></div>
               <div onClick={() => {this.props.ToAnchor('Feature5_0')}}>
@@ -39,8 +43,12 @@ class Footer2 extends React.PureComponent {
               <div onClick={() => {this.props.ToAnchor('Teams1_0')}}>
                 <a style={{color: '#3D4D66'}}>关于我们</a></div>
               <div onClick={() => {window.location.href = 'mailto:margaret.xie@shadingtech.com'}}>
-                <a style={{color: '#3D4D66'}}>联系我们 Email: margaret.xie@shadingtech.com</a></div>
+                <a style={{color: '#3D4D66'}}>联系我们</a></div>
+              <div onClick={() => {window.location.href = 'mailto:margaret.xie@shadingtech.com'}}>Email: margaret.xie@shadingtech.com</div>
             </div>
+          </div>
+          <div style={{textAlign: 'center', height: '20px', backgroundColor: '#DFE1E5'}}>
+            {dataSource.copyright1.children}
           </div>
         </div >
       );
@@ -52,13 +60,13 @@ class Footer2 extends React.PureComponent {
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>
             <a style={{fontSize: '20px'}} href="mailto:margaret.xie@shadingtech.com">Email: margaret.xie@shadingtech.com</a>
           </h2>
-          <div {...props} {...dataSource.wrapper} style={{textAlign:'center'}}>
+          <div {...props} {...dataSource.wrapper} style={{textAlign: 'center'}}>
             {/* <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}
           </div> */}
-            <OverPack {...dataSource.OverPack} style={{display:'inline-block'}}>
-              <TweenOne {...dataSource.links} style={{marginLeft:'75px'}}>
+            <OverPack {...dataSource.OverPack} style={{display: 'inline-block'}}>
+              <TweenOne {...dataSource.links} style={{marginLeft: '75px'}}>
                 {dataSource.links.children.map((item, i) => {
                   return (
                     <a key={i.toString()} {...item}>
@@ -72,17 +80,18 @@ class Footer2 extends React.PureComponent {
                 key="copyright"
                 {...dataSource.copyright}
               >
-                <div style={{marginRight:'100px',marginTop:'40px'}}>
+                <div style={{marginRight: '100px', marginTop: '40px'}}>
                   {dataSource.copyright.children.map((item, i) =>
                     // item.name === 'mail' ?
                     <a onClick={() => {this.props.ToAnchor(item.href)}} style={{marginLeft: '20px', color: '#3D4D66'}} key={item.href}>{item.children}</a>
                     // :
                   )}
-                  <a href="mailto:margaret.xie@shadingtech.com" style={{marginLeft: '20px', color: '#3D4D66'}} key='mail'>联系我们</a>
+                  {/* <a href="mailto:margaret.xie@shadingtech.com" style={{marginLeft: '20px', color: '#3D4D66'}} key='mail'>联系我们</a> */}
                   {/* </div> */}
+                  <Button style={{marginLeft: '20px'}} size="small" onClick={() => {window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
                 </div>
               </TweenOne>
-            </OverPack> 
+            </OverPack>
 
           </div>
           <div style={{textAlign: 'center', height: '20px', backgroundColor: '#DFE1E5'}}>
