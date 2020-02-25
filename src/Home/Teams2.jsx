@@ -2,7 +2,7 @@ import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 import {Row, Col} from 'antd';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import {getChildrenToRender} from './utils';
+import {getChildrenToRender, getChildrenToRenderWeb, getChildrenToRenderMobile} from './utils';
 
 class Teams1 extends React.PureComponent {
   getBlockChildren = (data) =>
@@ -21,29 +21,55 @@ class Teams1 extends React.PureComponent {
     delete props.dataSource;
     delete props.isMobile;
     const listChildren = this.getBlockChildren(dataSource.block.children);
-    return (
-      <div>
-        <div {...props} {...dataSource.wrapper}>
-          <div {...dataSource.page}>
-            <div {...dataSource.titleWrapper}>
-              {dataSource.titleWrapper.children.map(getChildrenToRender)}
+    if (this.props.isMobile) {
+      return (
+        <div>
+          <div {...props} {...dataSource.wrapper}>
+            <div {...dataSource.page}>
+              <div {...dataSource.titleWrapper}>
+                {dataSource.titleWrapper.children.map(getChildrenToRenderMobile)}
+              </div>
+              <OverPack {...dataSource.OverPack}>
+                <QueueAnim
+                  type="bottom"
+                  key="block"
+                  leaveReverse
+                  {...dataSource.block}
+                  component={Row}
+                >
+                  {listChildren}
+                </QueueAnim>
+              </OverPack>
             </div>
-            <OverPack {...dataSource.OverPack}>
-              <QueueAnim
-                type="bottom"
-                key="block"
-                leaveReverse
-                {...dataSource.block}
-                component={Row}
-              >
-                {listChildren}
-              </QueueAnim>
-            </OverPack>
           </div>
         </div>
-      </div>
-    );
+      )
+    } else {
+      return (
+        <div>
+          <div {...props} {...dataSource.wrapper}>
+            <div {...dataSource.page}>
+              <div {...dataSource.titleWrapper}>
+                {dataSource.titleWrapper.children.map(getChildrenToRenderWeb)}
+              </div>
+              <OverPack {...dataSource.OverPack}>
+                <QueueAnim
+                  type="bottom"
+                  key="block"
+                  leaveReverse
+                  {...dataSource.block}
+                  component={Row}
+                >
+                  {listChildren}
+                </QueueAnim>
+              </OverPack>
+            </div>
+          </div>
+        </div>
+      );
+    }
   }
+
 }
 
 export default Teams1;

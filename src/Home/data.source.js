@@ -85,10 +85,17 @@ export const Feature50DataSource = {
       {name: 'title', children: '解决方案', className: 'title-h1'},
       {
         name: 'content',
+        tag: 'mobile',
+        children: '鲨丁区块链以成熟的行业解决方案为依托，支持政务上链、智慧城市、供应链金融、存证溯源等多种应用场景快速落地，全面满足企业需求。'
+      },
+      {
+        name: 'content',
+        tag:'web',
         children: '鲨丁区块链以成熟的行业解决方案为依托，支持政务上链、智慧城市、供应链金融、',
       },
       {
         name: 'content',
+        tag:'web',
         children: '存证溯源等多种应用场景快速落地，全面满足企业需求。',
       }
     ],
@@ -259,8 +266,9 @@ export const Content00DataSource = {
   titleWrapper: {
     className: 'title-wrapper',
     children: [{name: 'title', children: '核心优势'},
-    {name: 'content', children: '鲨丁区块链依靠多年分布式系统领域研发经验,通过自主创新，'},
-    {name: 'content', children: '成为集高效、灵活、安全于一身的新一代联盟区块链解决方案。'}],
+    {name: 'content',tag:'mobile', children: '鲨丁区块链依靠多年分布式系统领域研发经验,通过自主创新，成为集高效、灵活、安全于一身的新一代联盟区块链解决方案。'},
+    {name: 'content',tag:'web', children: '鲨丁区块链依靠多年分布式系统领域研发经验,通过自主创新，'},
+    {name: 'content',tag:'web', children: '成为集高效、灵活、安全于一身的新一代联盟区块链解决方案。'}],
   },
   childWrapper: {
     className: 'content0-block-wrapper',
@@ -355,7 +363,7 @@ export const Content00DataSource = {
               tag: 'mobile',
               children: '支持多粒度的多链联盟链准入制度',
             },
-            
+
           ],
         },
       },
@@ -624,10 +632,13 @@ export const Teams20DataSource = {
     className: 'title-wrapper',
     children: [{name: 'title', children: '合作伙伴'},
     {
-      name: 'content', children: `鲨丁区块链携手战略合作伙伴，在构筑全球多链联盟链基础设施的探索中一起砥砺前行，`
+      name: 'content',tag:'mobile', children: `鲨丁区块链携手战略合作伙伴，在构筑全球多链联盟链基础设施的探索中一起砥砺前行，用区块链技术创造更多的价值！`
     },
     {
-      name: 'content', children: `用区块链技术创造更多的价值！`
+      name: 'content',tag:'web', children: `鲨丁区块链携手战略合作伙伴，在构筑全球多链联盟链基础设施的探索中一起砥砺前行，`
+    },
+    {
+      name: 'content',tag:'web', children: `用区块链技术创造更多的价值！`
     }],
   },
   block: {
@@ -697,7 +708,6 @@ export const Teams20DataSource = {
           ],
         },
       },
-      
     ],
   },
 };

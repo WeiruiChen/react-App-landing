@@ -21,7 +21,7 @@ class Content extends React.PureComponent {
           <div {...props} {...wrapper}>
             <div {...page}>
               <div {...titleWrapper}>
-                {titleWrapper.children.map(getChildrenToRender)}
+                {titleWrapper.children.map(getChildrenToRenderMobile)}
               </div>
               <OverPack {...overPackData}>
                 <QueueAnim
@@ -73,7 +73,7 @@ class Content extends React.PureComponent {
           <div {...props} {...wrapper}>
             <div {...page}>
               <div {...titleWrapper}>
-                {titleWrapper.children.map(getChildrenToRender)}
+                {titleWrapper.children.map(getChildrenToRenderWeb)}
               </div>
               <OverPack {...overPackData}>
                 <QueueAnim

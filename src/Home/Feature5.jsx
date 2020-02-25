@@ -4,7 +4,9 @@ import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import {Tabs, Icon, Row, Col} from 'antd';
 import Zmage from 'react-zmage'
 import {Collapse} from 'antd';
-import {getChildrenToRender} from './utils';
+// import {getChildrenToRender} from './utils';
+import {getChildrenToRender, getChildrenToRenderWeb,getChildrenToRenderMobile} from './utils';
+
 
 const TabPane = Tabs.TabPane;
 const {Panel} = Collapse;
@@ -104,7 +106,7 @@ class Content7 extends React.Component {
           }}>
             <div {...dataSource.page}>
               <div {...dataSource.titleWrapper}>
-                {dataSource.titleWrapper.children.map(getChildrenToRender)}
+                {dataSource.titleWrapper.children.map(getChildrenToRenderMobile)}
               </div>
               <div>
                 <Collapse
@@ -203,7 +205,7 @@ class Content7 extends React.Component {
           <div {...props} {...dataSource.wrapper}>
             <div {...dataSource.page}>
               <div {...dataSource.titleWrapper}>
-                {dataSource.titleWrapper.children.map(getChildrenToRender)}
+                {dataSource.titleWrapper.children.map(getChildrenToRenderWeb)}
               </div>
               <OverPack {...dataSource.OverPack}>
                 <TweenOne.TweenOneGroup
