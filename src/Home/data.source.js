@@ -110,7 +110,6 @@ export const Feature50DataSource = {
   tabsWrapper: {className: 'feature5-tabs-wrapper'},
   block: {
     children: [
-
       {
         name: 'block0',
         tag: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import {Button} from 'antd';
+import {Button, Row, Col} from 'antd';
 
 class Footer2 extends React.PureComponent {
   render() {
@@ -31,19 +31,27 @@ class Footer2 extends React.PureComponent {
             <div style={{width: '45%', height: '100%', float: 'left'}}>
               <img style={{width: '100%', height: '100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/logo-02.png" atl="logo"></img>
             </div>
-            <div style={{marginLeft:"300px", fontSize: '14px'}}>
-              <div onClick={() => {this.props.ToAnchor('Content0_0')}}>
-                <a style={{color: '#3D4D66'}}>核心优势</a></div>
-              <div onClick={() => {this.props.ToAnchor('Feature5_0')}}>
-                <a style={{color: '#3D4D66'}}> 解决方案</a></div>
-              <div onClick={() => {this.props.ToAnchor('Teams2_0')}}>
-                <a style={{color: '#3D4D66'}}>合作伙伴</a></div>
-              <div onClick={() => {this.props.ToAnchor('Banner1_0')}}>
-                <a style={{color: '#3D4D66'}}>公司动态</a></div>
-              <div onClick={() => {this.props.ToAnchor('Teams1_0')}}>
-                <a style={{color: '#3D4D66'}}>关于我们</a></div>
-              <Button size="small" style={{marginLeft:'-5px'}} onClick={() => {window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
+            <div style={{marginLeft: "250px", fontSize: '14px'}}>
+              <Row style={{marginTop:'35px'}}>
+                <Col span={12}>
+                  <div onClick={() => {this.props.ToAnchor('Feature5_0')}}>
+                    <a style={{color: '#3D4D66'}}>解决方案</a></div>
+                  <div onClick={() => {this.props.ToAnchor('Teams2_0')}}>
+                    <a style={{color: '#3D4D66'}}>合作伙伴</a></div>
+                  <div onClick={() => {this.props.ToAnchor('Teams1_0')}}>
+                    <a style={{color: '#3D4D66'}}>关于我们</a></div>
+                </Col>
+                <Col span={12}>
+                  <div onClick={() => {this.props.ToAnchor('Content0_0')}}>
+                    <a style={{color: '#3D4D66'}}>核心优势</a></div>
+                  <div onClick={() => {this.props.ToAnchor('Banner1_0')}}>
+                    <a style={{color: '#3D4D66'}}>公司动态</a></div>
+                  <Button size="small" style={{marginLeft: '-5px'}} onClick={() => {window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
+                </Col>
+              </Row>
+
             </div>
+
 
           </div>
           <div style={{textAlign: 'center', height: '20px', backgroundColor: '#DFE1E5'}}>
