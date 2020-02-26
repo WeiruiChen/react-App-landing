@@ -80,7 +80,7 @@ class Header extends React.Component {
           </TweenOne>
 
           <div id='father' className="header0-div-mobile-amotion" style={{height: '30px'}}>
-            <Button onClick={this.toggleOn} type="link" icon="menu" ghost style={{width: '70px'}}></Button>
+            <Button onClick={this.toggleOn} type="link" icon="menu" ghost style={{width: '70px',marginTop:'-1px'}}></Button>
             <div className="header0-div-mobile-amotion-son" style={{textAlign: 'center', display: 'none'}} id='son'>
               <Menu
                 mode={isMobile ? 'inline' : 'horizontal'}
