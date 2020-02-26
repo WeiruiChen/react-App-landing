@@ -63,18 +63,35 @@ class Header extends React.Component {
     const moment = phoneOpen === undefined ? 300 : null;
     if (this.props.isMobile) {
       return (
-        <div id='father' className="header0-div-mobile-amotion" style={{height: '30px'}}>
-          <Button onClick={this.toggleOn} type="link" icon="menu" ghost style={{width:'70px' }}></Button>
-          <div className="header0-div-mobile-amotion-son" style={{textAlign: 'center', display: 'none'}} id='son'>
-            <Menu
-              mode={isMobile ? 'inline' : 'horizontal'}
-              defaultSelectedKeys={['sub0']}
-              style={{width:'0px',height:'0px'}}
+        <div>
+          <TweenOne
+            component="header"
+            animation={{opacity: 0, type: 'from'}}
+            {...dataSource.wrapper}
+            {...props}
+          >
+            <div
+              {...dataSource.page}
+              className={`${dataSource.page.className}${phoneOpen ? ' open' : ''}`}
+              style={{height: '64px'}}
             >
-              {navChildren}
-            </Menu>
+              <img width="50%" src={dataSource.logo.children} alt="img" style={{marginTop: '10px'}} />
+            </div>
+          </TweenOne>
+
+          <div id='father' className="header0-div-mobile-amotion" style={{height: '30px'}}>
+            <Button onClick={this.toggleOn} type="link" icon="menu" ghost style={{width: '70px'}}></Button>
+            <div className="header0-div-mobile-amotion-son" style={{textAlign: 'center', display: 'none'}} id='son'>
+              <Menu
+                mode={isMobile ? 'inline' : 'horizontal'}
+                defaultSelectedKeys={['sub0']}
+                style={{width: '0px', height: '0px'}}
+              >
+                {navChildren}
+              </Menu>
+            </div>
           </div>
-        </div>
+        </div >
       );
     } else {
       return (
