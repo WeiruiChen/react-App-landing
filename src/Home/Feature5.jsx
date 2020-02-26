@@ -43,7 +43,7 @@ class Content7 extends React.Component {
         }
         className={item.className}
       >
-        <TweenOne.TweenOneGroup
+        {/* <TweenOne.TweenOneGroup
           enter={{
             y: 30,
             delay: 300,
@@ -53,7 +53,7 @@ class Content7 extends React.Component {
           }}
           leave={null}
           component=""
-        >
+        > */}
           {this.state.current === i + 1 && (
             <Row
               key="content"
@@ -68,7 +68,7 @@ class Content7 extends React.Component {
               </Col> */}
             </Row>
           )}
-        </TweenOne.TweenOneGroup>
+        {/* </TweenOne.TweenOneGroup> */}
       </TabPane>
     );
   };
@@ -207,7 +207,7 @@ class Content7 extends React.Component {
               <div {...dataSource.titleWrapper}>
                 {dataSource.titleWrapper.children.map(getChildrenToRenderWeb)}
               </div>
-              <OverPack {...dataSource.OverPack}>
+              {/* <OverPack {...dataSource.OverPack}>
                 <TweenOne.TweenOneGroup
                   key="tabs"
                   enter={{
@@ -218,7 +218,7 @@ class Content7 extends React.Component {
                   }}
                   leave={{y: 30, opacity: 0}}
                   {...dataSource.tabsWrapper}
-                >
+                > */}
                   {/* <div className="card-container"> */}
                   <Tabs
                     tabPosition="left"
@@ -235,8 +235,8 @@ class Content7 extends React.Component {
                     {tabsChildren}
                   </Tabs>
                   {/* </div> */}
-                </TweenOne.TweenOneGroup>
-              </OverPack>
+                {/* </TweenOne.TweenOneGroup>
+              </OverPack> */}
             </div>
           </div>
         </div >

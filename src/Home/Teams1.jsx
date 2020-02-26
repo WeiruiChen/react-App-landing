@@ -28,17 +28,20 @@ class Teams1 extends React.PureComponent {
             <div {...dataSource.titleWrapper}>
               {dataSource.titleWrapper.children.map(getChildrenToRender)}
             </div>
-            <OverPack {...dataSource.OverPack}>
+            {/* <OverPack {...dataSource.OverPack}>
               <QueueAnim
                 type="bottom"
                 key="block"
                 leaveReverse
-                {...dataSource.block}
+              
                 component={Row}
-              >
-                {listChildren}
-              </QueueAnim>
-            </OverPack>
+              > */}
+            <div
+              {...dataSource.block}>
+              {listChildren}
+            </div>
+              {/* </QueueAnim>
+            </OverPack> */}
           </div>
         </div>
       </div>

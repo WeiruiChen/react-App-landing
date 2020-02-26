@@ -23,14 +23,14 @@ class Content extends React.PureComponent {
               <div {...titleWrapper}>
                 {titleWrapper.children.map(getChildrenToRenderMobile)}
               </div>
-              <OverPack {...overPackData}>
+              {/* <OverPack {...overPackData}>
                 <QueueAnim
                   type="bottom"
                   key="block01"
                   leaveReverse
                   component={Row}
                   componentProps={childWrapper}
-                >
+                > */}
                   {childWrapper.children.map((block, i) => {
                     const {children: item, ...blockProps} = block;
                     return (
@@ -43,14 +43,14 @@ class Content extends React.PureComponent {
                       </Col>
                     );
                   })}
-                </QueueAnim>
+                {/* </QueueAnim>
                 <QueueAnim
                   type="bottom"
                   key="block"
                   leaveReverse
                   component={Row}
                   componentProps={childWrapper}
-                >
+                > */}
                   {childWrapper1.children.map((block, i) => {
                     const {children: item, ...blockProps} = block;
                     return (
@@ -61,8 +61,8 @@ class Content extends React.PureComponent {
                       </Col>
                     );
                   })}
-                </QueueAnim>
-              </OverPack>
+                {/* </QueueAnim>
+              </OverPack> */}
             </div>
           </div>
         </div>
@@ -75,14 +75,14 @@ class Content extends React.PureComponent {
               <div {...titleWrapper}>
                 {titleWrapper.children.map(getChildrenToRenderWeb)}
               </div>
-              <OverPack {...overPackData}>
+              {/* <OverPack {...overPackData}>
                 <QueueAnim
                   type="bottom"
                   key="block01"
                   leaveReverse
                   component={Row}
                   componentProps={childWrapper}
-                >
+                > */}
                   {childWrapper.children.map((block, i) => {
                     const {children: item, ...blockProps} = block;
                     return (
@@ -95,14 +95,14 @@ class Content extends React.PureComponent {
                       </Col>
                     );
                   })}
-                </QueueAnim>
+                {/* </QueueAnim>
                 <QueueAnim
                   type="bottom"
                   key="block"
                   leaveReverse
                   component={Row}
                   componentProps={childWrapper}
-                >
+                > */}
                   {childWrapper1.children.map((block, i) => {
                     const {children: item, ...blockProps} = block;
                     return (
@@ -113,8 +113,8 @@ class Content extends React.PureComponent {
                       </Col>
                     );
                   })}
-                </QueueAnim>
-              </OverPack>
+                {/* </QueueAnim>
+              </OverPack> */}
             </div>
           </div>
         </div>
