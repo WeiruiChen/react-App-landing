@@ -21,11 +21,11 @@ class Header extends React.Component {
 
   toggleOn() {
     let styleFather = document.getElementById('father').style;
-    if (styleFather.height == '50px') {
-      document.getElementById('father').style.height = "212px";
+    if (styleFather.height == '30px') {
+      document.getElementById('father').style.height = "242px";
       document.getElementById('son').style.display = 'block';
     } else {
-      document.getElementById('father').style.height = "50px";
+      document.getElementById('father').style.height = "30px";
       document.getElementById('son').style.display = 'none';
     }
 
@@ -39,34 +39,37 @@ class Header extends React.Component {
       if (this.props.isMobile) {
         return (
           <Item key={item.name} {...itemProps} style={{
-            width: '70px'
+            width: '70px',
+            height: '30px',
           }}>
-            <div onClick={() => {this.props.ToAnchor(item.children.href)}} style={{fontSize: '10px', marginLeft: '-24px', color: '#000'}}>
+            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:margaret.xie@shadingtech.com"} }}
+              style={{fontSize: '12px', marginLeft: '-14px', marginTop: '-5px', color: '#000'}}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>
         );
       } else {
-        return (
-          <Item key={item.name} {...itemProps}>
-            <div onClick={() => {this.props.ToAnchor(item.children.href)}} className={`header0-item-block ${a.className}`.trim()}>
-              {a.children.map(getChildrenToRender)}
-            </div>
-          </Item>
-        );
+        if (item.name !== 'mail') {
+          return (
+            <Item key={item.name} {...itemProps}>
+              <div onClick={() => {this.props.ToAnchor(item.children.href)}} className={`header0-item-block ${a.className}`.trim()}>
+                {a.children.map(getChildrenToRender)}
+              </div>
+            </Item>
+          );
+        }
       }
     });
     const moment = phoneOpen === undefined ? 300 : null;
     if (this.props.isMobile) {
       return (
-        <div id='father' className="header0-div-mobile-amotion" style={{height: '50px'}}>
-          <Button onClick={this.toggleOn} icon="menu" ghost style={{margin: '10px 0 0 20px', }}></Button>
-          <div className="header0-div-mobile-amotion-son" style={{textAlign: 'center',display:'none'}} id='son'>
+        <div id='father' className="header0-div-mobile-amotion" style={{height: '30px'}}>
+          <Button onClick={this.toggleOn} type="link" icon="menu" ghost style={{width:'70px' }}></Button>
+          <div className="header0-div-mobile-amotion-son" style={{textAlign: 'center', display: 'none'}} id='son'>
             <Menu
               mode={isMobile ? 'inline' : 'horizontal'}
               defaultSelectedKeys={['sub0']}
-              theme="theme"
-              style={{width: '0px'}}
+              style={{width:'0px',height:'0px'}}
             >
               {navChildren}
             </Menu>
@@ -128,6 +131,7 @@ class Header extends React.Component {
                 theme="theme"
               >
                 {navChildren}
+                <Button onClick={() => {window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
               </Menu>
             </TweenOne>
           </div>

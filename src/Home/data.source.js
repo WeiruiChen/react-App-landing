@@ -48,16 +48,15 @@ export const Nav00DataSource = {
           href: 'Teams1_0',
           children: [{children: '关于我们', name: 'text'}],
         },
+      },
+      {
+        name: 'mail',
+        className: 'header0-item',
+        children: {
+          href: 'margaret.xie@shadingtech.com',
+          children: [{children: '联系我们', name: 'text'}],
+        },
       }
-      // ,
-      // {
-      //   name: 'mail',
-      //   className: 'header0-item',
-      //   children: {
-      //     href: 'margaret.xie@shadingtech.com',
-      //     children: [{children: '联系我们', name: 'text'}],
-      //   },
-      // }
     ],
   },
   mobileMenu: {className: 'header0-mobile-menu'},
@@ -89,8 +88,8 @@ export const Feature50DataSource = {
   titleWrapper: {
     className: 'title-wrapper',
     children: [
-      {name: 'title',tag:'web', children: '解决方案', className: 'title-h1'},
-      {name: 'title',tag:'mobile', children: '解决方案', className: 'title-h1'},
+      {name: 'title', tag: 'web', children: '解决方案', className: 'title-h1'},
+      {name: 'title', tag: 'mobile', children: '解决方案', className: 'title-h1'},
       {
         name: 'content',
         tag: 'mobile',
@@ -111,29 +110,9 @@ export const Feature50DataSource = {
   tabsWrapper: {className: 'feature5-tabs-wrapper'},
   block: {
     children: [
+
       {
         name: 'block0',
-        tag: {
-          className: 'feature5-tag',
-          icon: {children: 'zhihui', className: 'zhihui'},
-          text: {className: 'feature5-tag-name', children: '智慧城市'},
-        },
-        content: {
-          className: 'feature5-content',
-          text: {
-            className: 'feature5-text',
-            md: 24,
-            xs: 30,
-            children: (
-              <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihui-newestP.png" width="100%" alt="智慧城市"></img>
-              </>
-            ),
-          }
-        },
-      },
-      {
-        name: 'block1',
         tag: {
           className: 'feature5-tag',
           text: {children: '政务上链', className: 'feature5-tag-name'},
@@ -148,6 +127,27 @@ export const Feature50DataSource = {
             children: (
               <>
                 <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwu-newestP.png" width="100%" alt="政务上链"></img>
+              </>
+            ),
+          }
+        },
+      },
+      {
+        name: 'block1',
+        tag: {
+          className: 'feature5-tag',
+          icon: {children: 'zhihui', className: 'zhihui'},
+          text: {className: 'feature5-tag-name', children: '智慧城市'},
+        },
+        content: {
+          className: 'feature5-content',
+          text: {
+            className: 'feature5-text',
+            md: 24,
+            xs: 30,
+            children: (
+              <>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihui-newestP.png" width="100%" alt="智慧城市"></img>
               </>
             ),
           }
@@ -273,8 +273,8 @@ export const Content00DataSource = {
   OverPack: {playScale: 0.3, className: ''},
   titleWrapper: {
     className: 'title-wrapper',
-    children: [{name: 'title',tag:'web', children: '核心优势'},
-    {name: 'title',tag:'mobile', children: '核心优势'},
+    children: [{name: 'title', tag: 'web', children: '核心优势'},
+    {name: 'title', tag: 'mobile', children: '核心优势'},
     {name: 'content', tag: 'mobile', children: '鲨丁区块链依靠多年分布式系统领域研发经验,通过自主创新，成为集高效、灵活、安全于一身的新一代联盟区块链解决方案。'},
     {name: 'content', tag: 'web', children: '鲨丁区块链依靠多年分布式系统领域研发经验,通过自主创新，'},
     {name: 'content', tag: 'web', children: '成为集高效、灵活、安全于一身的新一代联盟区块链解决方案。'}],

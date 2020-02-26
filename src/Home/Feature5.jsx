@@ -15,7 +15,7 @@ class Content7 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 2,
+      current: 1,
     };
   }
   onChange = (key) => {

@@ -31,7 +31,7 @@ class Footer2 extends React.PureComponent {
             <div style={{width: '45%', height: '100%', float: 'left'}}>
               <img style={{width: '100%', height: '100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/logo-02.png" atl="logo"></img>
             </div>
-            <div style={{float: 'right', paddingTop: '5px', fontSize: '12px'}}>
+            <div style={{marginLeft:"300px", fontSize: '14px'}}>
               <div onClick={() => {this.props.ToAnchor('Content0_0')}}>
                 <a style={{color: '#3D4D66'}}>核心优势</a></div>
               <div onClick={() => {this.props.ToAnchor('Feature5_0')}}>
@@ -42,10 +42,9 @@ class Footer2 extends React.PureComponent {
                 <a style={{color: '#3D4D66'}}>公司动态</a></div>
               <div onClick={() => {this.props.ToAnchor('Teams1_0')}}>
                 <a style={{color: '#3D4D66'}}>关于我们</a></div>
-              <div onClick={() => {window.location.href = 'mailto:margaret.xie@shadingtech.com'}}>
-                <a style={{color: '#3D4D66'}}>联系我们</a></div>
-              <div onClick={() => {window.location.href = 'mailto:margaret.xie@shadingtech.com'}}>Email: margaret.xie@shadingtech.com</div>
+              <Button size="small" style={{marginLeft:'-5px'}} onClick={() => {window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
             </div>
+
           </div>
           <div style={{textAlign: 'center', height: '20px', backgroundColor: '#DFE1E5'}}>
             {dataSource.copyright1.children}
@@ -56,7 +55,7 @@ class Footer2 extends React.PureComponent {
       return (
         <div>
 
-          <h1 style={{fontSize: '32px', margin: ' 0 auto', textAlign: 'center'}}>联系我们</h1>
+          <h1 style={{fontSize: '32px', margin: '0 auto', textAlign: 'center'}}>联系我们</h1>
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>
             <a style={{fontSize: '20px'}} href="mailto:margaret.xie@shadingtech.com">Email: margaret.xie@shadingtech.com</a>
           </h2>
