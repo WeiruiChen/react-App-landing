@@ -42,7 +42,7 @@ class Header extends React.Component {
             width: '70px',
             height: '30px',
           }}>
-            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:margaret.xie@shadingtech.com"} }}
+            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href);this.toggleOn()} else {window.location.href = "mailto:margaret.xie@shadingtech.com";this.toggleOn()} }}
               style={{fontSize: '12px', marginLeft: '-14px', marginTop: '-5px', color: '#000'}}>
               {a.children.map(getChildrenToRender)}
             </div>
@@ -75,7 +75,7 @@ class Header extends React.Component {
               className={`${dataSource.page.className}${phoneOpen ? ' open' : ''}`}
               style={{height: '64px'}}
             >
-              <img width="50%" src={dataSource.logo.children} alt="img" style={{marginTop: '20px'}} />
+              <img width="50%" src={dataSource.logo.children} alt="img" style={{marginTop: '15px'}} />
             </div>
           </TweenOne>
 

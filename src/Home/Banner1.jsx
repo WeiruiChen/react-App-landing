@@ -262,7 +262,7 @@ class Banner extends React.PureComponent {
                   <Col span={1} style={{textAlign: 'center'}}>
                     <Icon type="left-circle" style={{fontSize: '30px', marginTop: '185px', color: '#BEC4CC'}} onClick={this.prev} />
                   </Col>
-                  <Col span={22}><Carousel autoplay ref={el => (this.slider = el)}>
+                  <Col span={22}><Carousel  ref={el => (this.slider = el)}>
                     <div>
                       <Row style={{marginTop: '50px'}} type="flex" align="bottom" justify="space-around">
                         <Col span={6} > <Card hoverable

@@ -30,7 +30,7 @@ class Header extends React.Component {
           <Item key={item.name} {...itemProps} style={{
             width: '50px'
           }}>
-            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:margaret.xie@shadingtech.com"} }}
+            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:contact@shadingtech.com"} }}
               style={{fontSize: '12px', color: '#000'}} >
               {a.children.map(getChildrenToRender)}
             </div>
@@ -39,7 +39,7 @@ class Header extends React.Component {
       } else {
         return (
           <Item key={item.name} {...itemProps}>
-            <div  onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:margaret.xie@shadingtech.com"} }} className={`header0-item-block ${a.className}`.trim()}>
+            <div  onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:contact@shadingtech.com"} }} className={`header0-item-block ${a.className}`.trim()}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>
@@ -100,7 +100,7 @@ class Header extends React.Component {
                 theme="theme"
               >
                 {navChildren}
-                <Button size="small" onClick={() => { window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
+                <Button size="small" onClick={() => { window.location.href = "mailto:contact@shadingtech.com"}} type="primary">联系我们</Button>
               </Menu>
             </TweenOne>
           </div>
@@ -162,7 +162,7 @@ class Header extends React.Component {
                 theme="theme"
               >
                 {navChildren}
-                <Button onClick={() => { window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
+                <Button onClick={() => { window.location.href = "mailto:contact@shadingtech.com"}} type="primary">联系我们</Button>
               </Menu>
             </TweenOne>
           </div>

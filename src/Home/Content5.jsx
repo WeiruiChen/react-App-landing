@@ -1,8 +1,8 @@
 import React from 'react';
-import { Row, Col } from 'antd';
-import { TweenOneGroup } from 'rc-tween-one';
+import {Row, Col} from 'antd';
+import {TweenOneGroup} from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { getChildrenToRender } from './utils';
+import {getChildrenToRender} from './utils';
 
 class Content5 extends React.PureComponent {
   getChildrenToRender = (data) =>
@@ -20,38 +20,33 @@ class Content5 extends React.PureComponent {
     });
 
   render() {
-    const { ...props } = this.props;
-    const { dataSource } = props;
+    const {...props} = this.props;
+    const {dataSource} = props;
+    const {...currentProps} = this.props;
+    const {
+      wrapper,
+      page,
+      BannerAnim
+    } = dataSource;
     delete props.dataSource;
     delete props.isMobile;
-    const childrenToRender = this.getChildrenToRender(
-      dataSource.block.children
-    );
+
     return (
-      <div {...props} {...dataSource.wrapper}>
-        <div {...dataSource.page}>
-          <div key="title" {...dataSource.titleWrapper}>
-            {dataSource.titleWrapper.children.map(getChildrenToRender)}
+      <div>
+        <div {...currentProps} {...wrapper} style={{background: '#fff', height: '150px', minHeight: '150px'}}>
+          <div {...page}>
+            <div {...dataSource.titleWrapper} style={{textAlign: 'left'}}>
+              <div style={{float: 'left', marginBottom: '40px'}}>
+                <span style={{fontSize: '20px'}}>联系我们</span>
+                <ul style={{marginLeft: '20px', fontSize: '14px', listStyle: 'disc'}}>
+                  <li>
+                    <a href="mailto:contact@shadingtech.com" style={{ color: '#3D4D66'}} key='mail'>邮件:contact@shadingtech.com</a>
+
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <OverPack
-            className={`content-template ${props.className}`}
-            {...dataSource.OverPack}
-          >
-            <TweenOneGroup
-              component={Row}
-              key="ul"
-              enter={{
-                y: '+=30',
-                opacity: 0,
-                type: 'from',
-                ease: 'easeInOutQuad',
-              }}
-              leave={{ y: '+=30', opacity: 0, ease: 'easeInOutQuad' }}
-              {...dataSource.block}
-            >
-              {childrenToRender}
-            </TweenOneGroup>
-          </OverPack>
         </div>
       </div>
     );

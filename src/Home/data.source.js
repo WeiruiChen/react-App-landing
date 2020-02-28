@@ -4,7 +4,7 @@ export const Nav00DataSource = {
   page: {className: 'home-page'},
   logo: {
     className: 'header0-logo',
-    children: require('./img/logo-shading.png'),
+    children: require('./img/header-logo-newest.png'),
   },
   Menu: {
     className: 'header0-menu',
@@ -53,7 +53,7 @@ export const Nav00DataSource = {
         name: 'mail',
         className: 'header0-item',
         children: {
-          href: 'margaret.xie@shadingtech.com',
+          href: 'contact@shadingtech.com',
           children: [{children: '联系我们', name: 'text'}],
         },
       }
@@ -726,7 +726,7 @@ export const Footer20DataSource = {
   titleWrapper: {
     className: 'title-wrapper',
     children: [{name: 'title', children: '联系我们'},
-    {name: 'content', children: `Email: margaret.xie@shadingtech.com`}],
+    {name: 'content', children: `Email: contact@shadingtech.com`}],
   },
   copyright1: {
     className: 'copyright1',
@@ -783,7 +783,7 @@ export const Footer20DataSource = {
         href: '#',
         className: 'links-weibo',
         children:
-          'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/logo-shading.png',
+          'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/footer-logo.png',
       }
     ],
   },
@@ -803,3 +803,16 @@ export const Footer01DataSource = {
     ),
   },
 };
+
+export const Content50DataSource = {
+  wrapper: {className: 'home-page-wrapper content0-wrapper banner1'},
+  page: {className: 'home-page content0'},
+  titleWrapper: {
+    className: 'title-wrapper',
+    children: [
+      {name: 'title', children: '', className: 'title-h1'},
+    ],
+  },
+};
+
+

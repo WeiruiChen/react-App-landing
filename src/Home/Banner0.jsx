@@ -22,7 +22,7 @@ class Banner extends React.PureComponent {
               delay={200}
               {...dataSource.textWrapper}
             >
-              <div style={{color: '#00236D', fontSize: '40px'}}>鲨丁区块链</div>
+              <div style={{color: '#00236D', fontSize: '50px'}}>鲨丁区块链</div>
               <div key="title" {...dataSource.title}>
                 {typeof dataSource.title.children === 'string' &&
                   dataSource.title.children.match(isImg) ? (
@@ -48,7 +48,7 @@ class Banner extends React.PureComponent {
               delay={200}
               {...dataSource.textWrapper}
             >
-              <div style={{color: '#00236D', fontSize: '40px'}}>鲨丁区块链</div>
+              <div style={{color: '#00236D', fontSize: '50px'}}>鲨丁区块链</div>
               <div key="title" {...dataSource.title}>
                 {typeof dataSource.title.children === 'string' &&
                   dataSource.title.children.match(isImg) ? (

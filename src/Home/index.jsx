@@ -7,6 +7,7 @@ import Nav0 from './Nav0_1';
 import Banner0 from './Banner0';
 import Banner1 from './Banner1';
 import Content0 from './Content0';
+import Content5 from './Content5';
 import Teams1 from './Teams1';
 import Teams2 from './Teams2';
 import Feature5 from './Feature5';
@@ -22,6 +23,7 @@ import {
   Feature50DataSource,
   Teams10DataSource,
   Footer20DataSource,
+  Content50DataSource
   // Footer01DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
@@ -97,7 +99,7 @@ export default class Home extends React.Component {
       <Banner0
         id="Banner0_1"
         key="Banner0_1"
-        style={{minHeight:'550px'}}
+        style={{minHeight: '550px'}}
         dataSource={Banner01DataSource}
         isMobile={this.state.isMobile}
       />,
@@ -137,6 +139,13 @@ export default class Home extends React.Component {
       //   dataSource={Footer10DataSource}
       //   isMobile={this.state.isMobile}
       // />,
+      <Content5
+        id="Content5_0"
+        key="Content5_0"
+        // ToAnchor={this.scrollToAnchor}
+        dataSource={Content50DataSource}
+        isMobile={this.state.isMobile}>
+      </Content5>,
       <Footer2
         id="Footer2_0"
         key="Footer2_0"
