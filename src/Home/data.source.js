@@ -783,7 +783,7 @@ export const Footer20DataSource = {
         href: '#',
         className: 'links-weibo',
         children:
-          'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/footer-logo.png',
+          'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/footer-row.png',
       }
     ],
   },
@@ -814,5 +814,78 @@ export const Content50DataSource = {
     ],
   },
 };
+
+export const Footer40DataSource = {
+  wrapper: { className: 'home-page-wrapper footer4-wrapper' },
+  OverPack: { className: 'footer4', playScale: 0.2 },
+  block: {
+    className: 'home-page',
+    gutter: 0,
+    children: [
+      {
+        name: 'block0',
+        xs: 24,
+        md: 6,
+        className: 'block',
+        title: {
+          className: 'logo',
+          children:
+            'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/footer-logo.png',
+        },
+        childWrapper: {
+          className: 'slogan',
+          children: [
+            {
+              name: 'content0',
+              children: '',
+            },
+          ],
+        },
+      },
+      {
+        name: 'block1',
+        xs: 24,
+        md: 6,
+        className: 'block',
+        title: { children: '产品' },
+        childWrapper: {
+          children: [
+            { name: 'link0', href: '#', children: '产品更新记录' },
+            { name: 'link1', href: '#', children: 'API文档' },
+            { name: 'link2', href: '#', children: '快速入门' },
+            { name: 'link3', href: '#', children: '参考指南' },
+          ],
+        },
+      },
+      {
+        name: 'block2',
+        xs: 24,
+        md: 6,
+        className: 'block',
+        title: { children: '关于' },
+        childWrapper: {
+          children: [
+            { href: '#', name: 'link0', children: 'FAQ' },
+            { href: '#', name: 'link1', children: '联系我们' },
+          ],
+        },
+      }
+    ],
+  },
+  copyrightWrapper: { className: 'copyright-wrapper' },
+  copyrightPage: { className: 'home-page' },
+  copyright: {
+    className: 'copyright',
+    children: (
+      <>
+        <span>
+          ©2020 by <a href="https://119.23.79.90:3000">鲨丁网</a> All Rights
+          Reserved
+        </span>
+      </>
+    ),
+  },
+};
+
 
 

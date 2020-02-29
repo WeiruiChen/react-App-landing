@@ -1,6 +1,6 @@
 @feature5: feature5;
 .@{feature5}-wrapper {
-  background-color: #F4F6F9;
+  background-color: #EBEDF0;
   min-height: 720px;
   .@{feature5} {
     >h1,
@@ -69,11 +69,16 @@
         text-align: center;
       }
     }
+    .ant-tabs-nav-wrap{
+      border-bottom: 2px solid  #c8d2df;
+    }
     .ant-tabs-tab {
       height: 75px!important;
       background-color: #EFF0F2;
       // bor
-      border: 1px solid rgb(180, 180, 180);
+      border-top: 2px solid  #c8d2df;
+      // border-bottom-style: 'none'!important;
+      // border-right-style: none;
       // border-color: transparent;
     }
     .ant-tabs-tab:hover{
@@ -84,6 +89,13 @@
       background-color: rgb(17, 26, 39)!important;
       color: #fff!important;
       // border-color: transparent;
+    }
+    .ant-tabs-right-bar{
+      float: left;
+      margin-left: 5px;
+    }
+    .ant-tabs-right-content{
+      border-right: 1px solid #EBEDF0;
     }
     .ant-tabs-left-content{
       // border: 1px solid rgb(180, 180, 180);

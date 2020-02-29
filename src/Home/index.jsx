@@ -13,6 +13,7 @@ import Teams2 from './Teams2';
 import Feature5 from './Feature5';
 // import Footer0 from './Footer0';
 import Footer2 from './Footer2';
+import Footer4 from './Footer4';
 
 import {
   Nav00DataSource,
@@ -23,7 +24,8 @@ import {
   Feature50DataSource,
   Teams10DataSource,
   Footer20DataSource,
-  Content50DataSource
+  Content50DataSource,
+  Footer40DataSource,
   // Footer01DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
@@ -153,6 +155,12 @@ export default class Home extends React.Component {
         dataSource={Footer20DataSource}
         isMobile={this.state.isMobile}
       />,
+      // <Footer4
+      //   id="Footer4_0"
+      //   key="Footer4_0"
+      //   dataSource={Footer40DataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
     ];
     return (
       <div

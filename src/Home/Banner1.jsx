@@ -242,7 +242,7 @@ class Banner extends React.PureComponent {
               <div {...dataSource.titleWrapper}>
                 {dataSource.titleWrapper.children.map(getChildrenToRender)}
               </div>
-              <div style={{background: '#F4F6F9'}}>
+              <div style={{background: '#EBEDF0'}}>
                 <Row>
                   <Col span={1} style={{textAlign: 'center'}}>
                     <Icon type="left-circle" style={{fontSize: '30px', marginTop: '135px', color: '#BEC4CC'}} onClick={this.prev} />
@@ -286,7 +286,7 @@ class Banner extends React.PureComponent {
                       </Row>
                     </div>
                     <div >
-                      <Row style={{marginTop: '50px'}} type="flex" align="bottom" justify="space-around">
+                      <Row  type="flex" align="bottom" justify="space-around">
                         <Col span={6} > <Card hoverable
                           cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/KVwTNHBjDLjENA9H2BVnLg")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongao4.png" />}
                         >

@@ -31,7 +31,11 @@ class Content7 extends React.Component {
   onChange = (key) => {
     this.setState({current: parseFloat(key)});
     this.setState({name: nameMap[key]});
+  };
 
+  onChange1 = (key) => {
+    this.setState({current: parseFloat(key)});
+    this.setState({name: nameMap[key]});
   };
 
   getBlockChildren = (item, i) => {
@@ -46,16 +50,22 @@ class Content7 extends React.Component {
       <TabPane
         key={i + 1}
         tab={
-          <div className={tag.className} style={{marginTop: '18px'}}>
+          <div className={tag.className} style={{marginTop: '18px'}} onMouseEnter={() => {
+            this.setState({current: parseFloat(i + 1)});
+            this.setState({name: nameMap[i + 1]});
+          }} >
             <Icon type={iconChildren} className={icon.className} style={{marginTop: '5px'}} />
             <div {...tagText}>{tagText.children}</div>
           </div>
         }
         className={item.className}
       >
-        <div style={{border: "1px solid rgb(180, 180, 180);"}}>
+        <div style={{border: "2px solid #c8d2df", borderRadius: '0px 5px 5px 5px'}}>
 
-          <h1>{this.state.name}</h1>
+          <div style={{textAlign: 'left', marginLeft: '55px', position: 'absolute', marginTop: '30px'}}>
+            <h3 style={{fontSize: '20px', color: '#0033A1', fontWeight: '500'}}>{this.state.name}</h3>
+            <div style={{width: '35px', marginTop: '-15px', height: '2px', background: '#0033A1'}}></div>
+          </div>
           {/* <TweenOne.TweenOneGroup
           enter={{
             y: 30,
@@ -73,8 +83,9 @@ class Content7 extends React.Component {
                 key="content"
                 className={content.className}
                 gutter={content.gutter}
+                style={{marginTop: '70px'}}
               >
-                <Col className={text.className} xs={text.xs} md={text.md}>
+                <Col className={text.className} xs={text.xs} md={text.md} style={{height: '901px'}}>
                   {textChildren}
                 </Col>
                 {/* <Col className={img.className} xs={img.xs} md={img.md}>
@@ -240,7 +251,7 @@ class Content7 extends React.Component {
                 key="tabs"
                 onChange={this.onChange}
                 activeKey={`${this.state.current}`}
-                tabPosition='left'
+                tabPosition='right'
                 // renderTabBar={}
                 tabBarStyle={{color: '#0033A1'}}
                 {...dataSource.block}
