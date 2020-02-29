@@ -53,8 +53,10 @@ class Content7 extends React.Component {
         }
         className={item.className}
       >
-        <h1>{this.state.name}</h1>
-        {/* <TweenOne.TweenOneGroup
+        <div style={{border: "1px solid rgb(180, 180, 180);"}}>
+
+          <h1>{this.state.name}</h1>
+          {/* <TweenOne.TweenOneGroup
           enter={{
             y: 30,
             delay: 300,
@@ -65,22 +67,25 @@ class Content7 extends React.Component {
           leave={null}
           component=""
         > */}
-        {this.state.current === i + 1 && (
-          <Row
-            key="content"
-            className={content.className}
-            gutter={content.gutter}
-          >
-            <Col className={text.className} xs={text.xs} md={text.md}>
-              {textChildren}
-            </Col>
-            {/* <Col className={img.className} xs={img.xs} md={img.md}>
+          {
+            this.state.current === i + 1 && (
+              <Row
+                key="content"
+                className={content.className}
+                gutter={content.gutter}
+              >
+                <Col className={text.className} xs={text.xs} md={text.md}>
+                  {textChildren}
+                </Col>
+                {/* <Col className={img.className} xs={img.xs} md={img.md}>
                 <img src={img.children} width="100%" alt="img" />
               </Col> */}
-          </Row>
-        )}
+              </Row>
+            )
+          }
+        </div>
         {/* </TweenOne.TweenOneGroup> */}
-      </TabPane>
+      </TabPane >
     );
   };
 

@@ -59,21 +59,6 @@ class Banner extends React.PureComponent {
           <Meta style={{fontSize: '10px'}} title={<span style={{color: '#0033A1', fontSize: '12px'}}
           >{item.title}</span>} description={item.date} />
         </Card>
-        // <Card
-        //   onClick={() => {window.open(item.href)}}
-        //   hoverable
-        //   size='small'
-        //   style={{width: '100%', margin: '0 auto', marginTop: '30px'}}
-        // >
-        //   <Layout >
-        //     <Sider theme='light'><img alt="example" style={{width:'90%',marginTop:'7',marginLeft:'5%'}}  src={item.imgSrc} ></img></Sider>
-        //     <Layout style={{background:'#fff'}}>
-        //       <Content style={{background:'#fff'}}><span style={{color: '#0033A1',fontSize: '12px'}}
-        //   >{item.title}</span></Content>
-        //       <Footer style={{background:'#fff'}}><div style={{float:'bottom'}}>{item.date}</div></Footer>
-        //     </Layout>
-        //   </Layout>
-        // </Card>
       )
     });
     const Banner1Data = BannerAnim.children1.map((item) => {
@@ -260,11 +245,11 @@ class Banner extends React.PureComponent {
               <div style={{background: '#F4F6F9'}}>
                 <Row>
                   <Col span={1} style={{textAlign: 'center'}}>
-                    <Icon type="left-circle" style={{fontSize: '30px', marginTop: '185px', color: '#BEC4CC'}} onClick={this.prev} />
+                    <Icon type="left-circle" style={{fontSize: '30px', marginTop: '135px', color: '#BEC4CC'}} onClick={this.prev} />
                   </Col>
                   <Col span={22}><Carousel  ref={el => (this.slider = el)}>
                     <div>
-                      <Row style={{marginTop: '50px'}} type="flex" align="bottom" justify="space-around">
+                      <Row  type="flex" align="bottom" justify="space-around">
                         <Col span={6} > <Card hoverable
                           cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/dZkxf3XMaCN5dNkq_M4h-g")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg1.png" />}
                         >
@@ -331,7 +316,7 @@ class Banner extends React.PureComponent {
                   </Carousel>
                   </Col>
                   <Col span={1} style={{textAlign: 'center'}}>
-                    <Icon type="right-circle" style={{fontSize: '30px', marginTop: '185px', color: '#BEC4CC'}} onClick={this.next} />
+                    <Icon type="right-circle" style={{fontSize: '30px', marginTop: '135px', color: '#BEC4CC'}} onClick={this.next} />
                   </Col>
                 </Row>
               </div>
