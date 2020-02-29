@@ -1,10 +1,10 @@
 import React from 'react';
-import {Card, Row, Col, Carousel, Icon,Layout} from 'antd';
+import {Card, Row, Col, Carousel, Icon, Layout} from 'antd';
 import {getChildrenToRender} from './utils';
 import 'rc-banner-anim/assets/index.css';
 
 const {Meta} = Card;
-const { Header, Footer, Sider, Content } = Layout;
+const {Header, Footer, Sider, Content} = Layout;
 
 class Banner extends React.PureComponent {
 
@@ -79,17 +79,17 @@ class Banner extends React.PureComponent {
         <div>
           <div {...currentProps} {...wrapper}>
             <div {...page}>
-              <div {...dataSource.titleWrapper} style={{background: '#F4F6F9'}}>
+              <div {...dataSource.titleWrapper} >
                 {dataSource.titleWrapper.children.map(getChildrenToRender)}
               </div>
               <div style={{textAlign: 'center'}}>
                 <Icon type="up-circle" style={{fontSize: '30px', color: '#BEC4CC', margin: '0 auto'}} onClick={this.prev1} />
-                <Carousel dotPosition='left' ref={el => (this.slider1 = el)}>
+                <Carousel dotPosition='left' style={{background: '#EBEDF0'}} ref={el => (this.slider1 = el)}>
                   {/* <Col> */}
-                  <div style={{textAlign: 'center'}}>
+                  <div style={{textAlign: 'center',background: '#EBEDF0'}}>
                     {Banner0Data}
                   </div>
-                  <div style={{textAlign: 'center'}}>
+                  <div style={{textAlign: 'center',background: '#EBEDF0'}}>
                     {Banner1Data}
                   </div>
                 </Carousel>
@@ -247,9 +247,9 @@ class Banner extends React.PureComponent {
                   <Col span={1} style={{textAlign: 'center'}}>
                     <Icon type="left-circle" style={{fontSize: '30px', marginTop: '135px', color: '#BEC4CC'}} onClick={this.prev} />
                   </Col>
-                  <Col span={22}><Carousel  ref={el => (this.slider = el)}>
+                  <Col span={22}><Carousel ref={el => (this.slider = el)}>
                     <div>
-                      <Row  type="flex" align="bottom" justify="space-around">
+                      <Row type="flex" align="bottom" justify="space-around">
                         <Col span={6} > <Card hoverable
                           cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/dZkxf3XMaCN5dNkq_M4h-g")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/bannerbg1.png" />}
                         >
@@ -286,7 +286,7 @@ class Banner extends React.PureComponent {
                       </Row>
                     </div>
                     <div >
-                      <Row  type="flex" align="bottom" justify="space-around">
+                      <Row type="flex" align="bottom" justify="space-around">
                         <Col span={6} > <Card hoverable
                           cover={<img alt="example" onClick={() => window.open("https://mp.weixin.qq.com/s/KVwTNHBjDLjENA9H2BVnLg")} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongao4.png" />}
                         >
