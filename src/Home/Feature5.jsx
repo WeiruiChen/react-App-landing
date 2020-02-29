@@ -62,7 +62,7 @@ class Content7 extends React.Component {
       >
         <div style={{border: "2px solid #c8d2df", borderRadius: '0px 5px 5px 5px'}}>
 
-          <div style={{textAlign: 'left', marginLeft: '55px', position: 'absolute', marginTop: '30px'}}>
+          <div style={{textAlign: 'left', marginLeft: '55px', position: 'absolute', marginTop: '40px'}}>
             <h3 style={{fontSize: '20px', color: '#0033A1', fontWeight: '500'}}>{this.state.name}</h3>
             <div style={{width: '35px', marginTop: '-15px', height: '2px', background: '#0033A1'}}></div>
           </div>
@@ -85,7 +85,7 @@ class Content7 extends React.Component {
                 gutter={content.gutter}
                 style={{marginTop: '70px'}}
               >
-                <Col className={text.className} xs={text.xs} md={text.md} style={{height: '901px'}}>
+                <Col className={text.className} xs={text.xs} md={text.md} style={{height: '860px'}}>
                   {textChildren}
                 </Col>
                 {/* <Col className={img.className} xs={img.xs} md={img.md}>
