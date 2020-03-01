@@ -729,7 +729,7 @@ export const Footer20DataSource = {
     {name: 'content', children: `Email: contact@shadingtech.com`}],
   },
   copyright1: {
-    className: 'copyright1',
+    className: '',
     children: (
       <>
         <span>
