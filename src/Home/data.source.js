@@ -125,7 +125,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhengwu-newestP.png" width="100%" alt="政务上链"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/%E6%89%8B%E6%9C%BA%E7%AB%AF%EF%BC%9A%E6%94%BF%E5%8A%A1%E4%B8%8A%E9%93%BE.png" width="100%" alt="政务上链"></img>
               </>
             ),
           }
@@ -146,7 +146,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/zhihui-newestP.png" width="100%" alt="智慧城市"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/%E6%89%8B%E6%9C%BA%E7%AB%AF%EF%BC%9A%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82.png" width="100%" alt="智慧城市"></img>
               </>
             ),
           }
@@ -168,7 +168,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/gongying-newest.png" width="100%" alt="供应链金融"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/%E6%89%8B%E6%9C%BA%E7%AB%AF%EF%BC%9A%E4%BE%9B%E5%BA%94%E9%93%BE%E9%87%91%E8%9E%8D.png" width="100%" alt="供应链金融"></img>
               </>
             ),
           }
@@ -189,7 +189,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/chanping-newest.png" width="100%" alt="产品溯源"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/%E6%89%8B%E6%9C%BA%E7%AB%AF%EF%BC%9A%E4%BA%A7%E5%93%81%E6%BA%AF%E6%BA%90.png" width="100%" alt="产品溯源"></img>
               </>
             ),
           }
@@ -210,7 +210,7 @@ export const Feature50DataSource = {
             xs: 30,
             children: (
               <>
-                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/shuzi-newest.png" width="100%" alt="数字身份"></img>
+                <img src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/%E6%89%8B%E6%9C%BA%E7%AB%AF%EF%BC%9A%E6%95%B0%E5%AD%97%E8%BA%AB%E4%BB%BD.png" width="100%" alt="数字身份"></img>
               </>
             ),
           }
@@ -816,8 +816,8 @@ export const Content50DataSource = {
 };
 
 export const Footer40DataSource = {
-  wrapper: { className: 'home-page-wrapper footer4-wrapper' },
-  OverPack: { className: 'footer4', playScale: 0.2 },
+  wrapper: {className: 'home-page-wrapper footer4-wrapper'},
+  OverPack: {className: 'footer4', playScale: 0.2},
   block: {
     className: 'home-page',
     gutter: 0,
@@ -847,13 +847,13 @@ export const Footer40DataSource = {
         xs: 24,
         md: 6,
         className: 'block',
-        title: { children: '产品' },
+        title: {children: '产品'},
         childWrapper: {
           children: [
-            { name: 'link0', href: '#', children: '产品更新记录' },
-            { name: 'link1', href: '#', children: 'API文档' },
-            { name: 'link2', href: '#', children: '快速入门' },
-            { name: 'link3', href: '#', children: '参考指南' },
+            {name: 'link0', href: '#', children: '产品更新记录'},
+            {name: 'link1', href: '#', children: 'API文档'},
+            {name: 'link2', href: '#', children: '快速入门'},
+            {name: 'link3', href: '#', children: '参考指南'},
           ],
         },
       },
@@ -862,18 +862,18 @@ export const Footer40DataSource = {
         xs: 24,
         md: 6,
         className: 'block',
-        title: { children: '关于' },
+        title: {children: '关于'},
         childWrapper: {
           children: [
-            { href: '#', name: 'link0', children: 'FAQ' },
-            { href: '#', name: 'link1', children: '联系我们' },
+            {href: '#', name: 'link0', children: 'FAQ'},
+            {href: '#', name: 'link1', children: '联系我们'},
           ],
         },
       }
     ],
   },
-  copyrightWrapper: { className: 'copyright-wrapper' },
-  copyrightPage: { className: 'home-page' },
+  copyrightWrapper: {className: 'copyright-wrapper'},
+  copyrightPage: {className: 'home-page'},
   copyright: {
     className: 'copyright',
     children: (
