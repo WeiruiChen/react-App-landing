@@ -35,15 +35,16 @@ class Content5 extends React.PureComponent {
         <div>
           <div {...currentProps} {...wrapper} style={{background: '#fff', height: '100px', minHeight: '100px'}}>
             <div {...page}>
-              <div {...dataSource.titleWrapper} style={{textAlign: 'left'}}>
-                <div style={{float: 'left', marginTop: '-50px'}}>
-                  <span style={{fontSize: '20px'}}>联系我们</span>
-                  <ul style={{marginLeft: '15px', fontSize: '15px', listStyle: 'disc'}}>
-                    <li>
-                      <a href="mailto:contact@shadingtech.com" style={{color: '#3D4D66'}} key='mail'>邮件:contact@shadingtech.com</a>
-
-                    </li>
-                  </ul>
+              <div {...dataSource.titleWrapper} >
+                <div style={{textAlign: 'center', marginTop: '-50px'}}>
+                  <span style={{fontSize: '30px'}}>联系我们</span>
+                  {/* <ul style={{marginLeft: '15px', fontSize: '15px', listStyle: 'disc'}}> */}
+                  {/* <li> */}
+                  <div>
+                    <a href="mailto:contact@shadingtech.com" style={{color: '#3D4D66'}} key='mail'>邮件:contact@shadingtech.com</a>
+                  </div>
+                  {/* </li> */}
+                  {/* </ul> */}
                 </div>
               </div>
             </div>
@@ -55,15 +56,16 @@ class Content5 extends React.PureComponent {
         <div>
           <div {...currentProps} {...wrapper} style={{background: '#fff', height: '150px', minHeight: '150px'}}>
             <div {...page}>
-              <div {...dataSource.titleWrapper} style={{textAlign: 'left'}}>
-                <div style={{float: 'left', marginTop: '-50px'}}>
+              <div {...dataSource.titleWrapper} style={{textAlign: 'center'}}>
+                <div style={{marginTop: '-50px'}}>
                   <span style={{fontSize: '30px'}}>联系我们</span>
-                  <ul style={{marginLeft: '20px', fontSize: '24px', listStyle: 'disc'}}>
-                    <li>
-                      <a href="mailto:contact@shadingtech.com" style={{color: '#3D4D66'}} key='mail'>邮件:contact@shadingtech.com</a>
-
-                    </li>
-                  </ul>
+                  {/* <ul style={{marginLeft: '20px', fontSize: '24px', listStyle: 'disc'}}>
+                    <li> */}
+                  <div>
+                    <a href="mailto:contact@shadingtech.com" style={{color: '#3D4D66'}} key='mail'>邮件:contact@shadingtech.com</a>
+                  </div>
+                  {/* </li> */}
+                  {/* </ul> */}
                 </div>
               </div>
             </div>

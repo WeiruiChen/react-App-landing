@@ -733,7 +733,7 @@ export const Footer20DataSource = {
     children: (
       <>
         <span>
-          ©2020 <a href="http://119.23.79.90:3000"> 鲨丁网 </a> All Rights
+          ©2020 <a href="http://119.23.79.90:3000">鲨丁区块链 </a> All Rights
           Reserved
         </span>
       </>
