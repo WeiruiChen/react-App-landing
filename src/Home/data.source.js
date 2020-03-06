@@ -4,7 +4,7 @@ export const Nav00DataSource = {
   page: {className: 'home-page'},
   logo: {
     className: 'header0-logo',
-    children: require('./img/header-logo-newest.png'),
+    children: require('./img/shading-logo.png'),
   },
   Menu: {
     className: 'header0-menu',
@@ -783,7 +783,7 @@ export const Footer20DataSource = {
         href: '#',
         className: 'links-weibo',
         children:
-          'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/footer-row.png',
+          'https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/pc-shading-footer-logo.png',
       }
     ],
   },

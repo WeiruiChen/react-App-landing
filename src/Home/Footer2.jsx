@@ -35,7 +35,7 @@ class Footer2 extends React.PureComponent {
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>Email: contact@shadingtech.com</h2> */}
           <div {...props} {...dataSource.wrapper} style={{margin: '0 auto', height: '130px', backgroundColor: '#3D4D66'}}>
             <div style={{width: '130px', height: '100px', float: 'left',marginLeft:'30px',marginTop:'15px'}}>
-              <img style={{width: '100%', height: '100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/footer-logo-newest.png" atl="logo"></img>
+              <img style={{width: '100%', height: '100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/mobile-shading-footer-logo.png" atl="logo"></img>
             </div>
             <div style={{float:'right',marginRight:'70px', fontSize: '14px'}}>
               <Row style={{marginTop: '35px'}} >
