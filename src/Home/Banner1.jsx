@@ -237,7 +237,7 @@ class Banner extends React.PureComponent {
     } else {
       return (
         <div>
-          <div {...currentProps} {...wrapper}>
+          <div {...currentProps} {...wrapper} style={{minWidth:'1036px'}}>
             <div {...page}>
               <div {...dataSource.titleWrapper}>
                 {dataSource.titleWrapper.children.map(getChildrenToRender)}

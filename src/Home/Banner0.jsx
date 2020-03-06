@@ -40,13 +40,17 @@ class Banner extends React.PureComponent {
       );
     } else {
       return (
-        <div {...currentProps} {...wrapper}>
-          <div {...page} >
+        <div {...currentProps} {...wrapper}
+        style={{minHeight:'550px',minWidth:'1036px'}}
+        >
+          <div {...page}
+          >
             <QueueAnim
               key="QueueAnim"
               type={['bottom', 'top']}
               delay={200}
               {...dataSource.textWrapper}
+
             >
               <div style={{color: '#00236D', fontSize: '50px'}}>鲨丁区块链</div>
               <div key="title" {...dataSource.title}>

@@ -70,7 +70,7 @@ class Content extends React.PureComponent {
     } else {
       return (
         <div>
-          <div {...props} {...wrapper}>
+          <div {...props} {...wrapper} style={{minWidth:'1036px'}}>
             <div {...page}>
               <div {...titleWrapper}>
                 {titleWrapper.children.map(getChildrenToRenderWeb)}

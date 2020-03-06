@@ -54,7 +54,7 @@ class Content5 extends React.PureComponent {
     } else {
       return (
         <div>
-          <div {...currentProps} {...wrapper} style={{background: '#fff', height: '150px', minHeight: '150px'}}>
+          <div {...currentProps} {...wrapper} style={{background: '#fff', height: '150px', minHeight: '150px',minWidth:'1036px'}}>
             <div {...page}>
               <div {...dataSource.titleWrapper} style={{textAlign: 'center'}}>
                 <div style={{marginTop: '-50px'}}>

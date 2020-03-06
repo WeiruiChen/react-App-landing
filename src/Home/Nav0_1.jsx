@@ -42,7 +42,7 @@ class Header extends React.Component {
             width: '70px',
             height: '30px',
           }}>
-            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href);this.toggleOn()} else {window.location.href = "mailto:margaret.xie@shadingtech.com";this.toggleOn()} }}
+            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href);this.toggleOn()} else {window.location.href = "mailto:contact@shadingtech.com";this.toggleOn()} }}
               style={{fontSize: '12px', marginLeft: '-14px', marginTop: '-5px', color: '#000'}}>
               {a.children.map(getChildrenToRender)}
             </div>
@@ -75,7 +75,7 @@ class Header extends React.Component {
               className={`${dataSource.page.className}${phoneOpen ? ' open' : ''}`}
               style={{height: '64px'}}
             >
-              <img width="50%" src={dataSource.logo.children} alt="img" style={{marginTop: '15px'}} />
+              <img width="200px" src={dataSource.logo.children} alt="img" style={{marginTop: '15px'}} />
             </div>
           </TweenOne>
 
@@ -148,7 +148,7 @@ class Header extends React.Component {
                 theme="theme"
               >
                 {navChildren}
-                <Button onClick={() => {window.location.href = "mailto:margaret.xie@shadingtech.com"}} type="primary">联系我们</Button>
+                <Button onClick={() => {window.location.href = "mailto:contact@shadingtech.com"}} type="primary">联系我们</Button>
               </Menu>
             </TweenOne>
           </div>

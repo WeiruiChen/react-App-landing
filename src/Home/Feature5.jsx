@@ -229,7 +229,7 @@ class Content7 extends React.Component {
     else {
       return (
         <div>
-          <div {...props} {...dataSource.wrapper} >
+          <div {...props} {...dataSource.wrapper}  style={{minWidth:'1036px'}}>
             <div {...dataSource.page} style={{padding: '64px 24px'}}>
               <div {...dataSource.titleWrapper}>
                 {dataSource.titleWrapper.children.map(getChildrenToRenderWeb)}

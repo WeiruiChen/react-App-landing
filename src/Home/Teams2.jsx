@@ -49,7 +49,7 @@ class Teams1 extends React.PureComponent {
     } else {
       return (
         <div>
-          <div {...props} {...dataSource.wrapper}>
+          <div {...props} {...dataSource.wrapper} style={{minWidth:'1036px'}}>
             <div {...dataSource.page}>
               <div {...dataSource.titleWrapper}>
                 {dataSource.titleWrapper.children.map(getChildrenToRenderWeb)}

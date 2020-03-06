@@ -5,6 +5,7 @@
   position: sticky;
   width: 100%;
   z-index: 1;
+  min-width: 1036px;
   box-shadow: 0 5px 8px fade(#000, 15);
   top: 0;
   .home-page {
@@ -101,10 +102,12 @@
 
 @media screen and (max-width: 767px) {
   .@{header0} {
-    &-logo {
-      z-index: 101;
-    }
-
+    // &-logo {
+    //   z-index: 101;
+    //   height: 64px;
+    //   width: 250px;
+    // }
+    min-width: 0px;
     &.home-page-wrapper .home-page {
       padding: 0 24px;
     }

@@ -39,7 +39,7 @@ class Header extends React.Component {
       } else {
         return (
           <Item key={item.name} {...itemProps}>
-            <div  onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:contact@shadingtech.com"} }} className={`header0-item-block ${a.className}`.trim()}>
+            <div onClick={() => {if (item.name !== 'mail') {this.props.ToAnchor(item.children.href)} else {window.location.href = "mailto:contact@shadingtech.com"} }} className={`header0-item-block ${a.className}`.trim()}>
               {a.children.map(getChildrenToRender)}
             </div>
           </Item>
@@ -64,7 +64,7 @@ class Header extends React.Component {
               animation={{x: -30, type: 'from', ease: 'easeOutQuad'}}
               {...dataSource.logo}
             >
-              <img width="50%" src={dataSource.logo.children} alt="img" />
+              <img style={{width:'100%',height:'100%'}} src={dataSource.logo.children} alt="img" />
             </TweenOne>
             <div
               {...dataSource.mobileMenu}
@@ -100,7 +100,7 @@ class Header extends React.Component {
                 theme="theme"
               >
                 {navChildren}
-                <Button size="small" onClick={() => { window.location.href = "mailto:contact@shadingtech.com"}} type="primary">联系我们</Button>
+                <Button size="small" onClick={() => {window.location.href = "mailto:contact@shadingtech.com"}} type="primary">联系我们</Button>
               </Menu>
             </TweenOne>
           </div>
@@ -162,7 +162,7 @@ class Header extends React.Component {
                 theme="theme"
               >
                 {navChildren}
-                <Button onClick={() => { window.location.href = "mailto:contact@shadingtech.com"}} type="primary">联系我们</Button>
+                <Button onClick={() => {window.location.href = "mailto:contact@shadingtech.com"}} type="primary">联系我们</Button>
               </Menu>
             </TweenOne>
           </div>

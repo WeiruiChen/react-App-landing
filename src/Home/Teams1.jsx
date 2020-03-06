@@ -21,14 +21,15 @@ class Teams1 extends React.PureComponent {
     delete props.dataSource;
     delete props.isMobile;
     const listChildren = this.getBlockChildren(dataSource.block.children);
-    return (
-      <div>
-        <div {...props} {...dataSource.wrapper}>
-          <div {...dataSource.page}>
-            <div {...dataSource.titleWrapper}>
-              {dataSource.titleWrapper.children.map(getChildrenToRender)}
-            </div>
-            {/* <OverPack {...dataSource.OverPack}>
+    if (this.props.isMobile) {
+      return (
+        <div>
+          <div {...props} {...dataSource.wrapper} >
+            <div {...dataSource.page}>
+              <div {...dataSource.titleWrapper}>
+                {dataSource.titleWrapper.children.map(getChildrenToRender)}
+              </div>
+              {/* <OverPack {...dataSource.OverPack}>
               <QueueAnim
                 type="bottom"
                 key="block"
@@ -36,16 +37,43 @@ class Teams1 extends React.PureComponent {
               
                 component={Row}
               > */}
-            <div
-              {...dataSource.block}>
-              {listChildren}
-            </div>
+              <div
+                {...dataSource.block}>
+                {listChildren}
+              </div>
               {/* </QueueAnim>
             </OverPack> */}
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <div {...props} {...dataSource.wrapper} style={{minWidth: '1036px'}}>
+            <div {...dataSource.page}>
+              <div {...dataSource.titleWrapper}>
+                {dataSource.titleWrapper.children.map(getChildrenToRender)}
+              </div>
+              {/* <OverPack {...dataSource.OverPack}>
+              <QueueAnim
+                type="bottom"
+                key="block"
+                leaveReverse
+              
+                component={Row}
+              > */}
+              <div
+                {...dataSource.block}>
+                {listChildren}
+              </div>
+              {/* </QueueAnim>
+            </OverPack> */}
+            </div>
+          </div>
+        </div>
+      );
+    }
   }
 }
 

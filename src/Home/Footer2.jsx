@@ -34,12 +34,12 @@ class Footer2 extends React.PureComponent {
           {/* <h1 style={{fontSize: '32px', margin: ' 0 auto', textAlign: 'center'}}>联系我们</h1>
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>Email: contact@shadingtech.com</h2> */}
           <div {...props} {...dataSource.wrapper} style={{margin: '0 auto', height: '130px', backgroundColor: '#3D4D66'}}>
-            <div style={{width: '30%', height: '100px', float: 'left',marginLeft:'30px',marginTop:'15px'}}>
+            <div style={{width: '130px', height: '100px', float: 'left',marginLeft:'30px',marginTop:'15px'}}>
               <img style={{width: '100%', height: '100%'}} src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/footer-logo-newest.png" atl="logo"></img>
             </div>
-            <div style={{marginLeft: "200px", fontSize: '14px'}}>
-              <Row style={{marginTop: '35px'}}>
-                <Col span={10}>
+            <div style={{float:'right',marginRight:'70px', fontSize: '14px'}}>
+              <Row style={{marginTop: '35px'}} >
+                <Col span={11}>
                   <div onClick={() => {this.props.ToAnchor('Feature5_0')}}>
                     <a style={{color: '#DFE1E5'}}>解决方案</a></div>
                   <div onClick={() => {this.props.ToAnchor('Teams2_0')}}>
@@ -47,7 +47,9 @@ class Footer2 extends React.PureComponent {
                   <div onClick={() => {this.props.ToAnchor('Teams1_0')}}>
                     <a style={{color: '#DFE1E5'}}>关于我们</a></div>
                 </Col>
-                <Col span={10}>
+                <Col span={2}>
+                </Col>
+                <Col span={11}>
                   <div onClick={() => {this.props.ToAnchor('Content0_0')}}>
                     <a style={{color: '#DFE1E5'}}>核心优势</a></div>
                   <div onClick={() => {this.props.ToAnchor('Banner1_0')}}>
@@ -71,7 +73,7 @@ class Footer2 extends React.PureComponent {
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>
             <a style={{fontSize: '20px'}} href="mailto:contact@shadingtech.com">Email: contact@shadingtech.com</a>
           </h2> */}
-          <div {...props} {...dataSource.wrapper} style={{textAlign: 'center'}}>
+          <div {...props} {...dataSource.wrapper} style={{textAlign: 'center',minWidth:'1036px'}}>
             {/* <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}
@@ -105,10 +107,10 @@ class Footer2 extends React.PureComponent {
             </OverPack>
 
           </div>
-          <div style={{textAlign: 'center', height: '20px', backgroundColor: '#3D4D66',color:'#DFE1E5'}}>
+          <div style={{textAlign: 'center', height: '20px', backgroundColor: '#3D4D66',color:'#DFE1E5',minWidth:'1036px'}}>
             {dataSource.copyright1.children}
           </div>
-          <div style={{textAlign: 'center', height: '10px', backgroundColor: '#3D4D66'}}>
+          <div style={{textAlign: 'center', height: '10px', backgroundColor: '#3D4D66',minWidth:'1036px'}}>
           </div>
         </div >
 
