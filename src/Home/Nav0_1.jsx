@@ -75,7 +75,7 @@ class Header extends React.Component {
               className={`${dataSource.page.className}${phoneOpen ? ' open' : ''}`}
               style={{height: '64px'}}
             >
-              <img width="200px" src={dataSource.logo.children} alt="img" style={{marginTop: '15px'}} />
+              <img width="200px" src={dataSource.logo.children} alt="img" style={{marginTop: '10px'}} />
             </div>
           </TweenOne>
 
