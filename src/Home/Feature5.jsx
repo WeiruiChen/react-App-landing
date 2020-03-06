@@ -147,7 +147,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/%E6%89%8B%E6%9C%BA%E7%AB%AF%EF%BC%9A%E6%94%BF%E5%8A%A1%E4%B8%8A%E9%93%BE.png" width="100%" alt="政务上链">
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/%E6%89%8B%E6%9C%BA%E7%AB%AF%EF%BC%9A%E6%94%BF%E5%8A%A1%E4%B8%8A%E9%93%BE1.png" width="100%" alt="政务上链">
                       </Zmage>
                     </div>
                   </Panel>
@@ -165,7 +165,7 @@ class Content7 extends React.Component {
                     </div>
                   </div>} key="1">
                     <div >
-                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/%E6%89%8B%E6%9C%BA%E7%AB%AF%EF%BC%9A%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82.png" width="100%" alt="智慧城市"></Zmage>
+                      <Zmage src="https://sha-ding.oss-cn-beijing.aliyuncs.com/sha-ding/%E6%89%8B%E6%9C%BA%E7%AB%AF%EF%BC%9A%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%821.png" width="100%" alt="智慧城市"></Zmage>
                     </div>
                   </Panel>
                 </Collapse>
