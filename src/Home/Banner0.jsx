@@ -41,7 +41,7 @@ class Banner extends React.PureComponent {
     } else {
       return (
         <div {...currentProps} {...wrapper}
-        style={{minHeight:'550px',minWidth:'1036px'}}
+        style={{minHeight:'550px',minWidth:'1056px'}}
         >
           <div {...page}
           >

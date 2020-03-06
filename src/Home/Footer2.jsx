@@ -62,7 +62,7 @@ class Footer2 extends React.PureComponent {
           <div style={{textAlign: 'center', height: '20px', backgroundColor: '#3D4D66',color:'#DFE1E5'}}>
             {dataSource.copyright1.children}
           </div>
-          <div style={{textAlign: 'center', height: '10px', backgroundColor: '#3D4D66'}}>
+          <div style={{textAlign: 'center', height: '30px', backgroundColor: '#3D4D66'}}>
           </div>
         </div >
       );
@@ -73,7 +73,7 @@ class Footer2 extends React.PureComponent {
           <h2 style={{fontSize: '18px', margin: '0 auto 64px', textAlign: 'center'}}>
             <a style={{fontSize: '20px'}} href="mailto:contact@shadingtech.com">Email: contact@shadingtech.com</a>
           </h2> */}
-          <div {...props} {...dataSource.wrapper} style={{textAlign: 'center',minWidth:'1036px'}}>
+          <div {...props} {...dataSource.wrapper} style={{textAlign: 'center',minWidth:'1056px'}}>
             {/* <div {...dataSource.page}>
           <div {...dataSource.titleWrapper}>
             {dataSource.titleWrapper.children.map(getChildrenToRender)}
@@ -107,10 +107,10 @@ class Footer2 extends React.PureComponent {
             </OverPack>
 
           </div>
-          <div style={{textAlign: 'center', height: '20px', backgroundColor: '#3D4D66',color:'#DFE1E5',minWidth:'1036px'}}>
+          <div style={{textAlign: 'center', height: '20px', backgroundColor: '#3D4D66',color:'#DFE1E5',minWidth:'1056px'}}>
             {dataSource.copyright1.children}
           </div>
-          <div style={{textAlign: 'center', height: '10px', backgroundColor: '#3D4D66',minWidth:'1036px'}}>
+          <div style={{textAlign: 'center', height: '30px', backgroundColor: '#3D4D66',minWidth:'1056px'}}>
           </div>
         </div >
 

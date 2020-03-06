@@ -36,7 +36,7 @@ class Content5 extends React.PureComponent {
           <div {...currentProps} {...wrapper} style={{background: '#fff', height: '100px', minHeight: '100px'}}>
             <div {...page}>
               <div {...dataSource.titleWrapper} >
-                <div style={{textAlign: 'center', marginTop: '-50px'}}>
+                <div style={{textAlign: 'center', marginTop: '-70px'}}>
                   <span style={{fontSize: '30px'}}>联系我们</span>
                   {/* <ul style={{marginLeft: '15px', fontSize: '15px', listStyle: 'disc'}}> */}
                   {/* <li> */}
@@ -54,7 +54,7 @@ class Content5 extends React.PureComponent {
     } else {
       return (
         <div>
-          <div {...currentProps} {...wrapper} style={{background: '#fff', height: '150px', minHeight: '150px',minWidth:'1036px'}}>
+          <div {...currentProps} {...wrapper} style={{background: '#fff', height: '150px', minHeight: '150px',minWidth:'1056px'}}>
             <div {...page}>
               <div {...dataSource.titleWrapper} style={{textAlign: 'center'}}>
                 <div style={{marginTop: '-50px'}}>
